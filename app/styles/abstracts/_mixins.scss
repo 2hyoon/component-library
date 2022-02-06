@@ -1,0 +1,18 @@
+/* try to use mobile first strategy */
+@mixin bp-up($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin bp-down($breakpoint) {
+  @media (max-width: $breakpoint-1) {
+    @content;
+  }
+}
+
+@mixin bp-between($breakpoint-min, $breakpoint-max) {
+  @media (min-width: $breakpoint-min) and (max-width: $breakpoint-max) {
+    @content;
+  }
+}

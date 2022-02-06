@@ -1,0 +1,42 @@
+{
+  "name": "component-library",
+  "version": "1.0.0",
+  "description": "<div id=\"top\"></div>",
+  "main": "gulpfile.js",
+  "scripts": {
+    "gulp": "npm run prod",
+    "dev": "MODE=dev gulp  --gulpfile ./gulpfile.js dev",
+    "prod": "MODE=prod gulp  --gulpfile ./gulpfile.js prod"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "gulp",
+    "nunjuck"
+  ],
+  "author": "Hailey Yoon",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "autoprefixer": "^10.4.2",
+    "babel-loader": "^8.2.3",
+    "browser-sync": "^2.27.7",
+    "cssnano": "^5.0.16",
+    "del": "^6.0.0",
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "nunjucks": "^3.2.3",
+    "sass": "^1.49.7",
+    "webpack": "^5.68.0",
+    "webpack-stream": "^7.0.0"
+  }
+}

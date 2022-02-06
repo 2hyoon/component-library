@@ -1,0 +1,16 @@
+<section class="va verticalAccordion section" id="build-earn-grow">
+  <ul>
+    {% for item in verticalAccordion.list %}
+    <li>
+      <h3 class="va-control">
+        <button class="va-button js-va-control" id="va-control-{{loop.index}}"><span>{{item.title}}</span></button>
+      </h3>
+      <section class="va-content js-va-content" id="va-content-{{loop.index}}">
+        <div>
+          {{item.description|safe}}
+        </div>
+      </section>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,51 @@
+{% set version = '0.0.5' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/app.css?v={{version}}">
+  {# <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" href="./assets/img/favicon/apple-icon.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./assets/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-apple-icon" sizes="180x180" href="./assets/img/favicon/apple-icon-180x180.png">
+  <link rel="apple-apple-icon" sizes="167x167" href="./assets/img/favicon/apple-icon-167x167.png">
+  <meta name="msapplication-TileColor" content="#fff"/>
+  <meta name="msapplication-TileImage" content="./assets/img/favicon/ms-icon-150x150"/>
+  <meta name="msapplication-square70x70logo" content="./assets/img/favicon/ms-icon-70x70">
+  <meta name="msapplication-square150x150logo" content="./assets/img/favicon/ms-icon-150x150">
+  <meta name="msapplication-square310x310logo" content="./assets/img/favicon/ms-icon-310x310">
+  <meta name="msapplication-wide310x150logo" content="./assets/img/favicon/ms-icon-310x150">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="."> #}
+</head>
+<body>
+  <div id="page">
+    {% from 'data/_global/header.njk' import data as header %}
+    {% include 'components/_global/header.njk' %}
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    {% from 'data/_global/footer.njk' import data as footer %}
+    {% include 'components/_global/footer.njk' %}
+  </div>
+  <script src="./scripts/app.js?v={{version}}"></script>
+</body>
+</html>
