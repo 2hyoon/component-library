@@ -1,0 +1,19 @@
+.img-full-width {
+  width: 100%;
+}
+
+.mt {
+  margin-top: rem(60px);
+
+  @include breakpoint-up(map.get($bps, "tablet")) {
+    margin-top: rem(90px);
+  }
+}
+
+.mb {
+  margin-bottom: rem(60px);
+
+  @include breakpoint-up(map.get($bps, "tablet")) {
+    margin-bottom: rem(90px);
+  }
+}
