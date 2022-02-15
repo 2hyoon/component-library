@@ -1,7 +1,28 @@
+/**
+* image 
+**/
 .img-full-width {
   width: 100%;
 }
 
+/**
+* text align
+**/
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+/**
+* margin
+**/
 .mt {
   margin-top: rem(60px);
 
