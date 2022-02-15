@@ -51,7 +51,7 @@ $bp-1000: 1024px;
 $bp-1200: 1200px;
 $bp-mobile: 480px;
 $bp-tablet: 768px;
-$bp-default: 980px;
+$bp-base: 980px;
 $bp-desktop: 1024px;
 
 // breakpoints map
@@ -67,7 +67,7 @@ $bps: (
   "1200": 1200px,
   "mobile": 480px,
   "tablet": 768px,
-  "default": 980px,
+  "base": 980px,
   "desktop": 1024px,
 ) !default;
 
