@@ -14,8 +14,8 @@ section,
   position: relative;
 }
 
-//container has max width
-//see box-sizing value
+// container has max width
+// see box-sizing value
 .container {
   display: block;
   position: relative;
@@ -30,13 +30,13 @@ section,
 // global grid
 .grid {
   display: grid;
-  
-  // @include breakpoint-up(map.get($bps, "tablet")) {
-  //   display: grid;
+
+  @include breakpoint-up(map.get($bps, "tablet")) {
+    display: grid;
     grid-template-columns: repeat($grid-columns, 1fr);
     grid-column-gap: $grid-column-gap;
-    grid-row-gap: $grid-row-gap;
-  // }
+    row-gap: $grid-row-gap;
+  }
 }
 
 .shade {

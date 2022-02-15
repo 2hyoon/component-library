@@ -1,6 +1,6 @@
 // color
-$color-black: hsla(0, 0%, 0%, 1);
-$color-white: hsla(0, 0%, 100%, 1);
+$color-black: rgb(0, 0, 0);
+$color-white: rgb(255, 255, 255);
 $color-red: #f50028;
 $color-blue: #0050f3;
 $color-green: #00a555;
@@ -20,7 +20,7 @@ $color-grey-d: #ddd;
 $color-grey-e: #eee;
 
 // font family
-$font-sans: 'IBM Plex Sans Thai Looped', sans-serif;
+$font-sans: "IBM Plex Sans Thai Looped", sans-serif;
 $font-serif: serif;
 
 // font weight
@@ -51,8 +51,10 @@ $bp-1000: 1024px;
 $bp-1200: 1200px;
 $bp-mobile: 480px;
 $bp-tablet: 768px;
+$bp-default: 980px;
 $bp-desktop: 1024px;
 
+// breakpoints map
 $bps: (
   "300": 360px,
   "400": 480px,
@@ -63,11 +65,13 @@ $bps: (
   "900": 980px,
   "1000": 1024px,
   "1200": 1200px,
-  "mobile" : 480px,
-  "tablet" : 768px,
-  "desktop" : 1024px
+  "mobile": 480px,
+  "tablet": 768px,
+  "default": 980px,
+  "desktop": 1024px,
 ) !default;
 
+// page max width
 $page-max-width: 1280px;
 
 // transition
