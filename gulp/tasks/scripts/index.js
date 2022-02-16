@@ -1,13 +1,13 @@
-const { src, dest } = require('gulp');
+const { src, dest } = require("gulp");
 
 // use a different version of webpack than the one webpack-stream uses
-const compiler = require('webpack');
+const compiler = require("webpack");
 
 // run webpack as a stream to conveniently integrate with gulp.
-const webpack = require('webpack-stream');
+const webpack = require("webpack-stream");
 
 // eslint
-const eslint = require('gulp-eslint');
+const eslint = require("gulp-eslint");
 
 // webpack module
 const webpackModule = {
@@ -18,7 +18,7 @@ const webpackModule = {
       use: {
         loader: 'babel-loader',
         options: {
-          babelrc: false,
+          // babelrc: false,
           presets: ['@babel/preset-env'],
         },
       },
@@ -33,7 +33,7 @@ function buildScripts() {
         {
           mode: process.env.NODE_ENV || 'production',
           devtool: 'source-map',
-          // watch: true,
+          watch: false,
           output: {
             filename: 'app.js',
           },
@@ -46,8 +46,8 @@ function buildScripts() {
 }
 
 function lintScripts() {
-  return src('./app/scripts/**/*.js')
-    .pipe(eslint({ configFile: '.eslintrc.json', useEslintrc: true }))
+  return src("./app/scripts/**/*.js")
+    .pipe(eslint({ configFile: ".eslintrc.json", useEslintrc: true }))
     .pipe(eslint.format());
   // .pipe(eslint.failAfterError());
 }
