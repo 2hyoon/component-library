@@ -5,7 +5,8 @@ export function initComponents(elem, APP) {
   const initComponent = (elem) => {
     let componentList = elem.dataset.jsComponent;
 
-    componentList = componentList ? componentList.split(" ") : null;
+    if(!componentList) return;
+    componentList = componentList.split(" ");
 
     componentList.forEach((componentName) => {
       if (APP.components[componentName]) {
