@@ -3,6 +3,6 @@ import APP from "./app/appObj";
 /**
  * Get Document Ready
  */
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", (e) => {
   APP.helpers.initComponents(document.body, APP);
 });

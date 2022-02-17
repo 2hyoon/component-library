@@ -1,31 +1,29 @@
 export function initComponents(elem, APP) {
-  let init = (elem) => {
-    let components = elem.getAttribute("data-js-component");
+  const jsComponents = [...elem.querySelectorAll("[data-js-component]")];
 
-    if (!components) {
-      return;
-    } else {
-      components = components.split(" ");
-    }
+  // initialize components
+  const initComponent = (elem) => {
+    let componentList = elem.dataset.jsComponent;
 
-    for (let i = 0, len = components.length; i < len; i++) {
-      let componentName = components[i];
+    componentList = componentList ? componentList.split(" ") : null;
+
+    componentList.forEach((componentName) => {
       if (APP.components[componentName]) {
-        let component = new APP.components[componentName](elem, APP);
-        if (component.init) {
-          component.init();
+        const targetComponent = new APP.components[componentName](elem, APP);
+        if (targetComponent.init) {
+          targetComponent.init();
         }
       }
-    }
+    });
   };
 
-  let childComponents = [...elem.querySelectorAll("[data-js-component]")];
-
-  if (childComponents) {
-    for (let i = 0; i < childComponents.length; i++) {
-      init(childComponents[i]);
-    }
+  // get components
+  if (jsComponents) {
+    jsComponents.forEach((elem) => {
+      initComponent(elem);
+    });
   }
 
-  init(elem);
+  // for body elem
+  initComponent(elem);
 }
