@@ -3,6 +3,5 @@ export default class Header {
     this.elem = elem;
   }
 
-  init() {
-  }
+  init() {}
 }
