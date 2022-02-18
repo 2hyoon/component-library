@@ -1,0 +1,13 @@
+# Dependencies
+node_modules
+
+# OS or Editor folders
+.cache
+.DS_Store
+
+#
+dist
+app/scripts/vendors/*.js
+app/styles/vendor/*.scss
+app/assets
+README.md

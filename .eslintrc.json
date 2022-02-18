@@ -1,0 +1,15 @@
+{
+  "root": true,
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2015
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "warn"
+  }
+}
