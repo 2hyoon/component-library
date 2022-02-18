@@ -16,10 +16,10 @@ const webpackModule = {
       test: /\.(js)$/,
       exclude: /(node_modules|bower_components)/,
       use: {
-        loader: 'babel-loader',
+        loader: "babel-loader",
         options: {
           // babelrc: false,
-          presets: ['@babel/preset-env'],
+          presets: ["@babel/preset-env"],
         },
       },
     },
@@ -27,22 +27,25 @@ const webpackModule = {
 };
 
 function buildScripts() {
-  return src(['./app/scripts/vendors/noframework.waypoints.min.js', './app/scripts/app.js'])
+  return src([
+    "./app/scripts/vendors/noframework.waypoints.min.js",
+    "./app/scripts/app.js",
+  ])
     .pipe(
       webpack(
         {
-          mode: process.env.NODE_ENV || 'production',
-          devtool: 'source-map',
+          mode: process.env.NODE_ENV || "production",
+          devtool: "source-map",
           watch: false,
           output: {
-            filename: 'app.js',
+            filename: "app.js",
           },
           module: webpackModule,
         },
         compiler
       )
     )
-    .pipe(dest('./dist/scripts'));
+    .pipe(dest("./dist/scripts"));
 }
 
 function lintScripts() {

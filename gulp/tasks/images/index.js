@@ -1,7 +1,7 @@
-const { src, dest } = require('gulp');
+const { src, dest } = require("gulp");
 
 function buildImages() {
-  return src('./app/assets/img/**/*').pipe(dest('./dist/assets/img/'));
+  return src("./app/assets/img/**/*").pipe(dest("./dist/assets/img/"));
 }
 
 module.exports = {
