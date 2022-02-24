@@ -1,6 +1,7 @@
 import { initComponents } from "./../utils/initComponents";
 import Header from "./../components/header";
 import Accordion from "./../components/accordion";
+import Sticky from "./../components/sticky";
 
 const APP = {};
 
@@ -10,11 +11,12 @@ APP.helpers = {
 
 /**
  * Page components
- * <elem data-js-component="<component name>">
+ * <elem data-component="<component name>">
  */
 APP.components = {
   Header: (elem) => new Header(elem, APP).init(),
   Accordion: (elem) => new Accordion(elem, APP).init(),
+  Sticky: (elem) => new Sticky(elem, APP).init(),
 };
 
 export default APP;

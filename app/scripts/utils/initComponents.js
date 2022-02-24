@@ -1,9 +1,9 @@
 export function initComponents(elem, APP) {
-  const jsComponents = [...elem.querySelectorAll("[data-js-component]")];
+  const jsComponents = [...elem.querySelectorAll("[data-component]")];
 
   // initialize components
   const initComponent = (elem) => {
-    let componentList = elem.dataset.jsComponent;
+    let componentList = elem.dataset.component;
 
     if (!componentList) return;
     componentList = componentList.split(" ");
