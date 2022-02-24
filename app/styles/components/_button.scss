@@ -1,0 +1,27 @@
+
+.button {
+  @include reset-button;
+
+  border-radius: 3px;
+  background-color: $color-green;
+  color: #fff;
+  padding: rem(13px) rem(10px);
+  font-size: rem(14px);
+  font-family: $font-sans;
+  font-weight: $font-weight-semi-bold;
+
+  &:hover {
+    background-color: rgba($color: $color-green, $alpha: 60%);
+  }
+
+  &:focus {
+    @include reset-focus;
+  }
+
+  &.disabled,
+  &[disabled] {
+    background-color: $color-grey-5;
+    color: $color-grey-8;
+    cursor: default;
+  }
+}

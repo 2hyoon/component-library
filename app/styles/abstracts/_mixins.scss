@@ -16,3 +16,25 @@
     @content;
   }
 }
+
+/* reset */
+@mixin reset-button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  line-height: 1;
+  box-shadow: none;
+}
+
+@mixin reset-focus {
+  outline: 3px solid orange;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
