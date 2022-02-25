@@ -1,0 +1,39 @@
+.accordion {
+  &-header {
+    position: relative;
+    border-bottom: 1px solid $color-grey-c;
+  }
+
+  &-trigger {
+    @include reset-button;
+
+    display: block;
+    font-size: rem(30px);
+    font-weight: $font-weight-bold;
+    text-align: left;
+    background-color: $color-grey-d;
+    width: 100%;
+    padding: rem(20px);
+    box-sizing: border-box;
+    border: 2px solid $color-grey-d;
+
+    &:hover {
+      background-color: $color-grey-c;
+      border: 2px solid $color-grey-c;
+    }
+
+    &:focus-visible {
+      outline: none;
+      border: 2px solid $color-blue;
+    }
+  }
+
+  &-panel {
+    height: 0;
+  }
+
+  &-content {
+    padding: rem(20px);
+    opacity: 0;
+  }
+}

@@ -1,16 +1,25 @@
-<section class="va verticalAccordion section" id="build-earn-grow">
-  <ul>
-    {% for item in verticalAccordion.list %}
-    <li>
-      <h3 class="va-control">
-        <button class="va-button js-va-control" id="va-control-{{loop.index}}"><span>{{item.title}}</span></button>
+<section class="accordion mt mb" data-component="Accordion">
+  <div class="container">
+    <h2>Accordion</h2>
+    {% for item in accordion.list %}
+      <h3 class="accordion-header">
+        <button 
+          id="accordion-trigger-{{loop.index}}"
+          class="accordion-trigger"
+          aria-expanded="false"
+          aria-controls="accordion-section-{{loop.index}}">
+          {{item.title}}
+        </button>
       </h3>
-      <section class="va-content js-va-content" id="va-content-{{loop.index}}">
-        <div>
+      <section
+        id="accordion-panel-{{loop.index}}"
+        class="accordion-panel"
+        aria-labelledby="accordion-trigger-{{loop.index}}">
+        <div class="accordion-content">
           {{item.description|safe}}
         </div>
       </section>
-    </li>
     {% endfor %}
-  </ul>
+
+  </div>
 </section>
