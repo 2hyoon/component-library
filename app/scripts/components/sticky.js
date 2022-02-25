@@ -59,6 +59,32 @@ export default class Sticky {
         t.style.transform = `rotateY(${targetArr[i]}deg) skewY(3deg)`; //300 - 410 //perspective(1000px) 
       })
     }
+
+    // slide3 
+    if(window.pageYOffset >= slide3Top && window.pageYOffset < slide3Top+window.innerHeight) {
+      // console.log(this.elem.querySelectorAll('.mosaic1').length);34
+      const pct = (window.pageYOffset-this.slide3.offsetTop-window.innerHeight)/window.innerHeight;
+      console.log(window.pageYOffset, this.slide3.offsetTop);console.log(window.pageYOffset-this.slide3.offsetTop)
+      const t = pct * this.elem.querySelectorAll('.mosaic1').length;
+      this.elem.querySelectorAll('.mosaic1').forEach((e, i)=>{
+        if(i<t) {
+          e.style.opacity = '0.4';
+        } else {
+          e.style.opacity = '0';
+        }
+      })
+    }
+  }
+
+  setMosaics() {
+    const counts = Math.ceil(window.innerWidth/40);
+    const pattern = this.elem.querySelector('.slide3-pattern');
+    const img = this.elem.querySelector('.mosaic1');
+    for(let i=0; i<counts; i++) {
+      const copyImg = img.cloneNode(true);
+      const imgElem = pattern.appendChild(copyImg);
+      imgElem.style.left = `${(i+1) * 40}px`;
+    }
   }
 
   // width / 4
@@ -68,6 +94,7 @@ export default class Sticky {
 
 
   init() {
+    this.setMosaics();
     window.addEventListener('scroll', this.stickyScrollHandler);
   }
 }
