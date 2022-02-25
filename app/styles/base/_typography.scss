@@ -23,32 +23,39 @@ h1,
 
 h2,
 .h2 {
-  font-size: rem(65px);
+  font-size: rem(45px);
   font-weight: $font-weight-bold;
+  margin-bottom: rem(30px);
 }
 
 h3,
 .h3 {
-  font-size: rem(65px);
+  font-size: rem(30px);
   font-weight: $font-weight-bold;
 }
 
 h4,
 .h4 {
-  font-size: rem(65px);
+  font-size: rem(20px);
   font-weight: $font-weight-bold;
 }
 
 h5,
 .h5 {
-  font-size: rem(65px);
+  font-size: rem(16px);
   font-weight: $font-weight-bold;
 }
 
 h6,
 .h6 {
-  font-size: rem(65px);
+  font-size: rem(10px);
   font-weight: $font-weight-bold;
+}
+
+p {
+  font-size: rem(16px);
+  font-weight: $font-weight-normal;
+  line-height: $line-height-md;
 }
 
 a {

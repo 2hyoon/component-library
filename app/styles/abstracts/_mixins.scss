@@ -23,14 +23,14 @@
   border: none;
   margin: 0;
   text-decoration: none;
-  text-align: center;
   cursor: pointer;
   line-height: 1;
   box-shadow: none;
+  appearance: none;
 }
 
 @mixin reset-focus {
-  outline: 3px solid orange;
+  outline: 2px solid $color-blue;
 }
 
 @mixin reset-list {
