@@ -30,7 +30,7 @@
 }
 
 @mixin reset-focus {
-  outline: 2px solid $color-blue;
+  outline: 2px solid var(--color-blue);
 }
 
 @mixin reset-list {

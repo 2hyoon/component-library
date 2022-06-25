@@ -1,7 +1,7 @@
 .accordion {
   &-header {
     position: relative;
-    border-bottom: 1px solid $color-grey-c;
+    border-bottom: 1px solid var(--color-grey-c);
   }
 
   &-trigger {
@@ -11,20 +11,20 @@
     font-size: rem(30px);
     font-weight: $font-weight-bold;
     text-align: left;
-    background-color: $color-grey-d;
+    background-color: var(--color-grey-d);
     width: 100%;
     padding: rem(20px);
     box-sizing: border-box;
-    border: 2px solid $color-grey-d;
+    border: 2px solid var(--color-grey-d);
 
     &:hover {
-      background-color: $color-grey-c;
-      border: 2px solid $color-grey-c;
+      background-color: var(--color-grey-c);
+      border: 2px solid var(--color-grey-c);
     }
 
     &:focus-visible {
       outline: none;
-      border: 2px solid $color-blue;
+      border: 2px solid var(--color-blue);
     }
   }
 
