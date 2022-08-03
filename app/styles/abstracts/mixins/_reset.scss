@@ -1,0 +1,21 @@
+/* reset */
+@mixin reset-button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1;
+  box-shadow: none;
+  appearance: none;
+}
+
+@mixin reset-focus {
+  outline: 2px solid var(--color-blue);
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

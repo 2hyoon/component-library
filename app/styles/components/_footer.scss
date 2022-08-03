@@ -1,9 +1,9 @@
 .footer {
-  background-color: #000;
-  color: var(--color-grey-a);
+  background-color: var(--color-bg);
   position: fixed;
   width: 100%;
   bottom: 0;
   left: 0;
-  font-size: 12px;
+  padding: $spacer 0;
+  font-size: 10px;
 }
