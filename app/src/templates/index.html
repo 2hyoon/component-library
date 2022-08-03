@@ -1,3 +1,16 @@
-{% extends "layouts/base.njk" %} {% block content %} {# {% from
-'data/verticalAccordion.njk' import data as verticalAccordion %} {% include
-'components/verticalAccordion.njk' %} #} {% endblock %}
+{% extends "layouts/base.njk" %} 
+{% block content %} 
+<section class="index">
+  <div class="container">
+    <h1>Component Library</h1>
+    <h2>Components</h2>
+    <ul>
+      <li><a href="./accordion.html" target="_self">Accordion</a></li>
+    </ul>
+    <h2>Layout</h2>
+    <ul>
+      <li><a href="./grid.html" target="_self">Grid</a></li>
+    </ul>
+  </div>
+</section>
+{% endblock %}
