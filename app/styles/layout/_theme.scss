@@ -19,6 +19,10 @@ section,
   margin-bottom: 60px;
 }
 
+.row {
+  margin-bottom: 60px;
+}
+
 // container has max width
 // see box-sizing value
 .container {
@@ -40,6 +44,6 @@ section,
   @include make-cssgrid;
 
   > div {
-    background-color: rgb(199, 238, 236);
+    background-color:var(--color-secondary);
   }
 }

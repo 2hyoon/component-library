@@ -1,12 +1,18 @@
 :root,
 [data-theme="light"] {
   --color-bg: #efefef;
-  --color-txt: #111;
+  --color-txt: #0e0b16;
+  --color-txt-contrast: #e9e8e8;
+  --color-primary: #ff3b3f;
+  --color-secondary: #caebf2;
 }
 
 [data-theme="dark"] {
-  --color-bg: #111;
-  --color-txt: #efefef;
+  --color-bg: #0e0b16;
+  --color-txt: #e7dfdd;
+  --color-txt-contrast: #e7dfdd;
+  --color-primary: #4717f6;
+  --color-secondary: #a239ca;
 }
 
 $color-black: rgb(0, 0, 0);
@@ -33,6 +39,7 @@ $font-sans: "Roboto", sans-serif;
 $font-serif: serif;
 
 // font weight
+$font-weight-xlight: 100 !default;
 $font-weight-light: 300 !default;
 $font-weight-normal: 400 !default;
 $font-weight-semi-bold: 600 !default;
