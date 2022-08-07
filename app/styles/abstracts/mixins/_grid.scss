@@ -1,6 +1,8 @@
 // g-col-1 ~ g-col-12
 // g-col-500-1 ~ g-col-500-12
 // g-col-{grid-breakpoint}-1 ~ g-col-{grid-breakpoint}-12
+// g-start-1 ~ g-start-11
+// g-start-{grid-breakpoint}-1 ~ g-start-{grid-breakpoint}-11
 @mixin make-cssgrid($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
   @each $key, $value in $breakpoints {
 
@@ -9,12 +11,24 @@
         .g-col-#{$i} {
           grid-column: auto / span #{$i};
         }
+
+        @for $i from 1 through ($columns - 1) {
+          .g-start-#{$i} {
+            grid-column-start: $i;
+          }
+        }
       }
     } @else {
       @include breakpoint-up($value) {
         @for $i from 1 through $columns {
           .g-col-#{$key}-#{$i} {
             grid-column: auto / span #{$i};
+          }
+        }
+
+        @for $i from 1 through ($columns - 1) {
+          .g-start-#{$key}-#{$i} {
+            grid-column-start: $i;
           }
         }
       }
