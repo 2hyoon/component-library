@@ -3,23 +3,23 @@
     <h2>Accordion</h2>
     {% for item in accordion.list %}
       <h3 class="accordion-header">
-        <button 
+        <button
           id="accordion-trigger-{{loop.index}}"
-          class="accordion-trigger"
+          class="accordion-trigger js-trigger"
           aria-expanded="false"
           aria-controls="accordion-section-{{loop.index}}">
           {{item.title}}
         </button>
       </h3>
-      <section
+      <div
         id="accordion-panel-{{loop.index}}"
-        class="accordion-panel"
+        class="accordion-panel js-panel"
+        role="region"
         aria-labelledby="accordion-trigger-{{loop.index}}">
-        <div class="accordion-content">
+        <div class="accordion-content js-content">
           {{item.description|safe}}
         </div>
-      </section>
+      </div>
     {% endfor %}
-
   </div>
 </section>
