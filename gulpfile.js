@@ -1,7 +1,6 @@
 const browserSync = require("browser-sync").create();
 const del = require("del");
 const { series, parallel, watch } = require("gulp");
-const { buildImages } = require("./gulp/tasks/images");
 const { buildScripts } = require("./gulp/tasks/scripts");
 const { buildStyles } = require("./gulp/tasks/styles");
 const { buildHtml } = require("./gulp/tasks/html");
@@ -20,11 +19,10 @@ const serve = () => {
 /**
  * Clean dist folder
  */
-const clean = () => del(["./dist"]);
+const clean = () => del(["./dist/styles", "./dist/scripts"]);
 const cleanHtml = () => del(["./dist/*.html"]);
 const cleanStyles = () => del(["./dist/styles"]);
 const cleanScripts = () => del(["./dist/scripts"]);
-const cleanImages = () => del(["./dist/assets/img"]);
 
 /**
  * Watch
@@ -47,12 +45,6 @@ const watchScripts = () => {
     .on("unlink", series(cleanScripts, buildScripts, browserSync.reload));
 };
 
-const watchImages = () => {
-  watch("./app/assets/img/**/*")
-    .on("change", series(buildImages, browserSync.reload))
-    .on("unlink", series(cleanImages, buildImages, browserSync.reload));
-};
-
 /**
  * Build
  */
@@ -60,8 +52,8 @@ const dev = series(
   clean,
   // lintScripts,
   // lintStyles,
-  parallel(buildImages, buildStyles, buildScripts, buildHtml),
-  parallel(serve, watchImages, watchStyles, watchScripts, watchHtml)
+  parallel(buildStyles, buildScripts, buildHtml),
+  parallel(serve, watchStyles, watchScripts, watchHtml)
 );
 
 const prod = series(
@@ -69,7 +61,6 @@ const prod = series(
   parallel(
     // lintScripts,
     // lintStyles,
-    buildImages,
     buildScripts,
     buildStyles,
     buildHtml
