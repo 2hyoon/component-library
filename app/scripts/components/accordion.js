@@ -29,6 +29,15 @@ export default class Accordion {
     }
   }
 
+  setTriggerHandler() {
+    this.triggers.forEach((t, i) => {
+      t.addEventListener("click", () => {
+        this.togglePanel(i);
+      });
+    });
+  }
+
+
   resizePanel() {
     this.panels.forEach((elem) => {
       const targetHeight = elem.querySelector("div").offsetHeight + "px";
