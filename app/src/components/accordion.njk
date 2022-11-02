@@ -1,14 +1,18 @@
-<section class="accordion mt mb" data-component="Accordion">
+<section class="accordion" data-component="Accordion">
   <div class="container">
-    <h2>Accordion</h2>
+    <header class="accordion-header">
+      <h1>Accordion</h1>
+    </header>
+
     {% for item in accordion.list %}
       <h3 class="accordion-header">
         <button
           id="accordion-trigger-{{loop.index}}"
           class="accordion-trigger js-trigger"
           aria-expanded="false"
-          aria-controls="accordion-section-{{loop.index}}">
-          {{item.title}}
+          aria-controls="accordion-panel-{{loop.index}}">
+          <div class="accordion-label-text">{{item.title}}</div>
+          <div class="accordion-label-icon"></div>
         </button>
       </h3>
       <div

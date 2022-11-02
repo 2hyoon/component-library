@@ -6,7 +6,7 @@ export default class Accordion {
     this.allowMultiple = false;
   }
 
-  togglePanel(index) {
+  togglePanel(index, waypoint) {
     const trigger = this.triggers[index];
     const panel = this.panels[index];
     const panelHeight = `${panel.querySelector(".js-content").offsetHeight}px`;
@@ -29,22 +29,11 @@ export default class Accordion {
     }
   }
 
-  setTriggerHandler() {
-    this.triggers.forEach((t, i) => {
-      t.addEventListener("click", () => {
-        this.togglePanel(i);
-      });
-    });
-  }
-
-  resizeAccordion() {
-    this.panels.forEach((panel) => {
-      const panelHeight = `${
-        panel.querySelector(".accordion-content").offsetHeight
-      }px`;
-
-      panel.style.height = panel.classList.contains("expanded")
-        ? panelHeight
+  resizePanel() {
+    this.panels.forEach((elem) => {
+      const targetHeight = elem.querySelector("div").offsetHeight + "px";
+      elem.style.height = elem.classList.contains("expanded")
+        ? targetHeight
         : "0";
     });
   }

@@ -1,4 +1,7 @@
 @import "variables";
 @import "functions";
-@import "mixins";
+@import "mixins/media";
+@import "mixins/grid";
+@import "mixins/reset";
+@import "mixins/visually-hidden";
 @import "utils";

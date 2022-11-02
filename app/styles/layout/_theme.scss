@@ -14,6 +14,15 @@ section,
   position: relative;
 }
 
+.section-mg {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.row {
+  margin-bottom: 60px;
+}
+
 // container has max width
 // see box-sizing value
 .container {
@@ -27,74 +36,14 @@ section,
   padding-right: 3%;
 }
 
-// global grid
 .grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat($grid-columns, 1fr);
+  gap: 1rem;
 
-  @include breakpoint-up(map.get($bps, "tablet")) {
-    grid-template-columns: repeat($grid-columns, 1fr);
-    grid-column-gap: $grid-column-gap;
-    row-gap: $grid-row-gap;
+  @include make-cssgrid;
+
+  > div {
+    background-color:var(--color-secondary);
   }
-}
-
-.grid [class*="span"] {
-  margin-bottom: 5px;
-}
-
-.shade {
-  background-color: #c2dce2;
-}
-
-.row {
-  margin: 15px 0;
-}
-
-.span1 {
-  grid-column: span 1;
-}
-
-.span2 {
-  grid-column: span 2;
-}
-
-.span3 {
-  grid-column: span 3;
-}
-
-.span4 {
-  grid-column: span 4;
-}
-
-.span5 {
-  grid-column: span 5;
-}
-
-.span6 {
-  grid-column: span 6;
-}
-
-.span7 {
-  grid-column: span 7;
-}
-
-.span8 {
-  grid-column: span 8;
-}
-
-.span9 {
-  grid-column: span 9;
-}
-
-.span10 {
-  grid-column: span 10;
-}
-
-.span11 {
-  grid-column: span 11;
-}
-
-.span12 {
-  grid-column: span 12;
 }

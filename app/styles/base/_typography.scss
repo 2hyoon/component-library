@@ -1,3 +1,10 @@
+body {
+  font-family: $font-sans;
+  font-size: rem(14px);
+  font-weight: $font-weight-normal;
+  line-height: $line-height-md;
+}
+
 h1,
 h2,
 h3,
@@ -17,15 +24,14 @@ h6,
 
 h1,
 .h1 {
-  font-size: rem(65px);
-  font-weight: $font-weight-bold;
+  font-size: rem(55px);
+  font-weight: $font-weight-xlight;
 }
 
 h2,
 .h2 {
   font-size: rem(45px);
   font-weight: $font-weight-bold;
-  margin-bottom: rem(30px);
 }
 
 h3,
@@ -42,7 +48,7 @@ h4,
 
 h5,
 .h5 {
-  font-size: rem(16px);
+  font-size: rem(14px);
   font-weight: $font-weight-bold;
 }
 
@@ -53,7 +59,7 @@ h6,
 }
 
 p {
-  font-size: rem(16px);
+  font-size: rem(15px);
   font-weight: $font-weight-normal;
   line-height: $line-height-md;
 }
