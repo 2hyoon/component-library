@@ -1,8 +1,11 @@
 body {
-  background: $color-grey-e;
+  // background: $color-grey-e;
+  background-color: $color-white;
   color: $color-grey-2;
   font-family: $font-sans;
   font-size: rem(16px);
   font-weight: $font-weight-normal;
   line-height: $line-height-md;
+  background-image: url('../assets/img/pic/unsplash-01.jpg');
+  background-size: cover;
 }
