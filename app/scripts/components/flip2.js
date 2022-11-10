@@ -19,8 +19,6 @@ export default class Flip2 {
 
     let group, textMesh1, textMesh2, textGeo, materials, materialsBack;
 
-    let firstLetter = true;
-
     let text = "S",
       bevelEnabled = true,
       font = undefined,
@@ -68,28 +66,28 @@ export default class Flip2 {
     start();
     animate();
 
-    // function decimalToHex(d) {
-    //   let hex = Number(d).toString(16);
-    //   hex = "000000".substring(0, 6 - hex.length) + hex;
-    //   return hex.toUpperCase();
-    // }
-
     function start() {
       container = document.createElement("div");
       document.body.appendChild(container);
-      // container = this.elem;
 
-      // permalink = document.getElementById("permalink");
+      // container = this.elem.querySelector('js-container');
 
       // CAMERA
 
-      camera = new THREE.PerspectiveCamera(
-        45,
-        window.innerWidth / window.innerHeight,
-        1,
-        2000
-      );
-      camera.position.set(0, 400, 700);
+      // camera = new THREE.PerspectiveCamera(
+      //   45,
+      //   window.innerWidth / window.innerHeight,
+      //   1,
+      //   2000
+      // );
+      // camera.position.set(0, 400, 700);
+      const fov = 45;
+      const aspect = window.innerWidth / window.innerHeight; // the canvas default
+      const near = 1;
+      const far = 1000;
+      camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+      camera.position.set(0, 210, 600);
+      // camera.position.z = 2;
 
       cameraTarget = new THREE.Vector3(0, 150, 0);
 
@@ -109,33 +107,6 @@ export default class Flip2 {
       const pointLight = new THREE.PointLight(0xffffff, 1.5);
       pointLight.position.set(0, 100, 90);
       scene.add(pointLight);
-
-      // Get text from hash
-
-      // const hash = document.location.hash.slice(1);
-
-      // if (hash.length !== 0) {
-      //   const colorhash = hash.substring(0, 6);
-      //   const fonthash = hash.substring(6, 7);
-      //   const weighthash = hash.substring(7, 8);
-      //   const bevelhash = hash.substring(8, 9);
-      //   const texthash = hash.substring(10);
-
-      //   hex = colorhash;
-      //   pointLight.color.setHex(parseInt(colorhash, 16));
-
-      //   fontName = reverseFontMap[parseInt(fonthash)];
-      //   fontWeight = reverseWeightMap[parseInt(weighthash)];
-
-      //   bevelEnabled = parseInt(bevelhash);
-
-      //   text = decodeURI(texthash);
-
-      //   updatePermalink();
-      // } else {
-      //   pointLight.color.setHSL(Math.random(), 1, 0.5);
-      //   hex = decimalToHex(pointLight.color.getHex());
-      // }
 
       const texture = new THREE.TextureLoader().load( 'assets/img/pic/unsplash-01.jpg' );
       texture.center.set(0.5, 0.5);
@@ -261,18 +232,18 @@ export default class Flip2 {
       return b ? 1 : 0;
     }
 
-    function updatePermalink() {
-      const link =
-        hex +
-        fontMap[fontName] +
-        weightMap[fontWeight] +
-        boolToNum(bevelEnabled) +
-        "#" +
-        encodeURI(text);
+    // function updatePermalink() {
+    //   const link =
+    //     hex +
+    //     fontMap[fontName] +
+    //     weightMap[fontWeight] +
+    //     boolToNum(bevelEnabled) +
+    //     "#" +
+    //     encodeURI(text);
 
-      permalink.href = "#" + link;
-      window.location.hash = link;
-    }
+    //   permalink.href = "#" + link;
+    //   window.location.hash = link;
+    // }
 
     // function onDocumentKeyDown(event) {
     //   if (firstLetter) {
@@ -312,7 +283,7 @@ export default class Flip2 {
     function loadFont() {
       const loader = new FontLoader();
       loader.load(
-        "assets/fonts/" + fontName + "_" + fontWeight + ".typeface.json",
+        "assets/json/" + fontName + "_" + fontWeight + ".typeface.json",
         function (response) {
           font = response;
 

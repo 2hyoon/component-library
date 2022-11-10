@@ -1,3 +1,12 @@
+.flip-container {
+  background-color:rgba(249, 58, 58, 0.3);
+  max-width: 1280px;
+  width: 100%;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+
 canvas {
   background: transparent;
 }
