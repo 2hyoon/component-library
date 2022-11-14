@@ -24,17 +24,17 @@ export default class TSHero {
     const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
     // camera.position.z = 360;
     // camera.position.set(0, 210, 370);
-    camera.position.set(15, 215, 360);
+    camera.position.set(13, 215, 360);
     const cameraTarget = new THREE.Vector3(0, 150, 0);
 
     // light
-    const dirLight = new THREE.DirectionalLight(0xff0000, 0.125);
+    const dirLight = new THREE.DirectionalLight(0xffffff, 1);
     dirLight.position.set(0, 0, 1).normalize();
     scene.add(dirLight);
 
-    const pointLight = new THREE.PointLight(0xffffff, 1.5);
-    pointLight.position.set(0, 100, 90);
-    scene.add(pointLight);
+    // const pointLight = new THREE.PointLight(0xeeeeee, 1.5);
+    // pointLight.position.set(0, 100, 90);
+    // scene.add(pointLight);
 
     // image texture
     const texture = new THREE.TextureLoader().load(
@@ -57,14 +57,16 @@ export default class TSHero {
 
     // material
     const materials = [
-      new THREE.MeshBasicMaterial({ color: 0xff0000, map: texture }), // front
-      new THREE.MeshBasicMaterial({ color: 0xdddddd }), // side
+      new THREE.MeshPhongMaterial({ color: 0xffffff, map: texture }), // front
+      new THREE.MeshPhongMaterial({ color: 0xeeeeee }), // side
     ];
 
     const materialsBack = [
-      new THREE.MeshBasicMaterial({ color: 0xffff00, map: texture2 }), // front
-      new THREE.MeshBasicMaterial({ color: 0xdddddd }), // side
+      new THREE.MeshPhongMaterial({ color: 0xffffff, map: texture2 }), // front
+      new THREE.MeshPhongMaterial({ color: 0xeeeeee }), // side
     ];
+
+    // MeshBasicMaterial
 
     // group
     group = new THREE.Group();
@@ -77,7 +79,7 @@ export default class TSHero {
     const height = 1,
       size = 270,
       hover = 30,
-      curveSegments = 12,
+      curveSegments = 24,
       bevelThickness = 0,
       bevelSize = 0,
       text = "S";
