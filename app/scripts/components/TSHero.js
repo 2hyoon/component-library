@@ -18,12 +18,13 @@ export default class TSHero {
 
     // camera
     const fov = 45;
-    const aspect = window.innerWidth / window.innerHeight; // the canvas default
+    const aspect = 165 / 260; // the canvas default
     const near = 1;
     const far = 1500;
     const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    // camera.position.z = 2;
-    camera.position.set(0, 210, 600);
+    // camera.position.z = 360;
+    // camera.position.set(0, 210, 370);
+    camera.position.set(15, 215, 360);
     const cameraTarget = new THREE.Vector3(0, 150, 0);
 
     // light
@@ -74,15 +75,14 @@ export default class TSHero {
     // load font
     let group, font, textGeo, textMesh1, textMesh2;
     const height = 1,
-      size = 200,
+      size = 270,
       hover = 30,
-      curveSegments = 4,
+      curveSegments = 12,
       bevelThickness = 0,
       bevelSize = 0,
       text = "S";
 
     function createText() {
-      console.log('createtext');
       textGeo = new TextGeometry(text, {
         font: font,
         size: size,
@@ -96,12 +96,12 @@ export default class TSHero {
       textGeo.computeBoundingBox();
 
       const centerOffset =
-        -0.5 * (textGeo.boundingBox.max.x - textGeo.boundingBox.min.x);console.log(centerOffset);
+        -0.5 * (textGeo.boundingBox.max.x - textGeo.boundingBox.min.x);
 
       textMesh1 = new THREE.Mesh(textGeo, materials);
 
       textMesh1.position.x = centerOffset;
-      textMesh1.position.y = hover;
+      textMesh1.position.y = 0;
       textMesh1.position.z = 0;
 
       textMesh1.rotation.x = 0;
@@ -120,7 +120,7 @@ export default class TSHero {
       }), materialsBack );
 
       textMesh2.position.x = centerOffset;
-      textMesh2.position.y = hover;
+      textMesh2.position.y = 0;
       textMesh2.position.z = 1;
 
       textMesh2.rotation.x = 0;
@@ -136,29 +136,55 @@ export default class TSHero {
       createText();
     });
 
-    // const container = document.createElement("div");
-    // document.body.appendChild(container);
-
-    // const renderer = new THREE.WebGLRenderer({ antialias: true });
-    // renderer.setPixelRatio(window.devicePixelRatio);
-    // renderer.setSize(window.innerWidth, window.innerHeight);
-    // renderer.setClearColor(0x0000ff, 0.3);
-    // container.appendChild(renderer.domElement);
-
-    const canvas = this.elem.querySelector(".js-canvas");
+    const canvas = this.elem.querySelector(".js-canvas-1");
     const renderer = new THREE.WebGLRenderer({ canvas });
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(165, 260);
     renderer.setClearColor( 0x0000ff, 0.3 );
 
-    camera.lookAt(cameraTarget);
+    // camera.lookAt(cameraTarget);
     renderer.render(scene, camera);
+
+    // mouse event
+    let targetRotation = 0;
+    let targetRotationOnPointerDown = 0;
+    let pointerX = 0;
+    let pointerXOnPointerDown = 0;
+    let windowHalfX = 200 / 2;
+
+    canvas.addEventListener("pointerdown", onPointerDown);
+
+    function onPointerDown(event) {
+      if (event.isPrimary === false) return;
+
+      pointerXOnPointerDown = event.clientX - windowHalfX;
+      targetRotationOnPointerDown = targetRotation;
+
+      document.addEventListener("pointermove", onPointerMove);
+      document.addEventListener("pointerup", onPointerUp);
+    }
+
+    function onPointerMove(event) {
+      if (event.isPrimary === false) return;
+
+      pointerX = event.clientX - windowHalfX;
+
+      targetRotation =
+        targetRotationOnPointerDown + (pointerX - pointerXOnPointerDown) * 0.02;
+    }
+
+    function onPointerUp(event) {
+      if (event.isPrimary === false) return;
+
+      document.removeEventListener("pointermove", onPointerMove);
+      document.removeEventListener("pointerup", onPointerUp);
+    }
 
     // animation
     function updateFrame() {
-      group.rotation.y += (0 - group.rotation.y) * 0.05;
+      group.rotation.y += (targetRotation - group.rotation.y) * 0.05;
 
-      camera.lookAt(cameraTarget);
+      // camera.lookAt(cameraTarget);
 
       renderer.clear();
       renderer.render(scene, camera);
