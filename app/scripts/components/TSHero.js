@@ -38,10 +38,12 @@ export default class TSHero {
 
     // image texture
     const texture = new THREE.TextureLoader().load(
-      "assets/img/pic/unsplash-01.jpg"
+      "assets/img/pic/face.jpg"
     );
-    texture.center.set(0.5, 0.5);
-    texture.repeat.set(0.005, 0.005);
+    // texture.center.set(0.5, 0.5);
+    texture.wrapS = THREE.RepeatWrapping;
+    texture.wrapT = THREE.RepeatWrapping;
+    texture.repeat.set(0.004, 0.004);
 
     const texture2 = new THREE.TextureLoader().load(
       "assets/img/pic/unsplash-02.jpg"
@@ -50,20 +52,22 @@ export default class TSHero {
     texture2.repeat.set(0.005, 0.005);
 
     // video texture
-    // const video = document.getElementById("tshero-video");
-    // const videoTexture = new THREE.VideoTexture(video);
-    // videoTexture.center.set(0.5, 0.5);
-    // videoTexture.repeat.set(0.005, 0.005);
+    const video = document.getElementById("tshero-video");
+    const videoTexture = new THREE.VideoTexture(video);
+    texture.wrapS = THREE.RepeatWrapping;
+    texture.wrapT = THREE.RepeatWrapping;
+    videoTexture.center.set(0.018, 0.628);
+    videoTexture.repeat.set(0.00070, 0.00063);//smaller number, increase size // ratio 1.14453125
 
     // material
     const materials = [
-      new THREE.MeshPhongMaterial({ color: 0xffffff, map: texture }), // front
+      new THREE.MeshPhongMaterial({ color: 0xffffff, map: videoTexture }),
       new THREE.MeshPhongMaterial({ color: 0xeeeeee }), // side
     ];
 
     const materialsBack = [
-      new THREE.MeshPhongMaterial({ color: 0xffffff, map: texture2 }), // front
-      new THREE.MeshPhongMaterial({ color: 0xeeeeee }), // side
+      new THREE.MeshPhongMaterial({ color: 0xffffff, map: texture }),
+      new THREE.MeshPhongMaterial({ color: 0xff0000 }), // side
     ];
 
     // MeshBasicMaterial
@@ -100,7 +104,7 @@ export default class TSHero {
       const centerOffset =
         -0.5 * (textGeo.boundingBox.max.x - textGeo.boundingBox.min.x);
 
-      textMesh1 = new THREE.Mesh(textGeo, materials);
+      textMesh1 = new THREE.Mesh(textGeo, materialsBack);
 
       textMesh1.position.x = centerOffset;
       textMesh1.position.y = 0;
@@ -119,7 +123,7 @@ export default class TSHero {
         bevelThickness: bevelThickness,
         bevelSize: bevelSize,
         bevelEnabled: false,
-      }), materialsBack );
+      }), materials );
 
       textMesh2.position.x = centerOffset;
       textMesh2.position.y = 0;
@@ -142,7 +146,7 @@ export default class TSHero {
     const renderer = new THREE.WebGLRenderer({ canvas });
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(165, 260);
-    renderer.setClearColor( 0x0000ff, 0.3 );
+    renderer.setClearColor( 0xffffff, 1 );
 
     // camera.lookAt(cameraTarget);
     renderer.render(scene, camera);
