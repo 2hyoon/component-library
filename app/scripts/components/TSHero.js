@@ -56,8 +56,9 @@ export default class TSHero {
     const videoTexture = new THREE.VideoTexture(video);
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
-    videoTexture.center.set(0.018, 0.628);
-    videoTexture.repeat.set(0.00070, 0.00063);//smaller number, increase size // ratio 1.14453125
+    videoTexture.center.set(0.017, 0.628);
+    // videoTexture.repeat.set(0.00070, 0.00063);//smaller number, increase size // ratio 1.14453125
+    videoTexture.repeat.set(0.000715, 0.00063);
 
     // material
     const materials = [
