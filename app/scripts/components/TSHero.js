@@ -17,14 +17,14 @@ export default class TSHero {
     const scene = new THREE.Scene();
 
     // camera
-    const fov = 45;
+    const fov = 20;
     const aspect = 165 / 260; // the canvas default
     const near = 1;
-    const far = 1500;
+    const far = 3000;
     const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
     // camera.position.z = 360;
     // camera.position.set(0, 210, 370);
-    camera.position.set(0, 130, 360);
+    camera.position.set(0, 0, 825);
     // const cameraTarget = new THREE.Vector3(0, 150, 0);
 
     // light
@@ -78,7 +78,6 @@ export default class TSHero {
     let font, textGeo, textMesh1, textMesh2;
     const height = 1,
       size = 270,
-      hover = 30,
       curveSegments = 24,
       bevelThickness = 0,
       bevelSize = 0,
@@ -100,13 +99,13 @@ export default class TSHero {
       const centerOffset =
         -0.5 * (textGeo.boundingBox.max.x - textGeo.boundingBox.min.x) - 11;
 
-        console.log(textGeo.boundingBox);
-        console.log(centerOffset);
+      const centerOffsetY =
+        -0.5 * (textGeo.boundingBox.max.y - textGeo.boundingBox.min.y);
 
       textMesh1 = new THREE.Mesh(textGeo, materialsBack);
 
       textMesh1.position.x = centerOffset;
-      textMesh1.position.y = 0;
+      textMesh1.position.y = centerOffsetY;
       textMesh1.position.z = 0;
 
       textMesh1.rotation.x = 0;
@@ -125,7 +124,7 @@ export default class TSHero {
       }), materials );
 
       textMesh2.position.x = centerOffset;
-      textMesh2.position.y = 0;
+      textMesh2.position.y = centerOffsetY;
       textMesh2.position.z = 1;
 
       textMesh2.rotation.x = 0;
@@ -166,6 +165,12 @@ export default class TSHero {
     let pointerXOnPointerDown = 0;
     let windowHalfX = 165 / 2;
 
+    let targetRotationY = 0;
+    let targetRotationYOnPointerDown = 0;
+    let pointerY = 0;
+    let pointerYOnPointerDown = 0;
+    let windowHalfY = 260/2;
+
     canvas.addEventListener("pointerdown", onPointerDown);
 
     function onPointerDown(event) {
@@ -173,6 +178,9 @@ export default class TSHero {
 
       pointerXOnPointerDown = event.clientX - windowHalfX;
       targetRotationOnPointerDown = targetRotation;
+
+      pointerYOnPointerDown = event.clientY - windowHalfY;
+      targetRotationYOnPointerDown = targetRotationY;
 
       document.addEventListener("pointermove", onPointerMove);
       document.addEventListener("pointerup", onPointerUp);
@@ -182,9 +190,14 @@ export default class TSHero {
       if (event.isPrimary === false) return;
 
       pointerX = event.clientX - windowHalfX;
+      pointerY = event.clientY - windowHalfY;
 
+      // targetRotation!
       targetRotation =
         targetRotationOnPointerDown + (pointerX - pointerXOnPointerDown) * 0.02;
+
+      targetRotationY =
+        targetRotationYOnPointerDown + (pointerY - pointerYOnPointerDown) * 0.02;
     }
 
     function onPointerUp(event) {
@@ -196,7 +209,8 @@ export default class TSHero {
 
     // animation
     function updateFrame() {
-      group.rotation.y += (targetRotation - group.rotation.y) * 0.05;
+      group.rotation.y += (targetRotation - group.rotation.y) * 0.05; // left right
+      // group.rotation.x += (targetRotationY - group.rotation.x) * 0.05; // up down
 
       // camera.lookAt(cameraTarget);
 
