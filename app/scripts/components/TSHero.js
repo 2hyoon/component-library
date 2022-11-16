@@ -24,8 +24,8 @@ export default class TSHero {
     const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
     // camera.position.z = 360;
     // camera.position.set(0, 210, 370);
-    camera.position.set(13, 215, 360);
-    const cameraTarget = new THREE.Vector3(0, 150, 0);
+    camera.position.set(0, 130, 360);
+    // const cameraTarget = new THREE.Vector3(0, 150, 0);
 
     // light
     const dirLight = new THREE.DirectionalLight(0xffffff, 1);
@@ -72,15 +72,10 @@ export default class TSHero {
     ];
 
     // MeshBasicMaterial
-
-    // group
-    group = new THREE.Group();
-    group.position.y = 100;
-
-    scene.add(group);
+    let group = new THREE.Group();
 
     // load font
-    let group, font, textGeo, textMesh1, textMesh2;
+    let font, textGeo, textMesh1, textMesh2;
     const height = 1,
       size = 270,
       hover = 30,
@@ -103,7 +98,10 @@ export default class TSHero {
       textGeo.computeBoundingBox();
 
       const centerOffset =
-        -0.5 * (textGeo.boundingBox.max.x - textGeo.boundingBox.min.x);
+        -0.5 * (textGeo.boundingBox.max.x - textGeo.boundingBox.min.x) - 11;
+
+        console.log(textGeo.boundingBox);
+        console.log(centerOffset);
 
       textMesh1 = new THREE.Mesh(textGeo, materialsBack);
 
@@ -143,13 +141,22 @@ export default class TSHero {
       createText();
     });
 
+
+    // group
+    // group.position.y = 100;
+    group.position.x = 0;
+    group.position.y = 0;
+    group.position.z = 0;
+    scene.add(group);
+
     const canvas = this.elem.querySelector(".js-canvas-1");
     const renderer = new THREE.WebGLRenderer({ canvas });
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(165, 260);
-    renderer.setClearColor( 0xffffff, 1 );
+    renderer.setClearColor( 0xff0000, 0.2 );
 
     // camera.lookAt(cameraTarget);
+    renderer.clear();
     renderer.render(scene, camera);
 
     // mouse event
@@ -157,7 +164,7 @@ export default class TSHero {
     let targetRotationOnPointerDown = 0;
     let pointerX = 0;
     let pointerXOnPointerDown = 0;
-    let windowHalfX = 200 / 2;
+    let windowHalfX = 165 / 2;
 
     canvas.addEventListener("pointerdown", onPointerDown);
 
