@@ -1,18 +1,26 @@
 import * as THREE from "three";
 import { FontLoader } from "three/addons/loaders/FontLoader.js";
 import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
-import Stats from "three/addons/libs/stats.module.js";
 
 export default class TSHero {
   constructor(elem, APP) {
     this.App = APP;
     this.elem = elem;
+    this.canvases = this.elem.querySelectorAll(".js-canvas");
+    this.data = [
+      {
+        // S
+        letter: "S",
+        video_pos_x: 0.017,
+        video_pos_y: 0.628,
+        video_repeat_x: 0.000715,
+        video_repeat_y: 0.00063,
+        direction: 'L',
+      },
+    ];
   }
 
-  init() {
-    // const canvas = this.elem.querySelector(".js-canvas");
-    // const renderer = new THREE.WebGLRenderer({ canvas });
-
+  setCanvas(canvas) {
     // scene
     const scene = new THREE.Scene();
 
@@ -22,75 +30,60 @@ export default class TSHero {
     const near = 1;
     const far = 3000;
     const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    // camera.position.z = 360;
-    // camera.position.set(0, 210, 370);
     camera.position.set(0, 0, 825);
-    // const cameraTarget = new THREE.Vector3(0, 150, 0);
 
     // light
     const dirLight = new THREE.DirectionalLight(0xffffff, 1);
     dirLight.position.set(0, 0, 1).normalize();
     scene.add(dirLight);
 
-    // const pointLight = new THREE.PointLight(0xeeeeee, 1.5);
-    // pointLight.position.set(0, 100, 90);
-    // scene.add(pointLight);
-
-    // image texture
-    const texture = new THREE.TextureLoader().load(
-      "assets/img/pic/face.jpg"
-    );
-    // texture.center.set(0.5, 0.5);
-    texture.wrapS = THREE.RepeatWrapping;
-    texture.wrapT = THREE.RepeatWrapping;
-    texture.repeat.set(0.004, 0.004);
-
-    const texture2 = new THREE.TextureLoader().load(
-      "assets/img/pic/unsplash-02.jpg"
-    );
-    texture2.center.set(0.5, 0.5);
-    texture2.repeat.set(0.005, 0.005);
-
-    // video texture
+    // front texture
     const video = document.getElementById("tshero-video");
-    const videoTexture = new THREE.VideoTexture(video);
-    texture.wrapS = THREE.RepeatWrapping;
-    texture.wrapT = THREE.RepeatWrapping;
-    videoTexture.center.set(0.017, 0.628);
-    // videoTexture.repeat.set(0.00070, 0.00063);//smaller number, increase size // ratio 1.14453125
-    videoTexture.repeat.set(0.000715, 0.00063);
+    const texture_front = new THREE.VideoTexture(video);
+    texture_front.wrapS = THREE.RepeatWrapping;
+    texture_front.wrapT = THREE.RepeatWrapping;
+    texture_front.center.set(0.017, 0.628);
+    texture_front.repeat.set(0.000715, 0.00063); //smaller number, increase size // ratio 1.14453125
 
-    // material
-    const materials = [
-      new THREE.MeshPhongMaterial({ color: 0xffffff, map: videoTexture }),
+    // front materials
+    const materials_front = [
+      new THREE.MeshPhongMaterial({ color: 0xffffff, map: texture_front }),
       new THREE.MeshPhongMaterial({ color: 0xeeeeee }), // side
     ];
 
-    const materialsBack = [
-      new THREE.MeshPhongMaterial({ color: 0xffffff, map: texture }),
+    // back texture
+    const texture_back = new THREE.TextureLoader().load(
+      "assets/img/pic/face.jpg"
+    );
+    texture_back.wrapS = THREE.RepeatWrapping;
+    texture_back.wrapT = THREE.RepeatWrapping;
+    texture_back.repeat.set(0.004, 0.004);
+    // texture_back.center.set(0.5, 0.5);
+
+    // back materials
+    const materials_back = [
+      new THREE.MeshPhongMaterial({ color: 0xffffff, map: texture_back }),
       new THREE.MeshPhongMaterial({ color: 0xff0000 }), // side
     ];
 
-    // MeshBasicMaterial
+    // group
     let group = new THREE.Group();
 
-    // load font
-    let font, textGeo, textMesh1, textMesh2;
-    const height = 1,
-      size = 270,
-      curveSegments = 24,
-      bevelThickness = 0,
-      bevelSize = 0,
-      text = "S";
+    // font
+    let font;
 
     function createText() {
-      textGeo = new TextGeometry(text, {
+      const size = 270;
+      const curveSegments = 24;
+      const text = "S";
+
+      const textGeo = new TextGeometry(text, {
         font: font,
         size: size,
-        height: height,
+        height: 1,
         curveSegments: curveSegments,
-        bevelThickness: bevelThickness,
-        bevelSize: bevelSize,
+        bevelThickness: 0,
+        bevelSize: 0,
         bevelEnabled: false,
       });
 
@@ -102,60 +95,59 @@ export default class TSHero {
       const centerOffsetY =
         -0.5 * (textGeo.boundingBox.max.y - textGeo.boundingBox.min.y);
 
-      textMesh1 = new THREE.Mesh(textGeo, materialsBack);
+      // back
+      const mesh_back = new THREE.Mesh(textGeo, materials_back);
 
-      textMesh1.position.x = centerOffset;
-      textMesh1.position.y = centerOffsetY;
-      textMesh1.position.z = 0;
+      mesh_back.position.x = centerOffset;
+      mesh_back.position.y = centerOffsetY;
+      mesh_back.position.z = 0;
+      mesh_back.rotation.x = 0;
+      mesh_back.rotation.y = Math.PI * 2;
 
-      textMesh1.rotation.x = 0;
-      textMesh1.rotation.y = Math.PI * 2;
+      // front
+      const mesh_front = new THREE.Mesh(
+        new TextGeometry(text, {
+          font: font,
+          size: size,
+          height: 20,
+          curveSegments: curveSegments,
+          bevelThickness: 0,
+          bevelSize: 0,
+          bevelEnabled: false,
+        }),
+        materials_front
+      );
 
-      textMesh2 = new THREE.Mesh(new TextGeometry(text, {
-        font: font,
+      mesh_front.position.x = centerOffset;
+      mesh_front.position.y = centerOffsetY;
+      mesh_front.position.z = 1;
+      mesh_front.rotation.x = 0;
+      mesh_front.rotation.y = Math.PI * 2;
 
-        size: size,
-        height: 20,
-        curveSegments: curveSegments,
-
-        bevelThickness: bevelThickness,
-        bevelSize: bevelSize,
-        bevelEnabled: false,
-      }), materials );
-
-      textMesh2.position.x = centerOffset;
-      textMesh2.position.y = centerOffsetY;
-      textMesh2.position.z = 1;
-
-      textMesh2.rotation.x = 0;
-      textMesh2.rotation.y = Math.PI * 2;
-
-      group.add(textMesh1);
-      group.add(textMesh2);
+      group.add(mesh_back);
+      group.add(mesh_front);
     }
 
+    // font loader
     const loader = new FontLoader();
+
     loader.load("assets/json/ttc_bold.typeface.json", (response) => {
       font = response;
       createText();
     });
 
-
     // group
-    // group.position.y = 100;
     group.position.x = 0;
     group.position.y = 0;
     group.position.z = 0;
     scene.add(group);
 
-    const canvas = this.elem.querySelector(".js-canvas-1");
+    // render
+    // const canvas = this.elem.querySelector(".js-canvas-1");
     const renderer = new THREE.WebGLRenderer({ canvas });
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(165, 260);
-    renderer.setClearColor( 0xff0000, 0.2 );
-
-    // camera.lookAt(cameraTarget);
-    renderer.clear();
+    renderer.setClearColor(0xff0000, 0.2);
     renderer.render(scene, camera);
 
     // mouse event
@@ -169,7 +161,7 @@ export default class TSHero {
     let targetRotationYOnPointerDown = 0;
     let pointerY = 0;
     let pointerYOnPointerDown = 0;
-    let windowHalfY = 260/2;
+    let windowHalfY = 260 / 2;
 
     canvas.addEventListener("pointerdown", onPointerDown);
 
@@ -192,12 +184,13 @@ export default class TSHero {
       pointerX = event.clientX - windowHalfX;
       pointerY = event.clientY - windowHalfY;
 
-      // targetRotation!
+      // target rotation
       targetRotation =
         targetRotationOnPointerDown + (pointerX - pointerXOnPointerDown) * 0.02;
 
       targetRotationY =
-        targetRotationYOnPointerDown + (pointerY - pointerYOnPointerDown) * 0.02;
+        targetRotationYOnPointerDown +
+        (pointerY - pointerYOnPointerDown) * 0.02;
     }
 
     function onPointerUp(event) {
@@ -212,13 +205,19 @@ export default class TSHero {
       group.rotation.y += (targetRotation - group.rotation.y) * 0.05; // left right
       // group.rotation.x += (targetRotationY - group.rotation.x) * 0.05; // up down
 
-      // camera.lookAt(cameraTarget);
-
       renderer.clear();
       renderer.render(scene, camera);
       requestAnimationFrame(updateFrame);
     }
 
     requestAnimationFrame(updateFrame);
+  }
+
+  init() {
+    // this.setCanvas();
+
+    this.canvases.forEach((canvas) => {
+      this.setCanvas(canvas);
+    });
   }
 }
