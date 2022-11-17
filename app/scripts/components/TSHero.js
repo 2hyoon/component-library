@@ -7,30 +7,52 @@ export default class TSHero {
     this.App = APP;
     this.elem = elem;
     this.canvases = this.elem.querySelectorAll(".js-canvas");
-    this.data = [
+    this.data = [ //repeat //smaller number, increase size // ratio 1.14453125
       {
         // S
         letter: "S",
-        video_pos_x: 0.017,
-        video_pos_y: 0.628,
+        font_size: 270,
+        height: 18,
+        video_center_x: 0.017,
+        video_center_y: 0.628,
         video_repeat_x: 0.000715,
         video_repeat_y: 0.00063,
+        group_x: -3,
+        group_y: 0,
+        direction: 'L',
+      },
+      {
+        // c
+        letter: "c",
+        font_size: 363,
+        height: 28,
+        video_center_x: 0.146,
+        video_center_y: 0.628,
+        video_repeat_x: 0.000536,
+        video_repeat_y: 0.000466,
+        group_x: -3,
+        group_y: 3,
         direction: 'L',
       },
     ];
   }
 
   setCanvas(canvas) {
+    const w = canvas.offsetWidth;
+    const h = canvas.offsetHeight;
+    const i = parseInt(canvas.dataset.id);
+    console.log(w, h);
+
     // scene
     const scene = new THREE.Scene();
 
     // camera
     const fov = 20;
-    const aspect = 165 / 260; // the canvas default
+    const aspect = w / h; // the canvas default
     const near = 1;
     const far = 3000;
     const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    camera.position.set(0, 0, 825);
+    camera.position.set(0, 0, 715);//825
 
     // light
     const dirLight = new THREE.DirectionalLight(0xffffff, 1);
@@ -42,8 +64,8 @@ export default class TSHero {
     const texture_front = new THREE.VideoTexture(video);
     texture_front.wrapS = THREE.RepeatWrapping;
     texture_front.wrapT = THREE.RepeatWrapping;
-    texture_front.center.set(0.017, 0.628);
-    texture_front.repeat.set(0.000715, 0.00063); //smaller number, increase size // ratio 1.14453125
+    texture_front.center.set(this.data[i].video_center_x, this.data[i].video_center_y);
+    texture_front.repeat.set(this.data[i].video_repeat_x, this.data[i].video_repeat_y); //smaller number, increase size // ratio 1.14453125
 
     // front materials
     const materials_front = [
@@ -63,7 +85,7 @@ export default class TSHero {
     // back materials
     const materials_back = [
       new THREE.MeshPhongMaterial({ color: 0xffffff, map: texture_back }),
-      new THREE.MeshPhongMaterial({ color: 0xff0000 }), // side
+      new THREE.MeshPhongMaterial({ color: 0xeeeeee }), // side
     ];
 
     // group
@@ -71,11 +93,12 @@ export default class TSHero {
 
     // font
     let font;
+    const text = this.data[i].letter;
+    const size = this.data[i].font_size;
+    const height = this.data[i].height;
 
     function createText() {
-      const size = 270;
       const curveSegments = 24;
-      const text = "S";
 
       const textGeo = new TextGeometry(text, {
         font: font,
@@ -109,7 +132,7 @@ export default class TSHero {
         new TextGeometry(text, {
           font: font,
           size: size,
-          height: 20,
+          height: height,
           curveSegments: curveSegments,
           bevelThickness: 0,
           bevelSize: 0,
@@ -137,8 +160,8 @@ export default class TSHero {
     });
 
     // group
-    group.position.x = 0;
-    group.position.y = 0;
+    group.position.x = this.data[i].group_x;
+    group.position.y = this.data[i].group_y;
     group.position.z = 0;
     scene.add(group);
 
@@ -146,7 +169,7 @@ export default class TSHero {
     // const canvas = this.elem.querySelector(".js-canvas-1");
     const renderer = new THREE.WebGLRenderer({ canvas });
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(165, 260);
+    renderer.setSize(w, h);
     renderer.setClearColor(0xff0000, 0.2);
     renderer.render(scene, camera);
 
@@ -155,13 +178,13 @@ export default class TSHero {
     let targetRotationOnPointerDown = 0;
     let pointerX = 0;
     let pointerXOnPointerDown = 0;
-    let windowHalfX = 165 / 2;
+    let windowHalfX = w / 2;
 
     let targetRotationY = 0;
     let targetRotationYOnPointerDown = 0;
     let pointerY = 0;
     let pointerYOnPointerDown = 0;
-    let windowHalfY = 260 / 2;
+    let windowHalfY = h / 2;
 
     canvas.addEventListener("pointerdown", onPointerDown);
 
@@ -203,7 +226,7 @@ export default class TSHero {
     // animation
     function updateFrame() {
       group.rotation.y += (targetRotation - group.rotation.y) * 0.05; // left right
-      // group.rotation.x += (targetRotationY - group.rotation.x) * 0.05; // up down
+      group.rotation.x += (targetRotationY - group.rotation.x) * 0.05; // up down
 
       renderer.clear();
       renderer.render(scene, camera);
