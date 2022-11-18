@@ -7,9 +7,9 @@ export default class TSHero {
     this.App = APP;
     this.elem = elem;
     this.canvases = this.elem.querySelectorAll(".js-canvas");
-    this.data = [ //repeat //smaller number, increase size // ratio 1.14453125
+    this.data = [
+      //repeat //smaller number, increase size // ratio 1.14453125
       {
-        // S
         letter: "S",
         font_size: 270,
         height: 18,
@@ -19,10 +19,9 @@ export default class TSHero {
         video_repeat_y: 0.00063,
         group_x: -3,
         group_y: 0,
-        direction: 'L',
+        direction: "L",
       },
       {
-        // c
         letter: "c",
         font_size: 363,
         height: 28,
@@ -32,7 +31,79 @@ export default class TSHero {
         video_repeat_y: 0.000466,
         group_x: -3,
         group_y: 3,
-        direction: 'L',
+        direction: "B",
+      },
+      {
+        letter: "i",
+        font_size: 363,
+        height: 28,
+        video_center_x: 0.2697,
+        video_center_y: 0.628,
+        video_repeat_x: 0.000536,
+        video_repeat_y: 0.000466,
+        group_x: -10,
+        group_y: 49,
+        direction: "R",
+      },
+      {
+        letter: "e",
+        font_size: 363,
+        height: 28,
+        video_center_x: 0.3195,
+        video_center_y: 0.628,
+        video_repeat_x: 0.000536,
+        video_repeat_y: 0.000466,
+        group_x: -3,
+        group_y: 3,
+        direction: "T",
+      },
+      {
+        letter: "n",
+        font_size: 363,
+        height: 28,
+        video_center_x: 0.4465,
+        video_center_y: 0.628,
+        video_repeat_x: 0.000536,
+        video_repeat_y: 0.000466,
+        group_x: -15,
+        group_y: 3,
+        direction: "L",
+      },
+      {
+        letter: "c",
+        font_size: 363,
+        height: 28,
+        video_center_x: 0.5775,
+        video_center_y: 0.628,
+        video_repeat_x: 0.000536,
+        video_repeat_y: 0.000466,
+        group_x: -3,
+        group_y: 3,
+        direction: "R",
+      },
+      {
+        letter: "e",
+        font_size: 363,
+        height: 28,
+        video_center_x: 0.7013,
+        video_center_y: 0.628,
+        video_repeat_x: 0.000536,
+        video_repeat_y: 0.000466,
+        group_x: -3,
+        group_y: 3,
+        direction: "L",
+      },
+      {
+        letter: "s",
+        font_size: 363,
+        height: 28,
+        video_center_x: 0.8278,
+        video_center_y: 0.628,
+        video_repeat_x: 0.000536,
+        video_repeat_y: 0.000466,
+        group_x: -3,
+        group_y: 3,
+        direction: "T",
       },
     ];
   }
@@ -52,7 +123,7 @@ export default class TSHero {
     const near = 1;
     const far = 3000;
     const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    camera.position.set(0, 0, 715);//825
+    camera.position.set(0, 0, 715); //825
 
     // light
     const dirLight = new THREE.DirectionalLight(0xffffff, 1);
@@ -64,8 +135,14 @@ export default class TSHero {
     const texture_front = new THREE.VideoTexture(video);
     texture_front.wrapS = THREE.RepeatWrapping;
     texture_front.wrapT = THREE.RepeatWrapping;
-    texture_front.center.set(this.data[i].video_center_x, this.data[i].video_center_y);
-    texture_front.repeat.set(this.data[i].video_repeat_x, this.data[i].video_repeat_y); //smaller number, increase size // ratio 1.14453125
+    texture_front.center.set(
+      this.data[i].video_center_x,
+      this.data[i].video_center_y
+    );
+    texture_front.repeat.set(
+      this.data[i].video_repeat_x,
+      this.data[i].video_repeat_y
+    ); //smaller number, increase size // ratio 1.14453125
 
     // front materials
     const materials_front = [
@@ -95,7 +172,7 @@ export default class TSHero {
     let font;
     const text = this.data[i].letter;
     const size = this.data[i].font_size;
-    const height = this.data[i].height;
+    const height = this.data[i].height / 2;
 
     function createText() {
       const curveSegments = 24;
@@ -103,7 +180,7 @@ export default class TSHero {
       const textGeo = new TextGeometry(text, {
         font: font,
         size: size,
-        height: 1,
+        height: height,
         curveSegments: curveSegments,
         bevelThickness: 0,
         bevelSize: 0,
@@ -113,7 +190,7 @@ export default class TSHero {
       textGeo.computeBoundingBox();
 
       const centerOffset =
-        -0.5 * (textGeo.boundingBox.max.x - textGeo.boundingBox.min.x) - 11;
+        -0.5 * (textGeo.boundingBox.max.x - textGeo.boundingBox.min.x) - height;
 
       const centerOffsetY =
         -0.5 * (textGeo.boundingBox.max.y - textGeo.boundingBox.min.y);
@@ -143,7 +220,7 @@ export default class TSHero {
 
       mesh_front.position.x = centerOffset;
       mesh_front.position.y = centerOffsetY;
-      mesh_front.position.z = 1;
+      mesh_front.position.z = height;
       mesh_front.rotation.x = 0;
       mesh_front.rotation.y = Math.PI * 2;
 
@@ -170,7 +247,7 @@ export default class TSHero {
     const renderer = new THREE.WebGLRenderer({ canvas });
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(w, h);
-    renderer.setClearColor(0xff0000, 0.2);
+    renderer.setClearColor(0xffffff, 1);
     renderer.render(scene, camera);
 
     // mouse event
@@ -223,10 +300,14 @@ export default class TSHero {
       document.removeEventListener("pointerup", onPointerUp);
     }
 
+    const direction = this.data[i].direction;
     // animation
     function updateFrame() {
-      group.rotation.y += (targetRotation - group.rotation.y) * 0.05; // left right
-      group.rotation.x += (targetRotationY - group.rotation.x) * 0.05; // up down
+      if (direction === "L" || direction === "R") {
+        group.rotation.y += (targetRotation - group.rotation.y) * 0.05; // left right
+      } else {
+        group.rotation.x += (targetRotationY - group.rotation.x) * 0.05; // up down
+      }
 
       renderer.clear();
       renderer.render(scene, camera);
