@@ -20,6 +20,7 @@ export default class TSHero {
         group_x: -3,
         group_y: 0,
         direction: "L",
+        line_x: false,
       },
       {
         letter: "c",
@@ -32,6 +33,7 @@ export default class TSHero {
         group_x: -3,
         group_y: 3,
         direction: "B",
+        line_x: -87,
       },
       {
         letter: "i",
@@ -44,6 +46,7 @@ export default class TSHero {
         group_x: -10,
         group_y: 49,
         direction: "R",
+        line_x: false,
       },
       {
         letter: "e",
@@ -56,6 +59,7 @@ export default class TSHero {
         group_x: -3,
         group_y: 3,
         direction: "T",
+        line_x: -107,
       },
       {
         letter: "n",
@@ -68,6 +72,7 @@ export default class TSHero {
         group_x: -15,
         group_y: 3,
         direction: "L",
+        line_x: -33,
       },
       {
         letter: "c",
@@ -80,6 +85,7 @@ export default class TSHero {
         group_x: -3,
         group_y: 3,
         direction: "R",
+        line_x: 37,
       },
       {
         letter: "e",
@@ -92,6 +98,7 @@ export default class TSHero {
         group_x: -3,
         group_y: 3,
         direction: "L",
+        line_x: false,
       },
       {
         letter: "s",
@@ -104,6 +111,7 @@ export default class TSHero {
         group_x: -3,
         group_y: 3,
         direction: "T",
+        line_x: -96,
       },
     ];
   }
@@ -112,7 +120,7 @@ export default class TSHero {
     const w = canvas.offsetWidth;
     const h = canvas.offsetHeight;
     const i = parseInt(canvas.dataset.id);
-    console.log(w, h);
+    // console.log(w, h);
 
     // scene
     const scene = new THREE.Scene();
@@ -126,9 +134,25 @@ export default class TSHero {
     camera.position.set(0, 0, 715); //825
 
     // light
-    const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+    const dirLight = new THREE.DirectionalLight(0xeeeeee, 0.9);
     dirLight.position.set(0, 0, 1).normalize();
     scene.add(dirLight);
+
+    // line
+    if (this.data[i].line_x !== false) {
+      const line_material = new THREE.LineBasicMaterial({
+        color: 0xdddddd,
+        linewidth: 30,
+        linecap: 'round', //ignored by WebGLRenderer
+        linejoin:  'round' //ignored by WebGLRenderer
+      });
+      const points = [];
+      points.push(new THREE.Vector3(this.data[i].line_x, h * -1, 0));
+      points.push(new THREE.Vector3(this.data[i].line_x, h, 0));
+      const line_geometry = new THREE.BufferGeometry().setFromPoints(points);
+      const line = new THREE.Line(line_geometry, line_material);
+      scene.add(line);
+    }
 
     // front texture
     const video = document.getElementById("tshero-video");
@@ -243,7 +267,6 @@ export default class TSHero {
     scene.add(group);
 
     // render
-    // const canvas = this.elem.querySelector(".js-canvas-1");
     const renderer = new THREE.WebGLRenderer({ canvas });
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(w, h);
@@ -317,11 +340,25 @@ export default class TSHero {
     requestAnimationFrame(updateFrame);
   }
 
-  init() {
-    // this.setCanvas();
+  resizeHandler() {
+    const video = document.getElementById("tshero-video");
 
     this.canvases.forEach((canvas) => {
+      if (video.offsetWidth < 1280) {
+        canvas.style.transform = `scale(${video.offsetWidth / 1280})`;
+      } else {
+        canvas.style.transform = `scale(1)`;
+      }
+    });
+  }
+
+  init() {
+    this.canvases.forEach((canvas) => {
       this.setCanvas(canvas);
+    });
+
+    window.addEventListener("resize", () => {
+      this.resizeHandler();
     });
   }
 }
