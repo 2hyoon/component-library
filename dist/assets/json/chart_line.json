@@ -1,0 +1,1127 @@
+[
+  {
+      "YEAR": "2014",
+      "SECTOR": "All Sectors",
+      "YOY_GROWTH": "-0.155270"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "Ai / ML",
+      "YOY_GROWTH": "-0.011858"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "BioTech",
+      "YOY_GROWTH": "-0.285714"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "Business Operations",
+      "YOY_GROWTH": "-0.031746"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "Consumer",
+      "YOY_GROWTH": "-0.206434"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "Cybersecurity",
+      "YOY_GROWTH": "-0.355932"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "DevOps",
+      "YOY_GROWTH": "-0.280000"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "EdTech",
+      "YOY_GROWTH": "0.210059"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "Fintech",
+      "YOY_GROWTH": "-0.208197"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "FoodTech",
+      "YOY_GROWTH": "-0.163265"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "Future of Work",
+      "YOY_GROWTH": "-0.012500"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "GTM Tech",
+      "YOY_GROWTH": "-0.229695"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "Gaming",
+      "YOY_GROWTH": "-0.188679"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "GovTech",
+      "YOY_GROWTH": "0.017544"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "HR Tech",
+      "YOY_GROWTH": "0.014019"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "HealthTech",
+      "YOY_GROWTH": "-0.106061"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "IT Infrastructure",
+      "YOY_GROWTH": "-0.192193"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "LegalTech",
+      "YOY_GROWTH": "-0.190317"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "Logistics / Supply Chain",
+      "YOY_GROWTH": "-0.213368"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "Marketplace",
+      "YOY_GROWTH": "0.148515"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "Other Vertical SaaS",
+      "YOY_GROWTH": "-0.094415"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "PropertyTech",
+      "YOY_GROWTH": "0.043011"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "SpaceTech",
+      "YOY_GROWTH": "-0.533333"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "Web3",
+      "YOY_GROWTH": "-0.230769"
+  },
+  {
+      "YEAR": "2014",
+      "SECTOR": "eCommerce",
+      "YOY_GROWTH": "-0.141985"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "All Sectors",
+      "YOY_GROWTH": "-0.159835"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "Ai / ML",
+      "YOY_GROWTH": "0.268000"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "BioTech",
+      "YOY_GROWTH": "0.040000"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "Business Operations",
+      "YOY_GROWTH": "-0.213115"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "Consumer",
+      "YOY_GROWTH": "-0.282095"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "Cybersecurity",
+      "YOY_GROWTH": "0.410526"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "DevOps",
+      "YOY_GROWTH": "0.097222"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "EdTech",
+      "YOY_GROWTH": "-0.237164"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "Fintech",
+      "YOY_GROWTH": "-0.142857"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "FoodTech",
+      "YOY_GROWTH": "0.073171"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "Future of Work",
+      "YOY_GROWTH": "-0.253165"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "GTM Tech",
+      "YOY_GROWTH": "-0.237232"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "Gaming",
+      "YOY_GROWTH": "-0.186047"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "GovTech",
+      "YOY_GROWTH": "-0.206897"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "HR Tech",
+      "YOY_GROWTH": "-0.018433"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "HealthTech",
+      "YOY_GROWTH": "-0.171913"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "IT Infrastructure",
+      "YOY_GROWTH": "-0.062500"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "LegalTech",
+      "YOY_GROWTH": "-0.167010"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "Logistics / Supply Chain",
+      "YOY_GROWTH": "0.065359"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "Marketplace",
+      "YOY_GROWTH": "-0.344828"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "Other Vertical SaaS",
+      "YOY_GROWTH": "-0.111601"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "PropertyTech",
+      "YOY_GROWTH": "-0.216495"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "SpaceTech",
+      "YOY_GROWTH": "3.142857"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "Web3",
+      "YOY_GROWTH": "-0.223077"
+  },
+  {
+      "YEAR": "2015",
+      "SECTOR": "eCommerce",
+      "YOY_GROWTH": "-0.201068"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "All Sectors",
+      "YOY_GROWTH": "0.386622"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "Ai / ML",
+      "YOY_GROWTH": "0.690852"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "BioTech",
+      "YOY_GROWTH": "0.923077"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "Business Operations",
+      "YOY_GROWTH": "0.500000"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "Consumer",
+      "YOY_GROWTH": "0.456471"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "Cybersecurity",
+      "YOY_GROWTH": "0.201493"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "DevOps",
+      "YOY_GROWTH": "0.253165"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "EdTech",
+      "YOY_GROWTH": "0.086538"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "Fintech",
+      "YOY_GROWTH": "0.405797"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "FoodTech",
+      "YOY_GROWTH": "0.375000"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "Future of Work",
+      "YOY_GROWTH": "0.525424"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "GTM Tech",
+      "YOY_GROWTH": "0.412527"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "Gaming",
+      "YOY_GROWTH": "0.285714"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "GovTech",
+      "YOY_GROWTH": "0.543478"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "HR Tech",
+      "YOY_GROWTH": "0.286385"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "HealthTech",
+      "YOY_GROWTH": "0.722222"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "IT Infrastructure",
+      "YOY_GROWTH": "0.407283"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "LegalTech",
+      "YOY_GROWTH": "0.507426"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "Logistics / Supply Chain",
+      "YOY_GROWTH": "0.386503"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "Marketplace",
+      "YOY_GROWTH": "0.710526"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "Other Vertical SaaS",
+      "YOY_GROWTH": "0.408264"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "PropertyTech",
+      "YOY_GROWTH": "0.631579"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "SpaceTech",
+      "YOY_GROWTH": "-0.103448"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "Web3",
+      "YOY_GROWTH": "0.277228"
+  },
+  {
+      "YEAR": "2016",
+      "SECTOR": "eCommerce",
+      "YOY_GROWTH": "0.269488"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "All Sectors",
+      "YOY_GROWTH": "0.562735"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "Ai / ML",
+      "YOY_GROWTH": "0.833955"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "BioTech",
+      "YOY_GROWTH": "0.360000"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "Business Operations",
+      "YOY_GROWTH": "0.236111"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "Consumer",
+      "YOY_GROWTH": "0.319871"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "Cybersecurity",
+      "YOY_GROWTH": "0.847826"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "DevOps",
+      "YOY_GROWTH": "0.535354"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "EdTech",
+      "YOY_GROWTH": "0.182891"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "Fintech",
+      "YOY_GROWTH": "0.670103"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "FoodTech",
+      "YOY_GROWTH": "0.123967"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "Future of Work",
+      "YOY_GROWTH": "0.444444"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "GTM Tech",
+      "YOY_GROWTH": "0.423547"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "Gaming",
+      "YOY_GROWTH": "0.311111"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "GovTech",
+      "YOY_GROWTH": "0.746479"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "HR Tech",
+      "YOY_GROWTH": "0.715328"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "HealthTech",
+      "YOY_GROWTH": "0.417657"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "IT Infrastructure",
+      "YOY_GROWTH": "0.632564"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "LegalTech",
+      "YOY_GROWTH": "0.742200"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "Logistics / Supply Chain",
+      "YOY_GROWTH": "0.409292"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "Marketplace",
+      "YOY_GROWTH": "0.138462"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "Other Vertical SaaS",
+      "YOY_GROWTH": "0.504695"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "PropertyTech",
+      "YOY_GROWTH": "0.512097"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "SpaceTech",
+      "YOY_GROWTH": "-0.346154"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "Web3",
+      "YOY_GROWTH": "0.875969"
+  },
+  {
+      "YEAR": "2017",
+      "SECTOR": "eCommerce",
+      "YOY_GROWTH": "0.349123"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "All Sectors",
+      "YOY_GROWTH": "0.194704"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "Ai / ML",
+      "YOY_GROWTH": "0.366226"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "BioTech",
+      "YOY_GROWTH": "0.404412"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "Business Operations",
+      "YOY_GROWTH": "0.426966"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "Consumer",
+      "YOY_GROWTH": "0.308446"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "Cybersecurity",
+      "YOY_GROWTH": "-0.042017"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "DevOps",
+      "YOY_GROWTH": "0.296053"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "EdTech",
+      "YOY_GROWTH": "0.341646"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "Fintech",
+      "YOY_GROWTH": "0.366255"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "FoodTech",
+      "YOY_GROWTH": "0.536765"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "Future of Work",
+      "YOY_GROWTH": "0.292308"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "GTM Tech",
+      "YOY_GROWTH": "0.186896"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "Gaming",
+      "YOY_GROWTH": "0.644068"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "GovTech",
+      "YOY_GROWTH": "-0.209677"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "HR Tech",
+      "YOY_GROWTH": "0.172340"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "HealthTech",
+      "YOY_GROWTH": "0.227545"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "IT Infrastructure",
+      "YOY_GROWTH": "0.130944"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "LegalTech",
+      "YOY_GROWTH": "0.104618"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "Logistics / Supply Chain",
+      "YOY_GROWTH": "0.262166"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "Marketplace",
+      "YOY_GROWTH": "0.243243"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "Other Vertical SaaS",
+      "YOY_GROWTH": "0.201248"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "PropertyTech",
+      "YOY_GROWTH": "0.418667"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "SpaceTech",
+      "YOY_GROWTH": "1.941176"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "Web3",
+      "YOY_GROWTH": "0.603306"
+  },
+  {
+      "YEAR": "2018",
+      "SECTOR": "eCommerce",
+      "YOY_GROWTH": "0.172952"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "All Sectors",
+      "YOY_GROWTH": "0.621311"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "Ai / ML",
+      "YOY_GROWTH": "0.521221"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "BioTech",
+      "YOY_GROWTH": "0.753927"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "Business Operations",
+      "YOY_GROWTH": "1.000000"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "Consumer",
+      "YOY_GROWTH": "0.495790"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "Cybersecurity",
+      "YOY_GROWTH": "0.517544"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "DevOps",
+      "YOY_GROWTH": "0.548223"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "EdTech",
+      "YOY_GROWTH": "0.310409"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "Fintech",
+      "YOY_GROWTH": "0.750000"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "FoodTech",
+      "YOY_GROWTH": "0.320574"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "Future of Work",
+      "YOY_GROWTH": "0.619048"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "GTM Tech",
+      "YOY_GROWTH": "0.553846"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "Gaming",
+      "YOY_GROWTH": "0.876289"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "GovTech",
+      "YOY_GROWTH": "0.551020"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "HR Tech",
+      "YOY_GROWTH": "0.537205"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "HealthTech",
+      "YOY_GROWTH": "0.670244"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "IT Infrastructure",
+      "YOY_GROWTH": "0.609961"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "LegalTech",
+      "YOY_GROWTH": "0.527304"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "Logistics / Supply Chain",
+      "YOY_GROWTH": "0.573383"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "Marketplace",
+      "YOY_GROWTH": "0.260870"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "Other Vertical SaaS",
+      "YOY_GROWTH": "0.611688"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "PropertyTech",
+      "YOY_GROWTH": "0.242481"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "SpaceTech",
+      "YOY_GROWTH": "0.340000"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "Web3",
+      "YOY_GROWTH": "0.847938"
+  },
+  {
+      "YEAR": "2019",
+      "SECTOR": "eCommerce",
+      "YOY_GROWTH": "0.553215"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "All Sectors",
+      "YOY_GROWTH": "-0.159661"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "Ai / ML",
+      "YOY_GROWTH": "-0.106216"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "BioTech",
+      "YOY_GROWTH": "-0.271642"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "Business Operations",
+      "YOY_GROWTH": "-0.200787"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "Consumer",
+      "YOY_GROWTH": "-0.171982"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "Cybersecurity",
+      "YOY_GROWTH": "-0.083237"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "DevOps",
+      "YOY_GROWTH": "0.242623"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "EdTech",
+      "YOY_GROWTH": "-0.133333"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "Fintech",
+      "YOY_GROWTH": "-0.200947"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "FoodTech",
+      "YOY_GROWTH": "-0.007246"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "Future of Work",
+      "YOY_GROWTH": "0.220588"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "GTM Tech",
+      "YOY_GROWTH": "-0.314502"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "Gaming",
+      "YOY_GROWTH": "0.164835"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "GovTech",
+      "YOY_GROWTH": "-0.190789"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "HR Tech",
+      "YOY_GROWTH": "-0.214876"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "HealthTech",
+      "YOY_GROWTH": "-0.145444"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "IT Infrastructure",
+      "YOY_GROWTH": "-0.188965"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "LegalTech",
+      "YOY_GROWTH": "-0.229609"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "Logistics / Supply Chain",
+      "YOY_GROWTH": "-0.256917"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "Marketplace",
+      "YOY_GROWTH": "0.163793"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "Other Vertical SaaS",
+      "YOY_GROWTH": "-0.049960"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "PropertyTech",
+      "YOY_GROWTH": "-0.139183"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "SpaceTech",
+      "YOY_GROWTH": "-0.447761"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "Web3",
+      "YOY_GROWTH": "-0.216179"
+  },
+  {
+      "YEAR": "2020",
+      "SECTOR": "eCommerce",
+      "YOY_GROWTH": "-0.198430"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "All Sectors",
+      "YOY_GROWTH": "0.346846"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "Ai / ML",
+      "YOY_GROWTH": "0.363089"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "BioTech",
+      "YOY_GROWTH": "1.086066"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "Business Operations",
+      "YOY_GROWTH": "0.029557"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "Consumer",
+      "YOY_GROWTH": "0.282477"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "Cybersecurity",
+      "YOY_GROWTH": "-0.064313"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "DevOps",
+      "YOY_GROWTH": "0.137203"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "EdTech",
+      "YOY_GROWTH": "0.252046"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "Fintech",
+      "YOY_GROWTH": "0.668282"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "FoodTech",
+      "YOY_GROWTH": "0.474453"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "Future of Work",
+      "YOY_GROWTH": "-0.039157"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "GTM Tech",
+      "YOY_GROWTH": "0.242141"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "Gaming",
+      "YOY_GROWTH": "0.938679"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "GovTech",
+      "YOY_GROWTH": "-0.032520"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "HR Tech",
+      "YOY_GROWTH": "0.207519"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "HealthTech",
+      "YOY_GROWTH": "0.367054"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "IT Infrastructure",
+      "YOY_GROWTH": "0.196169"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "LegalTech",
+      "YOY_GROWTH": "0.212473"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "Logistics / Supply Chain",
+      "YOY_GROWTH": "0.332979"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "Marketplace",
+      "YOY_GROWTH": "0.829630"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "Other Vertical SaaS",
+      "YOY_GROWTH": "0.176421"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "PropertyTech",
+      "YOY_GROWTH": "0.365554"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "SpaceTech",
+      "YOY_GROWTH": "1.432432"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "Web3",
+      "YOY_GROWTH": "1.519573"
+  },
+  {
+      "YEAR": "2021",
+      "SECTOR": "eCommerce",
+      "YOY_GROWTH": "0.654497"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "All Sectors",
+      "YOY_GROWTH": "0.047474"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "Ai / ML",
+      "YOY_GROWTH": "-0.094415"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "BioTech",
+      "YOY_GROWTH": "0.043222"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "Business Operations",
+      "YOY_GROWTH": "0.210526"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "Consumer",
+      "YOY_GROWTH": "-0.065960"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "Cybersecurity",
+      "YOY_GROWTH": "-0.114555"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "DevOps",
+      "YOY_GROWTH": "-0.269142"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "EdTech",
+      "YOY_GROWTH": "0.077124"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "Fintech",
+      "YOY_GROWTH": "-0.112653"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "FoodTech",
+      "YOY_GROWTH": "0.027228"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "Future of Work",
+      "YOY_GROWTH": "-0.141066"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "GTM Tech",
+      "YOY_GROWTH": "0.098495"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "Gaming",
+      "YOY_GROWTH": "-0.306569"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "GovTech",
+      "YOY_GROWTH": "0.000000"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "HR Tech",
+      "YOY_GROWTH": "0.073474"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "HealthTech",
+      "YOY_GROWTH": "0.261500"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "IT Infrastructure",
+      "YOY_GROWTH": "0.091662"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "LegalTech",
+      "YOY_GROWTH": "0.186005"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "Logistics / Supply Chain",
+      "YOY_GROWTH": "0.270551"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "Marketplace",
+      "YOY_GROWTH": "-0.224696"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "Other Vertical SaaS",
+      "YOY_GROWTH": "-0.027037"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "PropertyTech",
+      "YOY_GROWTH": "0.158301"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "SpaceTech",
+      "YOY_GROWTH": "0.244444"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "Web3",
+      "YOY_GROWTH": "-0.204096"
+  },
+  {
+      "YEAR": "2022",
+      "SECTOR": "eCommerce",
+      "YOY_GROWTH": "-0.125942"
+  }
+]

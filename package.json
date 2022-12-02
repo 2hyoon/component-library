@@ -49,6 +49,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "chart.js": "^4.0.1",
     "three": "^0.145.0"
   }
 }
