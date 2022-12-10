@@ -42,7 +42,9 @@ section,
   gap: 1rem;
 
   @include make-cssgrid;
+}
 
+.grid.color {
   > div {
     background-color:var(--color-secondary);
   }
