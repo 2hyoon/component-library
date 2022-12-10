@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/app.css?v=0.0.5">
+  <link rel="icon" type="image/png" href="./assets/img/favicon/fav-32.png">
+  
+</head>
+<body data-theme="light">
+  <div id="page">
+    
+    <header class="header" data-js-component="Header">
+  <nav class="container">
+    <a href="./">Component Library</a> 
+  </nav>
+</header>
+
+    <main>
+      
+    <section class="charty">
+  <div class="container">
+
+    
+    <div class="grid row">
+      <div class="g-col-12 g-col-900-8 g-start-900-3">
+        <h1>Charts</h1>
+      </div>
+    </div>
+
+    
+    <div class="grid row">
+      <div class="g-col-12 g-col-900-5 g-start-900-4">
+
+        <h2>Bar Chart</h2>
+
+        <div data-component="Charty" data-json="bar-a" class="charty">
+          <canvas class="js-canvas"></canvas>
+        </div>
+
+        <div data-component="Charty" data-json="bar-b" class="charty">
+          <canvas class="js-canvas"></canvas>
+        </div>
+
+      </div>
+    </div>
+
+    
+    
+
+    
+    <div class="grid row">
+      <div class="g-col-12 g-col-900-4 g-start-900-4">
+
+        <h2>Doughnut Chart</h2>
+
+        <h3>Doughnut & Table</h3>
+        <div data-component="Charty" data-json="doughnut-b" class="charty">
+          <canvas class="js-canvas"></canvas>
+          <table class="charts-table">
+            <thead>
+              <tr>
+                <th width="25%">Asset Class</th>
+                <th width="25%">Scope 1</th>
+                <th width="25%">Scope 2</th>
+                <th width="25%">Scope 1 & 2 TOTAL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>A</th>
+                <td>10,541</td>
+                <td>&mdash;</td>
+                <td>10,541</td>
+              </tr>
+              <tr>
+                <th>B</th>
+                <td>&mdash;</td>
+                <td>28,531</td>
+                <td>28,531</td>
+              </tr>
+              <tr>
+                <th>C</th>
+                <td>2,334</td>
+                <td>14,240</td>
+                <td>16,574</td>
+              </tr>
+              <tr>
+                <th>D</th>
+                <td>&mdash;</td>
+                <td>21,050</td>
+                <td>21,050</td>
+              </tr>
+              <tr>
+                <th>E</th>
+                <td>1,104</td>
+                <td>&mdash;</td>
+                <td>1,104</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Total</th>
+                <td>13,979</td>
+                <td>63,821</td>
+                <td>77,800</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <h3>Multiple Doughnuts</h3>
+        <div data-component="Charty" data-json="doughnut-a" class="charty">
+          <canvas class="js-canvas"></canvas>
+          <canvas class="js-canvas"></canvas>
+          <canvas class="js-canvas"></canvas>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  
+    </main>
+
+    
+    <footer class="footer">
+  <div class="container">
+    ©2022
+  </div>
+</footer>
+  </div>
+  <script src="./scripts/app.js?v=0.0.5"></script>
+</body>
+</html>

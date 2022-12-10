@@ -1,0 +1,49 @@
+{
+  "charts": [
+    {
+      "type": "doughnut",
+      "data": {
+        "labels": ["People of Color", "White"],
+        "datasets": [{
+          "data": [29, 71],
+          "backgroundColor": [
+            "#481776",
+            "#0069c3"
+          ],
+          "hoverBackgroundColor": [
+            "#481776",
+            "#0069c3"
+          ],
+          "hoverOffset": 0,
+          "hoverBorderColor": [
+            "#481776",
+            "#0069c3"
+          ],
+          "borderWidth": 0,
+          "hoverBorderWidth": 10,
+          "borderRadius": 0,
+          "borderJoinStyle": "miter"
+        }]
+      },
+      "options": {
+        "aspectRatio": 1,
+        "cutout": "60%",
+        "layout": {
+            "padding": {
+                "left": 15,
+                "right": 15,
+                "top": 15,
+                "bottom": 15
+            }
+        },
+        "plugins": {
+          "title": {
+            "display": false,
+            "text": "2020"
+          }
+        }
+      },
+      "unit": "%"
+    }
+  ]
+}

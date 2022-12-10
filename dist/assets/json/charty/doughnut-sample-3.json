@@ -1,0 +1,49 @@
+{
+  "charts" : [
+    {
+      "type": "doughnut",
+      "data": {
+        "labels": ["Brown energy", "Green energy"],
+        "datasets": [{
+          "data": [34, 66],
+          "backgroundColor": [
+            "#0069c3",
+            "#00837b"
+          ],
+          "hoverBackgroundColor": [
+            "#0069c3",
+            "#00837b"
+          ],
+          "hoverOffset": 0,
+          "hoverBorderColor": [
+            "#0069c3",
+            "#00837b"
+          ],
+          "borderWidth": 0,
+          "hoverBorderWidth": 10,
+          "borderRadius": 0,
+          "borderJoinStyle": "miter"
+        }]
+      },
+      "options": {
+        "aspectRatio": 1,
+        "cutout": "60%",
+        "layout": {
+            "padding": {
+                "left": 15,
+                "right": 15,
+                "top": 15,
+                "bottom": 15
+            }
+        },
+        "plugins": {
+          "title": {
+            "display": false,
+            "text": "2022"
+          }
+        }
+      },
+      "unit": "%"
+    }
+  ]
+}

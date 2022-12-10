@@ -1,0 +1,68 @@
+{
+  "charts": [
+    {
+      "type": "line",
+      "data": {
+        "labels": ["2001", "2002", "2003"],
+        "datasets": [{
+          "label": "A",
+          "data": [4, 8, 16],
+          "borderColor": "rgb(233, 196, 106)",
+          "borderWidth": 1
+        },
+        {
+          "label": "B",
+          "data": [4, 8, 16],
+          "borderColor": "rgb(233, 196, 106)",
+          "borderWidth": 1
+        },
+        {
+          "label": "C",
+          "data": [4, 8, 16],
+          "borderColor": "rgb(233, 196, 106)",
+          "borderWidth": 1
+        }]
+      },
+      "options": {
+        "scales": {
+          "x": {
+            "grid": {
+              "color": "#ffffff",
+              "drawBorder": true,
+              "drawOnChartArea": true,
+              "drawTicks": true,
+              "display": false
+            },
+            "ticks": {
+              "color": "#f4a261",
+              "font": {
+                "size": 11,
+                "family": "'Gotham A', 'Gotham B', sans-serif"
+              }
+            }
+          },
+          "y": {
+            "grid": {
+              "display": true,
+              "drawBorder": false,
+              "color": "#e76f51"
+            },
+            "position": "right",
+            "min": 0,
+            "max": 20,
+            "ticks": {
+              "stepSize": 5,
+              "color": "#f4a261",
+              "font": {
+                "size": 11,
+                "family": "'Gotham A', 'Gotham B', sans-serif",
+                "weight": 500
+              }
+            }
+          }
+        }
+      },
+      "unit": "%"
+    }
+  ]
+}

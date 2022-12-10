@@ -1,0 +1,49 @@
+{
+  "charts": [
+    {
+      "type": "doughnut",
+      "data": {
+        "labels": ["Women", "Men"],
+        "datasets": [{
+          "data": [32, 68],
+          "backgroundColor": [
+            "#891d9b",
+            "#0069c3"
+          ],
+          "hoverBackgroundColor": [
+            "#891d9b",
+            "#0069c3"
+          ],
+          "hoverOffset": 0,
+          "hoverBorderColor": [
+            "#891d9b",
+            "#0069c3"
+          ],
+          "borderWidth": 0,
+          "hoverBorderWidth": 10,
+          "borderRadius": 0,
+          "borderJoinStyle": "miter"
+        }]
+      },
+      "options": {
+        "aspectRatio": 1,
+        "cutout": "60%",
+        "layout": {
+            "padding": {
+                "left": 15,
+                "right": 15,
+                "top": 15,
+                "bottom": 15
+            }
+        },
+        "plugins": {
+          "title": {
+            "display": false,
+            "text": "2020"
+          }
+        }
+      },
+      "unit": "%"
+    }
+  ]
+}
