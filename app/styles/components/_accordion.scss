@@ -1,27 +1,16 @@
 .accordion {
   padding-top: $spacer * 2;
   padding-bottom: $spacer * 2;
-  // background-color: var(--color-bg);
-  // color: var(--color-text);
 
   @include breakpoint-up(map.get($breakpoints, "900")) {
     padding-top: $spacer * 4;
     padding-bottom: $spacer * 4;
   }
+}
 
-  &-header {
-    margin-bottom: $spacer * 2;
-  }
-
-  &-label {
-		position: relative;
-
-    &:first-child {
-      border-top: 1px solid var(--color-primary);
-    }
-  }
-
-	&-trigger {
+// tab
+.accordion {
+	&-tab {
 		position: relative;
 		display: flex;
     flex-flow: row nowrap;
@@ -58,19 +47,28 @@
 		}
 	}
 
+  @media (hover: hover) {
+    &-tab:hover {
+      &::after {
+        height: 5px;
+      }
+    }
+  }
+
   @include breakpoint-up(map.get($breakpoints, "900")) {
-    &-trigger {
+    &-tab {
       padding: rem(30px) rem(7px) rem(30px) 0;
       font-size: rem(24px);
     }
   }
 
-  &-label-txt {
-    line-height: 1.15;
+  &-tab-label {
+    position: relative;
     width: calc(100% - 100px);
+    line-height: 1.15;
   }
 
-  &-label-icon {
+  &-tab-icon {
     width: rem(24px);
     height: rem(24px);
     position: relative;
@@ -78,9 +76,9 @@
     &::before {
       content: "";
       position: absolute;
-      width: rem(2px);
+      width: rem(4px);
       height: rem(24px);
-      left: rem(12px);
+      left: rem(10px);
       top: 0;
       background-color: var(--color-primary);
       transform-origin: center;
@@ -92,32 +90,23 @@
       content: "";
       position: absolute;
       width: rem(24px);
-      height: rem(2px);
-      top: rem(12px);
+      height: rem(4px);
+      top: rem(10px);
       left: 0;
       background-color: var(--color-primary);
     }
   }
 
-  @media (hover: hover) {
-    &-trigger:hover {
-      &::after {
-        height: 5px;
-      }
-    }
-  }
-
-  &-trigger.expanded {
-    .accordion-label-icon::before {
+  &-tab.expanded {
+    .accordion-tab-icon::before {
       transform: rotate(90deg);
-      left: 11px;
-    }
-
-    .accordion-label-icon::after {
-      height: 3px;
+      left: 10px;
     }
   }
+}
 
+// panel
+.accordion {
 	&-panel {
 		position: relative;
 		height: 0;
@@ -126,7 +115,7 @@
 
 		> div {
       position: relative;
-			padding-top: $spacer * 2;
+			padding-top: $spacer * 1.5;
 			padding-bottom: rem(40px);
       padding-right: 10%;
 			opacity: 0;
@@ -146,8 +135,10 @@
 	&-panel.expanded > div {
 		opacity: 1;
 	}
+}
 
-	// animation sequence
+// animation sequence
+.accordion {
 	&-panel.animate-in {
 		transition: height 0.3s ease-out;
 	}

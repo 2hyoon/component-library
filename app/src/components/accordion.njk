@@ -1,29 +1,40 @@
 <section class="accordion" data-component="Accordion">
   <div class="container">
-    <header class="accordion-header">
-      <h1>Accordion</h1>
-    </header>
 
-    {% for item in accordion.list %}
-      <h3 class="accordion-header">
-        <button
-          id="accordion-trigger-{{loop.index}}"
-          class="accordion-trigger js-trigger"
-          aria-expanded="false"
-          aria-controls="accordion-panel-{{loop.index}}">
-          <div class="accordion-label-text">{{item.title}}</div>
-          <div class="accordion-label-icon"></div>
-        </button>
-      </h3>
-      <div
-        id="accordion-panel-{{loop.index}}"
-        class="accordion-panel js-panel"
-        role="region"
-        aria-labelledby="accordion-trigger-{{loop.index}}">
-        <div class="accordion-content js-content">
-          {{item.description|safe}}
-        </div>
+    {# accordion header #}
+    <div class="grid row">
+      <div class="g-col-12 g-col-900-8 g-start-900-3">
+        <h1>Accordion</h1>
       </div>
-    {% endfor %}
+    </div>
+
+    {# accordion body #}
+    <div class="grid row">
+      <div class="g-col-12 g-col-900-8 g-start-900-3">
+        {% for item in accordion.list %}
+          <h3>
+            <button
+              type="button"
+              id="accordion-tag-{{loop.index}}"
+              class="accordion-tab js-tab"
+              aria-expanded="false"
+              aria-controls="accordion-panel-{{loop.index}}">
+              <div class="accordion-tab-label">{{item.title}}</div>
+              <div class="accordion-tab-icon"></div>
+            </button>
+          </h3>
+          <div
+            id="accordion-panel-{{loop.index}}"
+            class="accordion-panel js-panel"
+            role="region"
+            aria-labelledby="accordion-tab-{{loop.index}}">
+            <div class="accordion-content js-content">
+              {{item.description|safe}}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
   </div>
 </section>
