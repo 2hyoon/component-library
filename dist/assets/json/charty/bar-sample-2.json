@@ -1,0 +1,63 @@
+{
+  "charts": [
+    {
+      "type": "bar",
+      "data": {
+        "labels": ["Crown Castle", "US Average", "Industry Average"],
+        "datasets": [{
+          "data": [0.26, 2.9, 1.7],
+          "backgroundColor": [
+            "#481776",
+            "#00aeef",
+            "#51daff"
+          ],
+          "hoverBackgroundColor": [
+            "#481776",
+            "#00aeef",
+            "#51daff"
+          ],
+          "borderWidth": 0
+        }]
+      },
+      "options": {
+        "scales": {
+          "x": {
+            "grid": {
+              "color": "#ffffff",
+              "drawBorder": true,
+              "drawOnChartArea": true,
+              "drawTicks": true,
+              "display": false
+            },
+            "ticks": {
+              "color": "#5a6771",
+              "font": {
+                "size": 11,
+                "family": "'Gotham A', 'Gotham B', sans-serif"
+              }
+            }
+          },
+          "y": {
+            "grid": {
+              "display": true,
+              "drawBorder": false,
+              "color": "#acbac4"
+            },
+            "position": "right",
+            "min": 0,
+            "max": 3,
+            "ticks": {
+              "stepSize": 1,
+              "color": "#5a6771",
+              "font": {
+                "size": 11,
+                "family": "'Gotham A', 'Gotham B', sans-serif",
+                "weight": 500
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

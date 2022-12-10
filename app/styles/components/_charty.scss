@@ -1,0 +1,86 @@
+//  table charts
+.charts-table {
+  width: 100%;
+  color: $color-gray-1;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 13px 5px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  thead {
+    border-bottom: 4px solid $color-gray-1;
+
+    th {
+      text-align: center;
+    }
+
+    tr th:first-child {
+      text-align: left;
+    }
+  }
+
+  tbody {
+    border-bottom: 4px solid $color-blue;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid $color-gray-b;
+
+    th {
+      text-align: left;
+      color: $color-blue;
+    }
+
+    td {
+      text-align: center;
+    }
+  }
+
+  tfoot {
+    th {
+      text-align: left;
+    }
+
+    td {
+      text-align: center;
+    }
+  }
+
+  .active {
+    background-color: rgba(60, 218, 195, 0.2);
+  }
+}
+
+// tooltip
+#chartjs-tooltip {
+  table {
+    padding: 8px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.24);
+    color: $color-gray-2;
+    font-weight: normal;
+  }
+
+  th {
+    padding-bottom: 5px;
+    border-bottom: 1px solid $color-gray-b;
+    text-align: left;
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: 12px;
+  }
+
+  tbody {
+    font-size: 21px;
+  }
+
+  td {
+    text-align: left;
+    padding-top: 3px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+}

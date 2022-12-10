@@ -1,0 +1,139 @@
+{
+  "charts" : [
+    {
+      "type": "doughnut",
+      "data": {
+        "labels": ["A", "B"],
+        "datasets": [{
+          "data": [20, 80],
+          "backgroundColor": [
+            "#f28482",
+            "#0096c7"
+          ],
+          "hoverBackgroundColor": [
+            "#f28482",
+            "#0096c7"
+          ],
+          "hoverOffset": 0,
+          "hoverBorderColor": [
+            "#f28482",
+            "#0096c7"
+          ],
+          "borderWidth": 0,
+          "hoverBorderWidth": 10,
+          "borderRadius": 0,
+          "borderJoinStyle": "miter"
+        }]
+      },
+      "options": {
+        "aspectRatio": 1,
+        "cutout": "60%",
+        "layout": {
+            "padding": {
+                "left": 15,
+                "right": 15,
+                "top": 15,
+                "bottom": 15
+            }
+        },
+        "plugins": {
+          "title": {
+            "display": false,
+            "text": "Fruits"
+          }
+        }
+      },
+      "unit": "%"
+    },
+    {
+      "type": "doughnut",
+      "data": {
+        "labels": ["A", "B"],
+        "datasets": [{
+          "data": [30, 70],
+          "backgroundColor": [
+            "#f28482",
+            "#0096c7"
+          ],
+          "hoverBackgroundColor": [
+            "#f28482",
+            "#0096c7"
+          ],
+          "hoverOffset": 0,
+          "hoverBorderColor": [
+            "#f28482",
+            "#0096c7"
+          ],
+          "borderWidth": 0,
+          "hoverBorderWidth": 10,
+          "borderRadius": 0,
+          "borderJoinStyle": "miter"
+        }]
+      },
+      "options": {
+        "aspectRatio": 1,
+        "cutout": "60%",
+        "layout": {
+            "padding": {
+                "left": 15,
+                "right": 15,
+                "top": 15,
+                "bottom": 15
+            }
+        },
+        "plugins": {
+          "title": {
+            "display": false,
+            "text": "Bread"
+          }
+        }
+      },
+      "unit": "%"
+    },
+    {
+      "type": "doughnut",
+      "data": {
+        "labels": ["A", "B"],
+        "datasets": [{
+          "data": [40, 60],
+          "backgroundColor": [
+            "#f28482",
+            "#0096c7"
+          ],
+          "hoverBackgroundColor": [
+            "#f28482",
+            "#0096c7"
+          ],
+          "hoverOffset": 0,
+          "hoverBorderColor": [
+            "#f28482",
+            "#0096c7"
+          ],
+          "borderWidth": 0,
+          "hoverBorderWidth": 10,
+          "borderRadius": 0,
+          "borderJoinStyle": "miter"
+        }]
+      },
+      "options": {
+        "aspectRatio": 1,
+        "cutout": "60%",
+        "layout": {
+            "padding": {
+                "left": 15,
+                "right": 15,
+                "top": 15,
+                "bottom": 15
+            }
+        },
+        "plugins": {
+          "title": {
+            "display": false,
+            "text": "Dessert"
+          }
+        }
+      },
+      "unit": "%"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+<section class="charty">
+  <div class="container">
+
+    {# charty header #}
+    <div class="grid row">
+      <div class="g-col-12 g-col-900-8 g-start-900-3">
+        <h1>Charts</h1>
+      </div>
+    </div>
+
+    {# bar chart #}
+    <div class="grid row">
+      <div class="g-col-12 g-col-900-5 g-start-900-4">
+
+        <h2>Bar Chart</h2>
+
+        <div data-component="Charty" data-json="bar-a" class="charty">
+          <canvas class="js-canvas"></canvas>
+        </div>
+
+        <div data-component="Charty" data-json="bar-b" class="charty">
+          <canvas class="js-canvas"></canvas>
+        </div>
+
+      </div>
+    </div>
+
+    {# line chart#}
+    {# <div class="grid row">
+      <div class="g-col-12 g-col-900-5 g-start-900-4">
+
+        <h2>Line Chart</h2>
+
+        <div data-component="Charty" data-json="line-a" class="charty">
+          <canvas class="js-canvas"></canvas>
+        </div>
+      </div>
+    </div> #}
+
+    {# doughnut chart#}
+    <div class="grid row">
+      <div class="g-col-12 g-col-900-4 g-start-900-4">
+
+        <h2>Doughnut Chart</h2>
+
+        <h3>Doughnut & Table</h3>
+        <div data-component="Charty" data-json="doughnut-b" class="charty">
+          <canvas class="js-canvas"></canvas>
+          <table class="charts-table">
+            <thead>
+              <tr>
+                <th width="25%">Asset Class</th>
+                <th width="25%">Scope 1</th>
+                <th width="25%">Scope 2</th>
+                <th width="25%">Scope 1 & 2 TOTAL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>A</th>
+                <td>10,541</td>
+                <td>&mdash;</td>
+                <td>10,541</td>
+              </tr>
+              <tr>
+                <th>B</th>
+                <td>&mdash;</td>
+                <td>28,531</td>
+                <td>28,531</td>
+              </tr>
+              <tr>
+                <th>C</th>
+                <td>2,334</td>
+                <td>14,240</td>
+                <td>16,574</td>
+              </tr>
+              <tr>
+                <th>D</th>
+                <td>&mdash;</td>
+                <td>21,050</td>
+                <td>21,050</td>
+              </tr>
+              <tr>
+                <th>E</th>
+                <td>1,104</td>
+                <td>&mdash;</td>
+                <td>1,104</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Total</th>
+                <td>13,979</td>
+                <td>63,821</td>
+                <td>77,800</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <h3>Multiple Doughnuts</h3>
+        <div data-component="Charty" data-json="doughnut-a" class="charty">
+          <canvas class="js-canvas"></canvas>
+          <canvas class="js-canvas"></canvas>
+          <canvas class="js-canvas"></canvas>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
