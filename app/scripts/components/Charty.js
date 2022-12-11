@@ -19,6 +19,7 @@ import {
   Legend,
   Title,
   Tooltip,
+  PointElement,
 } from 'chart.js';
 
 Chart.register(
@@ -30,6 +31,7 @@ Chart.register(
   LinearScale,
   LineController,
   LineElement,
+  PointElement,
   Legend,
   Title,
   Tooltip
