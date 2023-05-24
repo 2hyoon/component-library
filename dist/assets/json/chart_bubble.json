@@ -1,0 +1,772 @@
+[
+  {
+      "SECTOR": "All Sectors",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "383"
+  },
+  {
+      "SECTOR": "All Sectors",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "13584"
+  },
+  {
+      "SECTOR": "All Sectors",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "147"
+  },
+  {
+      "SECTOR": "All Sectors",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "1438"
+  },
+  {
+      "SECTOR": "All Sectors",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "589"
+  },
+  {
+      "SECTOR": "All Sectors",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "918"
+  },
+  {
+      "SECTOR": "All Sectors",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "2993"
+  },
+  {
+      "SECTOR": "Ai / ML",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "2"
+  },
+  {
+      "SECTOR": "Ai / ML",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "120"
+  },
+  {
+      "SECTOR": "Ai / ML",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "8"
+  },
+  {
+      "SECTOR": "Ai / ML",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "25"
+  },
+  {
+      "SECTOR": "Ai / ML",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "26"
+  },
+  {
+      "SECTOR": "Ai / ML",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "22"
+  },
+  {
+      "SECTOR": "Ai / ML",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "44"
+  },
+  {
+      "SECTOR": "BioTech",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "1"
+  },
+  {
+      "SECTOR": "BioTech",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "4"
+  },
+  {
+      "SECTOR": "BioTech",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "3"
+  },
+  {
+      "SECTOR": "BioTech",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "1"
+  },
+  {
+      "SECTOR": "BioTech",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "1"
+  },
+  {
+      "SECTOR": "BioTech",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "9"
+  },
+  {
+      "SECTOR": "Business Operations",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "1"
+  },
+  {
+      "SECTOR": "Business Operations",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "131"
+  },
+  {
+      "SECTOR": "Business Operations",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "5"
+  },
+  {
+      "SECTOR": "Business Operations",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "6"
+  },
+  {
+      "SECTOR": "Business Operations",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "2"
+  },
+  {
+      "SECTOR": "Business Operations",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "2"
+  },
+  {
+      "SECTOR": "Consumer",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "6"
+  },
+  {
+      "SECTOR": "Consumer",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "337"
+  },
+  {
+      "SECTOR": "Consumer",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "31"
+  },
+  {
+      "SECTOR": "Consumer",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "31"
+  },
+  {
+      "SECTOR": "Consumer",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "19"
+  },
+  {
+      "SECTOR": "Consumer",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "16"
+  },
+  {
+      "SECTOR": "Consumer",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "86"
+  },
+  {
+      "SECTOR": "Cybersecurity",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "65"
+  },
+  {
+      "SECTOR": "Cybersecurity",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "4316"
+  },
+  {
+      "SECTOR": "Cybersecurity",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "16"
+  },
+  {
+      "SECTOR": "Cybersecurity",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "248"
+  },
+  {
+      "SECTOR": "Cybersecurity",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "72"
+  },
+  {
+      "SECTOR": "Cybersecurity",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "132"
+  },
+  {
+      "SECTOR": "Cybersecurity",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "439"
+  },
+  {
+      "SECTOR": "DevOps",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "40"
+  },
+  {
+      "SECTOR": "DevOps",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "2339"
+  },
+  {
+      "SECTOR": "DevOps",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "7"
+  },
+  {
+      "SECTOR": "DevOps",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "141"
+  },
+  {
+      "SECTOR": "DevOps",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "62"
+  },
+  {
+      "SECTOR": "DevOps",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "107"
+  },
+  {
+      "SECTOR": "DevOps",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "264"
+  },
+  {
+      "SECTOR": "EdTech",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "15"
+  },
+  {
+      "SECTOR": "EdTech",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "159"
+  },
+  {
+      "SECTOR": "EdTech",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "10"
+  },
+  {
+      "SECTOR": "EdTech",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "45"
+  },
+  {
+      "SECTOR": "EdTech",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "19"
+  },
+  {
+      "SECTOR": "EdTech",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "29"
+  },
+  {
+      "SECTOR": "EdTech",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "108"
+  },
+  {
+      "SECTOR": "Fintech",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "60"
+  },
+  {
+      "SECTOR": "Fintech",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "1522"
+  },
+  {
+      "SECTOR": "Fintech",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "19"
+  },
+  {
+      "SECTOR": "Fintech",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "152"
+  },
+  {
+      "SECTOR": "Fintech",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "67"
+  },
+  {
+      "SECTOR": "Fintech",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "101"
+  },
+  {
+      "SECTOR": "Fintech",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "344"
+  },
+  {
+      "SECTOR": "FoodTech",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "2"
+  },
+  {
+      "SECTOR": "FoodTech",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "1"
+  },
+  {
+      "SECTOR": "Future of Work",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "10"
+  },
+  {
+      "SECTOR": "Future of Work",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "402"
+  },
+  {
+      "SECTOR": "Future of Work",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "10"
+  },
+  {
+      "SECTOR": "Future of Work",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "89"
+  },
+  {
+      "SECTOR": "Future of Work",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "43"
+  },
+  {
+      "SECTOR": "Future of Work",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "57"
+  },
+  {
+      "SECTOR": "Future of Work",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "138"
+  },
+  {
+      "SECTOR": "GTM Tech",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "24"
+  },
+  {
+      "SECTOR": "GTM Tech",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "1907"
+  },
+  {
+      "SECTOR": "GTM Tech",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "24"
+  },
+  {
+      "SECTOR": "GTM Tech",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "202"
+  },
+  {
+      "SECTOR": "GTM Tech",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "54"
+  },
+  {
+      "SECTOR": "GTM Tech",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "136"
+  },
+  {
+      "SECTOR": "GTM Tech",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "319"
+  },
+  {
+      "SECTOR": "Gaming",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "1"
+  },
+  {
+      "SECTOR": "Gaming",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "5"
+  },
+  {
+      "SECTOR": "Gaming",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "7"
+  },
+  {
+      "SECTOR": "Gaming",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "3"
+  },
+  {
+      "SECTOR": "Gaming",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "2"
+  },
+  {
+      "SECTOR": "Gaming",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "15"
+  },
+  {
+      "SECTOR": "GovTech",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "16"
+  },
+  {
+      "SECTOR": "GovTech",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "10"
+  },
+  {
+      "SECTOR": "GovTech",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "33"
+  },
+  {
+      "SECTOR": "GovTech",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "11"
+  },
+  {
+      "SECTOR": "GovTech",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "25"
+  },
+  {
+      "SECTOR": "GovTech",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "63"
+  },
+  {
+      "SECTOR": "HR Tech",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "11"
+  },
+  {
+      "SECTOR": "HR Tech",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "246"
+  },
+  {
+      "SECTOR": "HR Tech",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "7"
+  },
+  {
+      "SECTOR": "HR Tech",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "41"
+  },
+  {
+      "SECTOR": "HR Tech",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "20"
+  },
+  {
+      "SECTOR": "HR Tech",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "32"
+  },
+  {
+      "SECTOR": "HR Tech",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "121"
+  },
+  {
+      "SECTOR": "HealthTech",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "38"
+  },
+  {
+      "SECTOR": "HealthTech",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "46"
+  },
+  {
+      "SECTOR": "HealthTech",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "7"
+  },
+  {
+      "SECTOR": "HealthTech",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "91"
+  },
+  {
+      "SECTOR": "HealthTech",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "51"
+  },
+  {
+      "SECTOR": "HealthTech",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "63"
+  },
+  {
+      "SECTOR": "HealthTech",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "230"
+  },
+  {
+      "SECTOR": "IT Infrastructure",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "90"
+  },
+  {
+      "SECTOR": "IT Infrastructure",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "4935"
+  },
+  {
+      "SECTOR": "IT Infrastructure",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "82"
+  },
+  {
+      "SECTOR": "IT Infrastructure",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "339"
+  },
+  {
+      "SECTOR": "IT Infrastructure",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "173"
+  },
+  {
+      "SECTOR": "IT Infrastructure",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "258"
+  },
+  {
+      "SECTOR": "IT Infrastructure",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "702"
+  },
+  {
+      "SECTOR": "LegalTech",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "6"
+  },
+  {
+      "SECTOR": "LegalTech",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "293"
+  },
+  {
+      "SECTOR": "LegalTech",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "16"
+  },
+  {
+      "SECTOR": "LegalTech",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "38"
+  },
+  {
+      "SECTOR": "LegalTech",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "24"
+  },
+  {
+      "SECTOR": "LegalTech",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "24"
+  },
+  {
+      "SECTOR": "LegalTech",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "60"
+  },
+  {
+      "SECTOR": "Logistics",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "31"
+  },
+  {
+      "SECTOR": "Logistics / Supply Chain",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "38"
+  },
+  {
+      "SECTOR": "Logistics / Supply Chain",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "276"
+  },
+  {
+      "SECTOR": "Logistics / Supply Chain",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "10"
+  },
+  {
+      "SECTOR": "Logistics / Supply Chain",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "99"
+  },
+  {
+      "SECTOR": "Logistics / Supply Chain",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "61"
+  },
+  {
+      "SECTOR": "Logistics / Supply Chain",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "100"
+  },
+  {
+      "SECTOR": "Logistics / Supply Chain",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "275"
+  },
+  {
+      "SECTOR": "Marketplace",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "2"
+  },
+  {
+      "SECTOR": "Marketplace",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "1"
+  },
+  {
+      "SECTOR": "Other Vertical SaaS",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "2"
+  },
+  {
+      "SECTOR": "Other Vertical SaaS",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "146"
+  },
+  {
+      "SECTOR": "Other Vertical SaaS",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "36"
+  },
+  {
+      "SECTOR": "Other Vertical SaaS",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "14"
+  },
+  {
+      "SECTOR": "Other Vertical SaaS",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "19"
+  },
+  {
+      "SECTOR": "Other Vertical SaaS",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "22"
+  },
+  {
+      "SECTOR": "Other Vertical SaaS",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "44"
+  },
+  {
+      "SECTOR": "PropertyTech",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "24"
+  },
+  {
+      "SECTOR": "PropertyTech",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "300"
+  },
+  {
+      "SECTOR": "PropertyTech",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "30"
+  },
+  {
+      "SECTOR": "PropertyTech",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "23"
+  },
+  {
+      "SECTOR": "PropertyTech",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "30"
+  },
+  {
+      "SECTOR": "PropertyTech",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "117"
+  },
+  {
+      "SECTOR": "Web3",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "2"
+  },
+  {
+      "SECTOR": "Web3",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "6"
+  },
+  {
+      "SECTOR": "Web3",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "1"
+  },
+  {
+      "SECTOR": "Web3",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "12"
+  },
+  {
+      "SECTOR": "Web3",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "7"
+  },
+  {
+      "SECTOR": "Web3",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "6"
+  },
+  {
+      "SECTOR": "Web3",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "17"
+  },
+  {
+      "SECTOR": "eCommerce",
+      "COE_ENGAGEMENT": "Diligence & Growth Strategy",
+      "OPPORTUNITIES": "41"
+  },
+  {
+      "SECTOR": "eCommerce",
+      "COE_ENGAGEMENT": "Ignite",
+      "OPPORTUNITIES": "245"
+  },
+  {
+      "SECTOR": "eCommerce",
+      "COE_ENGAGEMENT": "M&A",
+      "OPPORTUNITIES": "26"
+  },
+  {
+      "SECTOR": "eCommerce",
+      "COE_ENGAGEMENT": "Marketing",
+      "OPPORTUNITIES": "137"
+  },
+  {
+      "SECTOR": "eCommerce",
+      "COE_ENGAGEMENT": "Product",
+      "OPPORTUNITIES": "38"
+  },
+  {
+      "SECTOR": "eCommerce",
+      "COE_ENGAGEMENT": "Sales",
+      "OPPORTUNITIES": "55"
+  },
+  {
+      "SECTOR": "eCommerce",
+      "COE_ENGAGEMENT": "Talent",
+      "OPPORTUNITIES": "263"
+  }
+]
