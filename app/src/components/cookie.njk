@@ -1,0 +1,17 @@
+{#
+Place the banner near the very top of the DOM, just after the main content skip link.
+Wrap the banner in a <div role="region"> with an aria-label saying something like "cookie consent banner" so that people using screen readers know exactly where the banner begins and ends, and can easily skip it with a keyboard shortcut.
+<html>
+<body>
+  <a href="#main" class="skip-to-content">Skip to main content</a>
+  <div role="region" aria-label="cookie consent banner" class="cookie-banner">
+    <div class="text">This site uses cookies.</div>
+    <div class="buttons">
+      <button class="accept">Accept</button>
+      <button class="dismiss">Dismiss</button>
+    </div>
+  </div>
+  ...
+</body>
+</html>
+#}
