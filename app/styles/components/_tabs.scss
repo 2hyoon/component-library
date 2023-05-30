@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+  background-color: rgba(0,0,0,.1);
+}
+
+
+/**
+  Tab button controls
+*/
+.tab {
+  background: 0;
+  border: 0;
+  margin: 0 3px 0 0;
+  padding: 10px 15px;
+
+  background-color: rgba(255,255,255,.5);
+}
+
+  /** Focus state */
+  .tab:focus {
+    outline-offset: 4px;
+    text-decoration: underline;
+  }
+
+  /** Selected state (tabpanel visible) */
+  .tab[aria-selected="true"] {
+    background-color: white;
+    border-top: 4px solid rgba(0,0,0,.2);
+  }
+
+    .tab[aria-selected="true"]:focus {
+      border-color: royalblue;
+      color: royalblue;
+      text-decoration: underline;
+    }
+
+  /** Disabled state */
+  .tab[disabled="true"] {
+    cursor: not-allowed;
+    text-decoration: line-through;
+  }
+
+
+/**
+  Tab panels
+*/
+.tabpanel {
+  display: none;
+  padding: 20px;
+  background-color: #fff;
+}
+
+  .tabpanel.is-visible {
+    display: block;
+  }
+
+  .tabpanel h2 {
+    margin-top: 0;
+  }

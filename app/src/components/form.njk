@@ -1,0 +1,47 @@
+{# https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/form-select/about #}
+
+{# checkboxk#}
+<fieldset>
+  <legend>Pick your poultry</legend>
+
+  <input type="checkbox" name="chicken" value="bantam" id="bantam" class="sr-only">
+  <label for="bantam">Bantam</label>
+
+  <input type="checkbox" name="chicken" value="brahma" id="brahma" class="sr-only">
+  <label for="brahma">Brahma</label>
+
+  <input type="checkbox" name="chicken" value="cochin" id="cochin" class="sr-only">
+  <label for="cochin">Cochin</label>
+</fieldset>
+
+{# radio #}
+<fieldset>
+  <legend>Pick your poultry</legend>
+
+  <input type="radio" name="chicken" value="bantam" id="bantam" class="sr-only">
+  <label for="bantam">Bantam</label>
+
+  <input type="radio" name="chicken" value="brahma" id="brahma" class="sr-only">
+  <label for="brahma">Brahma</label>
+
+  <input type="radio" name="chicken" value="cochin" id="cochin" class="sr-only">
+  <label for="cochin">Cochin</label>
+</fieldset>
+
+{# custom select #}
+{#
+<button
+  role="combobox"
+  aria-haspopup="listbox"
+  aria-labelledby="label selected-text"
+  aria-expanded="false"
+  id="trigger"
+  class="trigger">
+  <span id="selected-text">Bantam</span>
+  <span class="icon fas fa-sort-down" aria-hidden="true"></span>
+</button>
+<ul role="listbox" aria-labelledby="[ID of the relevant <label>]">
+  <!-- Options -->
+  <li role="option" id="option-1" aria-selected="true">Option value</li>
+</ul>
+#}
