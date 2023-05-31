@@ -15,12 +15,12 @@
 - Badge: When floating "badges" are placed at the top of cards to indicate special notices like sales or limited stock quantities, be sure to place them after the title heading in the DOM
 #}
 
-<div class="card" role="group" aria-label="article">
-  <a href="https://google.com">
-    <div class="card-img">
-      <img src="https://picsum.photos/300" alt="">
+<div role="group" aria-label="article" class="card g-col-12 g-col-500-6 g-col-900-3">
+  <a href="{{card.link}}" target="_blank" class="card-link">
+    <div>
+      <img src="https://picsum.photos/300/200" alt="" class="card-img">
     </div>
-    <h2 class="card-title">Article 1</h2>
+    <h2 class="card-title">{{card.title}}</h2>
   </a>
-  <p class="card-desc">Lorem ipsum dolor sit amet, consec tetur adipiscing elit.</p>
+  <p class="card-desc">{{card.description|safe}}</p>
 </div>

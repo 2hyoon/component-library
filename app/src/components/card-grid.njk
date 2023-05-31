@@ -1,0 +1,14 @@
+<section>
+  <div class="container">
+    <div class="grid">
+      <div class="g-col-12 g-col-900-8">
+        <h2>Cards</h2>
+      </div>
+    </div>
+    <ul class="grid reset-list">
+      {% for card in cards.list %}
+        {% include 'components/card.njk' %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>

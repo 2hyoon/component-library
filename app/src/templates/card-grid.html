@@ -1,6 +1,5 @@
 {% extends "layouts/base.njk" %}
   {% block content %}
-    <ul>
-      <li>{% include 'components/card.njk' %}</li>
-    </ul>
+    {% from 'data/cards.njk' import cards %}
+    {% include 'components/card-grid.njk' %}
   {% endblock %}
