@@ -1,7 +1,14 @@
 {# a11y #}
 {# https://www.w3.org/WAI/tutorials/images/decorative/ #}
 {# https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Media_objects #}
-{# http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/ #}
+{# http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+https://codepen.io/A360/pen/XWpBJdM/b7803d2eb619daa2c3dc921496724d1f
+https://codepen.io/A360/pen/QWbRMYJ/dca7c071a3ece1758713843b47cdcf9f
+https://codepen.io/A360/pen/LYGOgPQ/524b5d99aaa9fb656a89a5eb926bf4de
+https://codepen.io/A360/pen/oNLNdRr/eeb7d6da99bf11264fd51ea2b9c50507
+https://codepen.io/A360/pen/KKzVBBg/277f71d65a14bdbb9e1ce944b6477e1c
+https://codepen.io/A360/pen/eYJZoxg/aa7ded294e33048f3098bba1929b1781
+https://codepen.io/A360/pen/pogdOLz/664e9c5a8e978979c92e4af7913d7e38 #}
 {#
 - If multiple cards are shown side by side, they should be organized using list markup.
 - Each individual card's wrapper should have a role="group" attribute and a generic aria-label like "product" or "article".
@@ -17,9 +24,8 @@
 
 <div role="group" aria-label="article" class="card g-col-12 g-col-500-6 g-col-900-3">
   <a href="{{card.link}}" target="_blank" class="card-link">
-    <div>
-      <img src="https://picsum.photos/300/200" alt="" class="card-img">
-    </div>
+    <img src="https://picsum.photos/300/200" alt="" class="card-img">
+    {# use heading tag when only you have a description #}
     <h2 class="card-title">{{card.title}}</h2>
   </a>
   <p class="card-desc">{{card.description|safe}}</p>
