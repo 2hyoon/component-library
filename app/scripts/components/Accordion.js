@@ -10,13 +10,13 @@ export default class Accordion {
     const panel = this.panels[index];
     const panelHeight = `${panel.querySelector(".js-accordion-content").offsetHeight}px`;
 
-    const targetExpandState = panel.classList.toggle("expanded") ? true : false;
+    const targetState = panel.classList.toggle("expanded") ? true : false;
 
-    panel.classList[targetExpandState ? "remove" : "add"]("animate-out");
-    panel.classList[targetExpandState ? "add" : "remove"]("animate-in");
-    panel.style.height = targetExpandState ? panelHeight : 0;
-    panel.setAttribute("aria-hidden", !targetExpandState);
-    trigger.setAttribute("aria-expanded", targetExpandState);
+    panel.classList[targetState ? "remove" : "add"]("animate-out");
+    panel.classList[targetState ? "add" : "remove"]("animate-in");
+    panel.style.height = targetState ? panelHeight : 0;
+    panel.setAttribute("aria-hidden", !targetState);
+    trigger.setAttribute("aria-expanded", targetState);
   }
 
   setTriggerHandler() {
