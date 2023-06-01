@@ -1,69 +1,55 @@
-var trigger;
-var backdrop;
-var dialog;
-var closeButton;
-var otherButtons;
-var firstFocusableElement, lastFocusableElement;
-var isOpen = false;
+import { addModalKeyDownHandler } from "../utils/a11y";
 
-document.addEventListener('DOMContentLoaded', function(e) {
-  trigger = document.querySelector('.trigger');
-  backdrop = document.querySelector('.backdrop');
-  dialog = backdrop.querySelector('.modal-dialog');
-  closeButton = dialog.querySelector('.close-button');
-  otherButtons = dialog.querySelectorAll('.buttons button');
-  firstFocusableElement = dialog.querySelector('.first-focusable-element');
-  lastFocusableElement = dialog.querySelector('.last-focusable-element');
+export default class Modal {
+  constructor(elem, APP) {
+    this.elem = elem;
+    this.modal = this.elem.querySelector(".js-modal");
+    this.dialog = this.elem.querySelector(".js-modal-dialog");
+    this.openBtn = this.elem.querySelector(".js-btn-open");
+    this.closeBtn = this.elem.querySelector(".js-btn-close");
+    this.cancelBtn = this.elem.querySelector(".js-btn-cancel");
+    this.okBtn = this.elem.querySelector(".js-btn-ok");
+    this.firstFocusableElement = this.closeBtn;
+    this.lastFocusableElement = this.okBtn;
+  }
 
-  // Open the dialog when the trigger button is activated.
-  trigger.addEventListener('click', function(e) {
-    openDialog();
-  });
+  openModal() {
+    this.modal.classList.add("is-visible");
+    this.closeBtn.focus();
+  }
 
-  // Close the dialog when the inner close button is activated.
-  closeButton.addEventListener('click', function(e) {
-    closeDialog();
-  });
+  closeModal() {
+    this.modal.classList.remove("is-visible");
+    this.openBtn.focus();
+  }
 
-  // Close the dialog when the user clicks on the backdrop.
-  backdrop.addEventListener('click', function(e) {
-    if(!dialog.contains(e.target)) {
-      closeDialog();
-    }
-  });
+  init() {
+    addModalKeyDownHandler(
+      this.dialog,
+      this.firstFocusableElement,
+      this.lastFocusableElement
+    );
 
-  // Close the dialog when 'Escape' key is pressed.
-  backdrop.addEventListener('keydown', function(e) {
-    if(e.key == 'Escape') {
-      closeDialog();
-    }
-  });
-
-  // Trap keyboard focus by moving focus to the first or last focusable element when the user tries to tab (or "backwards" tab) past them.
-  dialog.addEventListener('keydown', function(e) {
-    if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
-      e.preventDefault();
-      lastFocusableElement.focus();
-    } else if(e.target == lastFocusableElement && e.key == 'Tab' && !e.shiftKey) {
-      e.preventDefault();
-      firstFocusableElement.focus();
-    }
-  });
-
-  // For code demo purposes only. Close the dialog when the Cancel or OK buttons are activated. In a real use case these might actually do something like set cookies or refresh the page or something.
-  otherButtons.forEach(function(button) {
-    button.addEventListener('click', function(e) {
-      closeDialog();
+    this.openBtn.addEventListener("click", () => {
+      this.openModal();
     });
-  });
-});
 
-function openDialog() {
-  backdrop.classList.add('is-visible');
-  closeButton.focus();
-}
+    this.closeBtn.addEventListener("click", () => {
+      this.closeModal();
+    });
 
-function closeDialog() {
-  backdrop.classList.remove('is-visible');
-  trigger.focus();
+    this.cancelBtn.addEventListener("click", () => {
+      this.closeModal();
+    });
+
+    this.okBtn.addEventListener("click", () => {
+      this.closeModal();
+    });
+
+    this.modal.addEventListener("click", (e) => {
+      if(!this.dialog.contains(e.target)) {
+        this.closeModal();
+      }
+    })
+  }
 }
