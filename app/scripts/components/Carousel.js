@@ -8,7 +8,7 @@ import {
 export default class Carousel {
   constructor(elem, APP) {
     this.elem = elem;
-    this.carousel = this.elem.querySelector(".js-carousel-slides");
+    this.carousel = this.elem.querySelector(".js-slider");
     this.dots;
   }
 
@@ -16,7 +16,7 @@ export default class Carousel {
     this.flkty = new Flickity(this.carousel, {
       accessibility: false,
       prevNextButtons: true,
-      pageDots: false,
+      pageDots: true,
       autoPlay: false,
       imagesLoaded: true,
       cellAlign: "left",
@@ -31,7 +31,7 @@ export default class Carousel {
         },
         settle: () => {
           flickitySettleHandler(
-            this.carousel.querySelectorAll(".js-carousel-slide")
+            this.carousel.querySelectorAll(".js-slide")
           );
         },
       },
