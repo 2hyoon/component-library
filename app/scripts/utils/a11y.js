@@ -1,12 +1,10 @@
-export function updateTabindex() {}
-
-export function updateAriaExpanded() {}
-
 export function addModalKeyDownHandler(
   target,
   firstFocusableElement,
   lastFocusableElement
 ) {
+  if (!target || !firstFocusableElement || !lastFocusableElement) return;
+
   target.addEventListener("keydown", function (e) {
     if (e.target == firstFocusableElement && e.key == "Tab" && e.shiftKey) {
       e.preventDefault();

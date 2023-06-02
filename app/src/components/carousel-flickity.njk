@@ -1,0 +1,40 @@
+{#
+https://codepen.io/A360/pen/QWwZpQe
+https://codepen.io/A360/pen/LYEXrGe
+https://codepen.io/A360/pen/KKwrBxo
+https://codepen.io/A360/pen/xxbQQvK
+https://codepen.io/A360/pen/QWwZpQe?editors=0010 // flickity optimization
+#}
+<section>
+  <div class="container">
+    <div class="grid">
+      <div class="g-col-12">
+        <h2>Flickity Carousel</h2>
+      </div>
+      <div class="g-col-12">
+        <div class="carousel" aria-label="hero carousel" data-component="Carousel">
+          {# 1. sr-only text #}
+          <p class="sr-only">This is a carousel with auto-rotating slides. Activate any of the buttons to disable rotation. Use Next and Previous buttons to navigate, or jump to a slide using the slide dots.</p>
+          {# 2. add pause and resume button if you have #}
+          {# 3. add previous and next button if you are using custom prev/next buttons #}
+          {# 4. add slides #}
+          <div class="carousel-slides js-carousel-slides">
+            <div role="group" aria-label="slide 1 of 4" class="carousel-slide js-carousel-slide">
+              <img src="https://picsum.photos/700/300?random=1" alt="">
+            </div>
+            <div role="group" aria-label="slide 2 of 4" class="carousel-slide js-carousel-slide">
+              <img src="https://picsum.photos/700/300?random=2" alt="">
+            </div>
+            <div role="group" aria-label="slide 3 of 4" class="carousel-slide js-carousel-slide">
+              <img src="https://picsum.photos/700/300?random=3" alt="">
+            </div>
+            <div role="group" aria-label="slide 4 of 4" class="carousel-slide js-carousel-slide">
+              <img src="https://picsum.photos/700/300?random=4" alt="">
+            </div>
+            {# 5. add slider dots #}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
