@@ -1,3 +1,4 @@
+// https://getbootstrap.com/docs/5.3/layout/css-grid/
 .grid {
   display: grid;
   grid-template-columns: repeat($grid-columns, 1fr);
@@ -8,6 +9,6 @@
 
 .grid.color {
   > div {
-    background-color:var(--color-secondary);
+    background-color: var(--color-secondary);
   }
 }

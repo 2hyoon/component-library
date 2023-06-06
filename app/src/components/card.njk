@@ -24,9 +24,9 @@ https://codepen.io/A360/pen/pogdOLz/664e9c5a8e978979c92e4af7913d7e38 #}
 
 <div role="group" aria-label="article" class="card g-col-12 g-col-500-6 g-col-900-3">
   <a href="{{card.link}}" target="_blank" class="card-link">
-    <img src="https://picsum.photos/300/200" alt="" class="card-img">
+    <img src="https://picsum.photos/300/200?random={{loop.index}}" alt="" class="card-img">
     {# use heading tag when only you have a description #}
-    <h2 class="card-title">{{card.title}}</h2>
+    <h3 class="card-title">{{card.title}}</h3>
   </a>
   <p class="card-desc">{{card.description|safe}}</p>
 </div>

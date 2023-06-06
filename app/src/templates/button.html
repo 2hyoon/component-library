@@ -3,14 +3,14 @@
     <section class="section-button mt mb">
       <div class="container">
         <div class="grid">
-          <div class="g-col-12">
+          <div class="g-col-12 g-col-900-8 g-start-900-3">
             <h2>Buttons</h2>
           </div>
         </div>
         <div class="grid">
           {% from 'data/buttons.njk' import buttons %}
             {% for button in buttons.list %}
-              <div class="g-col-12">
+              <div class="g-col-12 g-col-900-8 g-start-900-3">
                 {% include 'components/button.njk' %}
               </div>
             {% endfor %}

@@ -1,0 +1,28 @@
+:root,
+[data-theme="light"] {
+  --color-text: #{$gray-2};
+  --color-bg: #{$gray-c};
+  --color-bg-subtle: #{$gray-d};
+  --color-primary: #{$red};
+  --color-secondary: #{$teal};
+  --color-tertiary: #{$red};
+  --color-emphasis: #{$red};
+  --color-link: #{$gray-2};
+  --color-link-hover: #{$red};
+  --color-button-hover: #{$gray-d};
+  --color-border: #{$gray-5};
+}
+
+[data-theme="dark"] {
+  --color-text: #{$gray-e};
+  --color-bg: #{$gray-1};
+  --color-bg-subtle: #{$gray-3};
+  --color-primary: #{$red};
+  --color-secondary: #{$teal};
+  --color-tertiary: #{$red};
+  --color-emphasis: #{$red};
+  --color-link: #{$gray-2};
+  --color-link-hover: #{$red};
+  --color-button-hover: #{$gray-2};
+  --color-border: #{$gray-5};
+}

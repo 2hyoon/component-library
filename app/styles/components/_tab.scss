@@ -4,8 +4,8 @@
 
 .tab-btn {
   &[aria-selected="true"] {
-    background-color: $color-white;
-    border: 2px solid $color-black;
+    background-color: $white;
+    border: 2px solid $black;
   }
 
   &[disabled="true"] {

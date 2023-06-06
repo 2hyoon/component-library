@@ -1,7 +1,7 @@
 //  table charts
 .charts-table {
   width: 100%;
-  color: $color-gray-1;
+  color: $gray-1;
   border-collapse: collapse;
 
   th, td {
@@ -11,7 +11,7 @@
   }
 
   thead {
-    border-bottom: 4px solid $color-gray-1;
+    border-bottom: 4px solid $gray-1;
 
     th {
       text-align: center;
@@ -23,15 +23,15 @@
   }
 
   tbody {
-    border-bottom: 4px solid $color-blue;
+    border-bottom: 4px solid $blue;
   }
 
   tbody tr {
-    border-bottom: 1px solid $color-gray-b;
+    border-bottom: 1px solid $gray-b;
 
     th {
       text-align: left;
-      color: $color-blue;
+      color: $blue;
     }
 
     td {
@@ -60,13 +60,13 @@
     padding: 8px;
     background-color: rgb(255, 255, 255);
     box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.24);
-    color: $color-gray-2;
+    color: $gray-2;
     font-weight: normal;
   }
 
   th {
     padding-bottom: 5px;
-    border-bottom: 1px solid $color-gray-b;
+    border-bottom: 1px solid $gray-b;
     text-align: left;
     font-weight: 400;
     line-height: 1.2;

@@ -1,11 +1,9 @@
 .accordion {
-  padding-top: $spacer * 2;
-  padding-bottom: $spacer * 2;
-
-  @include breakpoint-up(map.get($breakpoints, "900")) {
-    padding-top: $spacer * 4;
-    padding-bottom: $spacer * 4;
-  }
+  --accordion-text-color: var(--color-text);
+  --accordion-bg-color: var(--color-bg);
+  --accordion-border-color: var(--color-border);
+  --accordion-trigger-hover-color: var(--color-button-hover);
+  --accordion-icon-color: var(--color-border);
 }
 
 // trigger
@@ -29,7 +27,7 @@
   text-decoration: none;
   font-weight: 700;
   font-size: rem(20px);
-  color: var(--color-txt);
+  color: var(--accordion-text-color);
 
   // bottom border
   &::after {
@@ -39,12 +37,12 @@
     bottom: 0;
     left: 0;
     height: 1px;
-    background-color: var(--color-txt);
+    background-color: var(--accordion-border-color);
   }
 
   @media (hover: hover) {
     &:hover {
-      background-color: var(--color-txt-contrast);
+      background-color: var(--accordion-trigger-hover-color);
 
       &::after {
         height: 5px;
@@ -77,7 +75,7 @@
       height: rem(24px);
       left: rem(10px);
       top: 0;
-      background-color: var(--color-txt);
+      background-color: var(--accordion-icon-color);
       transform-origin: center;
       transform: rotate(0);
       transition: transform 0.3s;
@@ -90,7 +88,7 @@
       height: rem(4px);
       top: rem(10px);
       left: 0;
-      background-color: var(--color-txt);
+      background-color: var(--accordion-icon-color);
     }
   }
 
@@ -124,7 +122,7 @@
       bottom: 0;
       height: 1px;
       width: 100%;
-      background: var(--color-btn);
+      background: transparent;
     }
   }
 

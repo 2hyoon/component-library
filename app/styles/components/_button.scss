@@ -3,16 +3,16 @@
   @include reset-button;
 
   border-radius: 3px;
-  background-color: $color-gray-e;
-  color: $color-gray-2;
+  background-color: $gray-e;
+  color: $gray-2;
   padding: rem(13px) rem(10px);
   font-size: rem(14px);
   font-family: $font-sans;
-  font-weight: $font-weight-semi-bold;
-  border: 1px solid $color-black;
+  font-weight: $font-weight-semibold;
+  border: 1px solid $black;
 
   &:hover {
-    background-color: rgba($color: $color-gray-e, $alpha: 60%);
+    background-color: rgba($color: $gray-e, $alpha: 60%);
   }
 
   &:focus {
@@ -21,9 +21,9 @@
 
   &.disabled,
   &[disabled] {
-    background-color: $color-gray-d;
-    border: 1px solid $color-gray-a;
-    color: $color-gray-a;
+    background-color: $gray-d;
+    border: 1px solid $gray-a;
+    color: $gray-a;
     cursor: default;
   }
 }
