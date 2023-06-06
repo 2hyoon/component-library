@@ -1,0 +1,32 @@
+{#
+- add a visible <h1> with a unique id at the top of the dialog to introduce the content, then reference it placing aria-labelledby on to the wrapper, pointing to the heading's ID
+- role="dialog" tells screen reader users that this is a dialog, which helps set their expectations going forward.
+- aria-modal="true" causes screen readers to automatically trap their users' virtual cursor inside this element, similar to the keyboard focus trap that we have to implement manually. This attribute is specifically for screen reader users, and the focus trap is for keyboard-only users.
+https://codepen.io/A360/pen/zYKXMaW/d00247a7fc06514ced3ef6749bdc9bdf
+https://codepen.io/A360/pen/BapyGwv/e132ce2acae1fec3e0bdc2279595bf23
+https://codepen.io/A360/pen/gOgLoNx/10ecd1beba9b2a568b6d1a677989d8ee
+#}
+<section data-component="Modal">
+  <div class="container">
+    <div class="grid">
+      <div class="g-col-12 g-col-900-8 g-start-900-3">
+        <h2>Modal</h2>
+        <button class="js-btn-open">Open the modal</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal js-modal">
+    <div class="modal-dialog js-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+      <button class="js-btn-close first-focusable-element">
+        {# <span class="fas fa-times" aria-hidden="true"></span> #}
+        {# <span class="sr-only">Close</span> #}
+      Close
+      </button><h1 id="modal-heading">Modal Title</h1>
+      <p>Press Tab key to see how focus works in Modal</p>
+      <div class="buttons">
+        <button class="js-btn-cancel">Cancel</button>
+        <button class="js-btn-ok last-focusable-element">OK</button>
+      </div>
+    </div>
+  </div>
+</section>

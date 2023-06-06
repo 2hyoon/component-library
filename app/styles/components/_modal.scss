@@ -1,0 +1,132 @@
+.modal {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9000;
+  justify-content: center;
+  align-items: center;
+
+  &.is-visible {
+    display: flex;
+  }
+}
+
+.modal-dialog {
+  position: relative;
+  background-color: $white;
+  width: 90%;
+  height: 50%;
+  padding: $spacer * 2;
+  box-sizing: border-box;
+}
+
+// body {
+//   width: 100vw;
+//   height: 100vh;
+
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// /** Trigger button ****************************/
+// .trigger {
+//   padding: 15px;
+//   background-color: black;
+//   border: 3px solid black;
+//   border-radius: 5px;
+//   color: white;
+//   font-weight: bold;
+//   cursor: pointer;
+// }
+
+//   .trigger:hover,
+//   .trigger:focus {
+//     text-decoration: underline;
+//     background-color: white;
+//     color: black;
+//   }
+
+//   .trigger:focus {
+//     outline-offset: 5px;
+//   }
+
+// /** Backdrop behind modal dialog **********************/
+// .backdrop {
+//   display: none;
+
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0,0,0,.7);
+
+//   justify-content: center;
+//   align-items: center;
+// }
+
+//   .backdrop.is-visible {
+//     display: flex;
+//   }
+
+// /** Modal dialog ********************************/
+// .modal-dialog {
+//   position: relative;
+//   width: 75%;
+//   max-width: 450px;
+//   height: 75%;
+//   max-height: 400px;
+//   padding: 15px;
+
+//   background-color: white;
+//   box-shadow: 0 0 50px 0 rgba(0,0,0,.7);
+//   border-radius: 10px;
+// }
+
+//   .close-button {
+//     position: absolute;
+//     top: 10px;
+//     right: 10px;
+
+//     background: none;
+//     border: 0;
+//     font-size: 28px;
+//     cursor: pointer;
+//   }
+
+//   #heading {
+//     padding: 0;
+//     margin: 0;
+//     font-size: 24px;
+//     font-weight: bold;
+//   }
+
+//   .buttons {
+//     position: absolute;
+//     bottom: 15px;
+//     right: 15px;
+//   }
+
+//     .buttons button {
+//       padding: 5px 10px;
+//       margin-left: 5px;
+//       border-radius: 5px;
+//       border: 1px solid black;
+//       cursor: pointer;
+//     }
+
+//       .buttons button:focus {
+//         outline-offset: 5px;
+//       }
+
+//       .buttons button.cancel-button {
+//         background-color: white;
+//       }
+
+//       .buttons button.ok-button {
+//         background-color: black;
+//         color: white;
+//       }

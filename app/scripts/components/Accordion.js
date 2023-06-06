@@ -1,36 +1,26 @@
 export default class Accordion {
   constructor(elem, APP) {
     this.elem = elem;
-    this.tabs = this.elem.querySelectorAll(".js-tab");
-    this.panels = this.elem.querySelectorAll(".js-panel");
-    this.allowMultiple = false;
+    this.triggers = this.elem.querySelectorAll(".js-accordion-trigger");
+    this.panels = this.elem.querySelectorAll(".js-accordion-panel");
   }
 
   togglePanel(index) {
-    const tab = this.tabs[index];
+    const trigger = this.triggers[index];
     const panel = this.panels[index];
-    const panelHeight = `${panel.querySelector(".js-content").offsetHeight}px`;
+    const panelHeight = `${panel.querySelector(".js-accordion-content").offsetHeight}px`;
 
-    tab.classList.toggle("expanded");
-    panel.classList.toggle("expanded");
+    const targetState = panel.classList.toggle("expanded") ? true : false;
 
-    if (panel.classList.contains("expanded")) {
-      panel.classList.remove("animate-out");
-      panel.classList.add("animate-in");
-      panel.style.height = panelHeight;
-      panel.setAttribute("aria-hidden", false);
-      tab.setAttribute("aria-expanded", true);
-    } else {
-      panel.classList.remove("animate-in");
-      panel.classList.add("animate-out");
-      panel.style.height = 0;
-      panel.setAttribute("aria-hidden", true);
-      tab.setAttribute("aria-expanded", false);
-    }
+    panel.classList[targetState ? "remove" : "add"]("animate-out");
+    panel.classList[targetState ? "add" : "remove"]("animate-in");
+    panel.style.height = targetState ? panelHeight : 0;
+    panel.setAttribute("aria-hidden", !targetState);
+    trigger.setAttribute("aria-expanded", targetState);
   }
 
-  setTabHandler() {
-    this.tabs.forEach((t, i) => {
+  setTriggerHandler() {
+    this.triggers.forEach((t, i) => {
       t.addEventListener("click", () => {
         this.togglePanel(i);
       });
@@ -47,7 +37,7 @@ export default class Accordion {
   }
 
   init() {
-    this.setTabHandler();
+    this.setTriggerHandler();
 
     window.addEventListener("resize", () => {
       this.resizePanel();

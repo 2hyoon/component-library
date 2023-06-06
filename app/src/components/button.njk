@@ -1,4 +1,4 @@
-{#  A11y 
+{#  A11y
 <button>
   <i class="fa fa-search" aria-hidden="true"></i>
   <span class="sr-only">Search</span>
@@ -11,4 +11,6 @@
 <div role="button" tabindex="0">act as a button</div>
 #}
 
-<button class="button {{disabled}}">Button</button>
+
+<button type="button" class="button {{button.disabled}}" {{button.disabled}}>{{button.label}}</button>
+

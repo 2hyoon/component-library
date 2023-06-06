@@ -1,54 +1,49 @@
 .accordion {
-  padding-top: $spacer * 2;
-  padding-bottom: $spacer * 2;
-
-  @include breakpoint-up(map.get($breakpoints, "900")) {
-    padding-top: $spacer * 4;
-    padding-bottom: $spacer * 4;
-  }
+  --accordion-text-color: var(--color-text);
+  --accordion-bg-color: var(--color-bg);
+  --accordion-border-color: var(--color-border);
+  --accordion-trigger-hover-color: var(--color-button-hover);
+  --accordion-icon-color: var(--color-border);
 }
 
-// tab
-.accordion {
-	&-tab {
-		position: relative;
-		display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
-    padding: rem(20px) rem(7px) rem(20px) 0;
+// trigger
+.accordion-trigger {
+  //TODO: USE MIXIN TO RESET BUTTON
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: rem(10px) rem(7px) rem(10px) 0;
+  width: 100%;
+  border: 0;
+  appearance: none;
+  background-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  line-height: 1;
+  text-align: left;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: rem(20px);
+  color: var(--accordion-text-color);
+
+  // bottom border
+  &::after {
+    content: "";
+    position: absolute;
     width: 100%;
-    border: 0;
-    appearance: none;
-    background-color: transparent;
-    box-shadow: none;
-    cursor: pointer;
-    line-height: 1;
-    text-align: left;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: rem(20px);
-    color: var(--color-text);
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      left: 0;
-      height: 1px;
-      background-color: var(--color-primary);
-      transition: height 0.15s ease-out;
-    }
-
-		&:focus-visible {
-			outline: auto;
-		}
-	}
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: var(--accordion-border-color);
+  }
 
   @media (hover: hover) {
-    &-tab:hover {
+    &:hover {
+      background-color: var(--accordion-trigger-hover-color);
+
       &::after {
         height: 5px;
       }
@@ -56,19 +51,19 @@
   }
 
   @include breakpoint-up(map.get($breakpoints, "900")) {
-    &-tab {
-      padding: rem(30px) rem(7px) rem(30px) 0;
+    & {
+      padding: rem(18px) rem(7px) rem(18px) 0;
       font-size: rem(24px);
     }
   }
 
-  &-tab-label {
+  &-label {
     position: relative;
     width: calc(100% - 100px);
     line-height: 1.15;
   }
 
-  &-tab-icon {
+  &-icon {
     width: rem(24px);
     height: rem(24px);
     position: relative;
@@ -80,7 +75,7 @@
       height: rem(24px);
       left: rem(10px);
       top: 0;
-      background-color: var(--color-primary);
+      background-color: var(--accordion-icon-color);
       transform-origin: center;
       transform: rotate(0);
       transition: transform 0.3s;
@@ -93,12 +88,13 @@
       height: rem(4px);
       top: rem(10px);
       left: 0;
-      background-color: var(--color-primary);
+      background-color: var(--accordion-icon-color);
     }
   }
 
-  &-tab.expanded {
-    .accordion-tab-icon::before {
+  // &.expanded {
+  &[aria-expanded="true"] {
+    .accordion-trigger-icon::before {
       transform: rotate(90deg);
       left: 10px;
     }
@@ -106,54 +102,50 @@
 }
 
 // panel
-.accordion {
-	&-panel {
-		position: relative;
-		height: 0;
-		top: 1px;
-		outline: none;
+.accordion-panel {
+  position: relative;
+  height: 0;
+  top: 1px;
+  outline: none;
 
-		> div {
-      position: relative;
-			padding-top: $spacer * 1.5;
-			padding-bottom: rem(40px);
-      padding-right: 10%;
-			opacity: 0;
+  > div {
+    position: relative;
+    padding-top: $spacer * 1.5;
+    padding-bottom: rem(40px);
+    padding-right: 10%;
+    opacity: 0;
 
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 1px;
-        width: 100%;
-        background: var(--color-btn);
-      }
-		}
-	}
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      background: transparent;
+    }
+  }
 
-	&-panel.expanded > div {
-		opacity: 1;
-	}
+  &.expanded > div {
+    opacity: 1;
+  }
 }
 
 // animation sequence
-.accordion {
-	&-panel.animate-in {
-		transition: height 0.3s ease-out;
-	}
+.accordion-panel {
+  &.animate-in {
+    transition: height 0.3s ease-out;
+  }
 
-	&-panel.animate-in > div {
-		transition: opacity 0.4s ease-out 0.2s;
-	}
+  &.animate-in > div {
+    transition: opacity 0.4s ease-out 0.2s;
+  }
 
-	&-panel.animate-out {
-		transition: height 0.3s ease-out 0.2s;
-	}
+  &.animate-out {
+    transition: height 0.3s ease-out 0.2s;
+  }
 
-	&-panel.animate-out > div {
-		transition: opacity 0.3s ease-out;
-	}
+  &.animate-out > div {
+    transition: opacity 0.3s ease-out;
+  }
 }
-
-

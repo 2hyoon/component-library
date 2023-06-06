@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "chart.js": "^4.0.1",
+    "flickity": "^3.0.0",
     "three": "^0.145.0"
   }
 }

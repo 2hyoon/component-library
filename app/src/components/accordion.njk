@@ -1,10 +1,25 @@
+{#
+- The trigger bars use both button and heading markup so that they are both actionable and semantically clear.
+- The trigger bars buttons have both the aria-controls and aria-expanded ARIA attributes to tell to screen readers what they control and their current state, per WCAG 4.1.2.
+- If indicator icons are used, they are hidden from screen readers using the aria-hidden ARIA attribute.
+- The content panels are fully hidden from all users when they are collapsed.
+- aria-disabled="true"
+- https://www.w3.org/WAI/ARIA/apg/
+- https://www.w3.org/WAI/ARIA/apg/patterns/
+- https://www.w3.org/WAI/ARIA/apg/patterns/accordion/examples/accordion/
+https://codepen.io/A360/pen/ZEzmwOX/8309fd36c6b4acadd8115fef198238b9
+https://codepen.io/A360/pen/QWLJYvp/406d3db140560744144bda4a1a50038e
+https://codepen.io/A360/pen/PoYxVJZ/236a06a5be9bb3d37546b79db5256888
+https://codepen.io/A360/pen/zYOMepJ/96f87eb6c0ab64b06d1779b585049018
+#}
+
 <section class="accordion" data-component="Accordion">
   <div class="container">
 
     {# accordion header #}
     <div class="grid row">
       <div class="g-col-12 g-col-900-8 g-start-900-3">
-        <h1>Accordion</h1>
+        <h2>Accordion</h2>
       </div>
     </div>
 
@@ -14,21 +29,21 @@
         {% for item in accordion.list %}
           <h3>
             <button
-              type="button"
-              id="accordion-tag-{{loop.index}}"
-              class="accordion-tab js-tab"
+              id="accordion-trigger-{{loop.index}}"
+              aria-controls="accordion-panel-{{loop.index}}"
               aria-expanded="false"
-              aria-controls="accordion-panel-{{loop.index}}">
-              <div class="accordion-tab-label">{{item.title}}</div>
-              <div class="accordion-tab-icon"></div>
+              class="accordion-trigger js-accordion-trigger"
+              type="button">
+              <div class="accordion-trigger-label">{{item.title}}</div>
+              <div class="accordion-trigger-icon" aria-hidden="true"></div>
             </button>
           </h3>
           <div
             id="accordion-panel-{{loop.index}}"
-            class="accordion-panel js-panel"
+            aria-labelledby="accordion-trigger-{{loop.index}}"
             role="region"
-            aria-labelledby="accordion-tab-{{loop.index}}">
-            <div class="accordion-content js-content">
+            class="accordion-panel js-accordion-panel">
+            <div class="accordion-content js-accordion-content">
               {{item.description|safe}}
             </div>
           </div>

@@ -1,0 +1,54 @@
+{#
+- As a UX best practice, try to avoid having the slides automatically rotate.
+- If auto-rotation must be used, provide a pause/play toggle button and make it the very first focusable element in the carousel. Make sure this button has useful accessible text and that its icon is hidden from screen reader users.
+- Wrap the entire carousel in a <section> or <div role="region"> with a clear, succinct aria-label like "carousel" so screen reader users know exactly where it begins and ends.
+- Place screen-reader-only text instructions as the first child element inside the wrapper explaining how the carousel works.
+- <p class="sr-only">This is a carousel with auto-rotating slides. Activate any of the buttons to disable rotation. Use Next and Previous buttons to navigate, or jump to a slide with the slide dots.</p>
+- Each slide container has role="group" with an aria-label that uniquely labels it, like "slide 1 of 5".
+- Each slide that is not visible on the screen must be fully hidden from screen reader and keyboard-only users.
+- Each slide dot should be marked up as a <button>.
+- Each slide dot button should have accessible text describing what it does, like "Go to slide 1".
+- Add aria-current="true" to the active slide dot button to tell screen reader users that it is active.
+- Dom order
+<div class="carousel" role="region" aria-label="carousel">
+  <!-- Pause / play autoplay button -->
+  <!-- Previous slide button -->
+  <!-- Slides -->
+  <!-- Next slide button -->
+  <!-- Slide dots -->
+</div>
+- https://accessible360.github.io/accessible-slick
+#}
+{#
+  basic structure sample
+#}
+<section class="carousel" aria-label="carousel with cards">
+  <p class="sr-only">This is a carousel with cards that activate modal dialogs. Use the previous and next buttons to navigate.</p>
+
+  <!-- Previous button -->
+  <button class="button is-control previous-button">
+    <span class="fas fa-angle-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous cards</span>
+  </button>
+
+  <!-- Slide content -->
+  <div class="cards">
+    <button class="card">
+      <div class="sr-only">card 1 of 2,</div>
+      <img src="https://picsum.photos/300" alt="lorem">
+    </button>
+
+    <button class="card">
+      <div class="sr-only">card 2 of 2,</div>
+      <img src="https://picsum.photos/300" alt="lorem">
+    </button>
+  </div>
+
+  <!-- Next button -->
+  <button class="button is-control next-button">
+    <span class="fas fa-angle-right" aria-hidden="true"></span>
+    <span class="sr-only">Next cards</span>
+  </button>
+</section>
+
+

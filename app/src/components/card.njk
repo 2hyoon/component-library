@@ -1,0 +1,32 @@
+{# a11y #}
+{# https://www.w3.org/WAI/tutorials/images/decorative/ #}
+{# https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Media_objects #}
+{# http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+https://codepen.io/A360/pen/XWpBJdM/b7803d2eb619daa2c3dc921496724d1f
+https://codepen.io/A360/pen/QWbRMYJ/dca7c071a3ece1758713843b47cdcf9f
+https://codepen.io/A360/pen/LYGOgPQ/524b5d99aaa9fb656a89a5eb926bf4de
+https://codepen.io/A360/pen/oNLNdRr/eeb7d6da99bf11264fd51ea2b9c50507
+https://codepen.io/A360/pen/KKzVBBg/277f71d65a14bdbb9e1ce944b6477e1c
+https://codepen.io/A360/pen/eYJZoxg/aa7ded294e33048f3098bba1929b1781
+https://codepen.io/A360/pen/pogdOLz/664e9c5a8e978979c92e4af7913d7e38 #}
+{#
+- If multiple cards are shown side by side, they should be organized using list markup.
+- Each individual card's wrapper should have a role="group" attribute and a generic aria-label like "product" or "article".
+- In some very specific scenarios both of these attributes can be optionally omitted to create a more streamlined experience for screen reader users.
+- The main image must be marked up appropriately based on whether or not it is decorative, and based on specific styling constraints.
+- Decorative images are images that are either fully described by adjacent text or provide no additional information to the page.
+- If multiple main images are used, like a mini-carousel of alternative product views, some sort of accessible text must be provided so that any nearby controls make sense for screen reader users.
+- The title should be marked up as a heading, unless there is no content in the DOM after it.
+- The main title of the card (usually a product name or article title) should be marked up as a heading, unless there is no content that follows it.
+- Reduce tab stops by combining adjacent links: Having multiple links to the same place in a card can create a lot of extra work for keyboard and screen reader users, especially if they are close to each other like a main image and a title. Multiple adjacent links that go to the same place are not a WCAG violation, but they can have such a serious usability impact for people with disabilities that we recommend combining them whenever possible.
+- Badge: When floating "badges" are placed at the top of cards to indicate special notices like sales or limited stock quantities, be sure to place them after the title heading in the DOM
+#}
+
+<div role="group" aria-label="article" class="card g-col-12 g-col-500-6 g-col-900-3">
+  <a href="{{card.link}}" target="_blank" class="card-link">
+    <img src="https://picsum.photos/300/200?random={{loop.index}}" alt="" class="card-img">
+    {# use heading tag when only you have a description #}
+    <h3 class="card-title">{{card.title}}</h3>
+  </a>
+  <p class="card-desc">{{card.description|safe}}</p>
+</div>

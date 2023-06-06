@@ -1,49 +1,42 @@
-:root,
-[data-theme="light"] {
-  --color-bg: #efefef;
-  --color-txt: #0e0b16;
-  --color-txt-contrast: #e9e8e8;
-  --color-primary: #ff3b3f;
-  --color-secondary: #caebf2;
-}
-
-[data-theme="dark"] {
-  --color-bg: #0e0b16;
-  --color-txt: #e7dfdd;
-  --color-txt-contrast: #e7dfdd;
-  --color-primary: #4717f6;
-  --color-secondary: #a239ca;
-}
-
-$color-black: rgb(0, 0, 0);
-$color-white: rgb(255, 255, 255);
-$color-red: #fa2b0b;
-$color-blue: #2528f4;
-$color-gray-1: #111;
-$color-gray-2: #222;
-$color-gray-3: #333;
-$color-gray-4: #444;
-$color-gray-5: #555;
-$color-gray-6: #666;
-$color-gray-7: #777;
-$color-gray-8: #888;
-$color-gray-9: #999;
-$color-gray-a: #aaa;
-$color-gray-b: #bbb;
-$color-gray-c: #ccc;
-$color-gray-d: #ddd;
-$color-gray-e: #eee;
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
+$gray-1: #111;
+$gray-2: #222;
+$gray-3: #333;
+$gray-4: #444;
+$gray-5: #555;
+$gray-6: #666;
+$gray-7: #777;
+$gray-8: #888;
+$gray-9: #999;
+$gray-a: #aaa;
+$gray-b: #bbb;
+$gray-c: #ccc;
+$gray-d: #ddd;
+$gray-e: #eee;
+$blue: #0d6efd !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #198754 !default;
+$teal: #20c997 !default;
+$cyan: #0dcaf0 !default;
 
 // font family
 $font-sans: "Roboto", sans-serif;
 $font-serif: serif;
 
 // font weight
-$font-weight-xlight: 100 !default;
+$font-weight-lighter: lighter !default;
 $font-weight-light: 300 !default;
 $font-weight-normal: 400 !default;
-$font-weight-semi-bold: 600 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
 $font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
 
 // line-height
 $line-height-sm: 1.2 !default;
@@ -56,17 +49,17 @@ $grid-column-gap: 30px;
 $grid-row-gap: 20px;
 
 // breakpoints
-$bp-300: 360px;
-$bp-400: 480px;
-$bp-500: 576px;
-$bp-600: 640px;
-$bp-700: 768px;
-$bp-800: 889px;
-$bp-900: 992px;
-$bp-1000: 1024px;
-$bp-1200: 1200px;
-$bp-1400: 1400px;
-$bp-default: 992px;
+// $bp-300: 360px;
+// $bp-400: 480px;
+// $bp-500: 576px;
+// $bp-600: 640px;
+// $bp-700: 768px;
+// $bp-800: 889px;
+// $bp-900: 992px;
+// $bp-1000: 1024px;
+// $bp-1200: 1200px;
+// $bp-1400: 1400px;
+// $bp-default: 992px;
 
 // breakpoints map
 $breakpoints: (
@@ -80,7 +73,7 @@ $breakpoints: (
   "1000": 1024px,
   "1200": 1200px,
   "1400": 1400px,
-  "default": 992px
+  "default": 768px,
 ) !default;
 
 // grid bps
@@ -90,15 +83,15 @@ $grid-breakpoints: (
   "700": 768px,
   "900": 992px,
   "1000": 1024px,
-  "1200": 1200px
+  "1200": 1200px,
 );
 
 // spacer
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
@@ -111,5 +104,6 @@ $page-max-width: 1280px;
 $transition-base: all 0.25s ease-in-out;
 
 // z-index
-$zindex-header: 8000 !default;
-$zindex-modal: 9999 !default;
+$zindex-header: 1000 !default;
+$zindex-modal: 1050 !default;
+$zindex-tooltip: 1100 !default;

@@ -1,0 +1,375 @@
+{#
+https://codepen.io/A360/pen/LYyzEYP/cd31949e2b1b4e81412b16af396cca33
+https://codepen.io/A360/pen/OJmBBvr/5e21234fc0b1d764bbcd9cf5987e22fa
+https://codepen.io/A360/pen/rNmqQmG/ec16aa948e2b2480fa6312a8d1af251b
+https://codepen.io/A360/pen/qBmJLMO/d1078dce09b6bafb988e9287efaef4e0
+https://codepen.io/A360/pen/YzVgpQy/4f0e4d7a59ee0d654dabb3e476ece988
+#}
+<label id="label">Pick your poultry:</label>
+
+<div class="wrapper" role="region" aria-label="options filter with selected options">
+  <button class="trigger" aria-controls="filter-popup" aria-expanded="false" aria-labelledby="label value">
+    <span class="value" id="value">Choose at least one</span>
+    <span class="fas fa-caret-down" aria-hidden="true"></span>
+  </button>
+
+  <div id="filter-popup" class="popup" role="region" aria-label="option filter">
+    <div class="sr-only">The following text field filters the results that follow as you type. Use Tab to access the results.</div>
+
+    <div class="text-field">
+      <input type="text" aria-label="Search" placeholder="Search ..." autocomplete="off">
+    </div>
+
+    <div class="results-count sr-only" aria-live="assertive"></div>
+
+    <ul class="results">
+      <li>
+        <label for="result-0">Brahma</label>
+        <input type="checkbox" id="result-0" value="brahma">
+      </li>
+      <li>
+        <label for="result-1">Bantam</label>
+        <input type="checkbox" id="result-1" value="bantam">
+      </li>
+      <li>
+        <label for="result-2">Cochin</label>
+        <input type="checkbox" id="result-2" value="cochin">
+      </li>
+      <li>
+        <label for="result-3">Jersey Giant</label>
+        <input type="checkbox" id="result-3" value="jersey-giant">
+      </li>
+      <li>
+        <label for="result-4">Orpington</label>
+        <input type="checkbox" id="result-4" value="orpington">
+      </li>
+    </ul>
+  </div>
+
+  <div class="selected-tags" role="region" aria-label="Selected options"></div>
+</div>
+
+{#
+* { box-sizing: border-box; }
+body { padding: 20px; }
+
+#label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+/**
+  Trigger button
+*/
+.trigger {
+  width: 200px;
+  background: rgba(0,0,0,.05);
+  border: 1px solid rgba(0,0,0,.5);
+  padding: 10px 15px;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+  .trigger:focus {
+    outline-offset: 3px;
+  }
+
+  .trigger .value {
+    display: inline-block;
+    max-width: calc(100% - 30px);
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /** Caret icon */
+  .trigger span.fas {
+    float: right;
+    font-size: 18px;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+
+    /** Flip the caret when the popup is expanded */
+    .trigger[aria-expanded="true"] span.fas {
+      transform: rotate(180deg);
+    }
+
+/**
+  Popup
+*/
+.popup {
+  display: none;
+
+  background-color: white;
+  border: 1px solid rgba(0,0,0,.5);
+  padding: 5px;
+  margin-top: -1px;
+  max-width: 200px;
+
+  position: absolute;
+  left: 0;
+  top: 40;
+  z-index: 1;
+}
+
+  .trigger[aria-expanded="true"] + .popup {
+    display: block;
+  }
+
+  /** Text field at the top */
+  .popup .text-field {
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
+    .popup input[type="text"] {
+      width: 100%;
+      border-radius: 0;
+      border: 1px solid rgba(0,0,0,.5);
+      padding: 7px 10px;
+      font-size: 14px;
+    }
+
+  /** List of results */
+  .popup .results {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+    .popup .results li {
+      position: relative;
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: 0;
+      cursor: pointer;
+    }
+
+      .popup .results li:focus-within,
+      .popup .results li:hover {
+        background-color: rgba(0,0,0,.05);
+      }
+
+      .popup .results li label {
+        display: block;
+        padding: 7px;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .popup .results li input {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+
+/**
+  Selected options tags
+*/
+.selected-tags ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+
+  .selected-tags ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+    .selected-tags ul li .tag {
+      background-color: rgba(0,0,0,.05);
+      border: 0;
+      border-radius: 4px;
+      padding: 5px 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+      .selected-tags ul li .tag:hover,
+      .selected-tags ul li .tag:focus {
+        box-shadow: 0 0 0 2px rgba(200,0,0,1);
+        color: darkred;
+        outline: 0;
+      }
+
+        .selected-tags ul li .tag:hover .text,
+        .selected-tags ul li .tag:focus .text {
+          text-decoration: underline;
+        }
+
+    .selected-tags ul li .tag .fas {
+      margin-left: 5px;
+    }
+     #}
+
+{# var trigger, triggerValue;
+var popup;
+var input;
+var liveRegion;
+var resultListItems, resultLabels, resultCheckboxes, checkedCheckboxLabels;
+var selectedTagsWrapper;
+
+window.addEventListener('DOMContentLoaded', function(e) {
+  trigger = document.querySelector('button');
+  triggerValue = trigger.querySelector('.value');
+  popup = document.querySelector('.popup');
+  input = popup.querySelector('input');
+  liveRegion = popup.querySelector('.results-count');
+  resultListItems = popup.querySelectorAll('.results li');
+  resultLabels = popup.querySelectorAll('.results li label');
+  resultCheckboxes = popup.querySelectorAll('.results li input');
+  selectedTagsWrapper = document.querySelector('.selected-tags');
+
+  /** Expand/collapse the popup when the trigger button is activated. */
+  trigger.addEventListener('click', function(e) {
+    var isExpanded = trigger.getAttribute('aria-expanded') === 'true' ? true : false;
+    trigger.setAttribute('aria-expanded', !isExpanded);
+  });
+
+  /** Collapse the popup when Escape key is pressed. */
+  trigger.addEventListener('keydown', function(e) {
+    var isExpanded = trigger.getAttribute('aria-expanded') === 'true' ? true : false;
+
+    if(e.key === 'Escape' && isExpanded) {
+      trigger.setAttribute('aria-expanded', false);
+    }
+  });
+
+  /** Show/hide individual results as the user types in the text field. */
+  input.addEventListener('input', function(e) {
+    var filteredResultListItems = Array.prototype.slice.call(resultListItems).filter(function(listItem) {
+      return listItem.querySelector('label').innerText.toLowerCase().includes(e.target.value.toLowerCase());
+    });
+
+    // Hide all results at first.
+    resultListItems.forEach(function(listItem) {
+      listItem.style.display = 'none';
+    });
+
+    // Show only the results that match the filter.
+    filteredResultListItems.forEach(function(listItem) {
+      listItem.style.display = 'flex';
+    });
+
+    // Announce to screen reader users that new results are available, and remind them how to reach them.
+    liveRegion.innerHTML = '';  // clear the previous content so that the next line will always cause a screen reader announcement, even if the number of results is the same.
+    liveRegion.innerHTML = filteredResultListItems.length + ' results available. Use Tab to access.';
+
+    // After the screen reader has had some time to announce the line above, empty out the live region so that its text can't be reached with a virtual cursor.
+    setTimeout(function() {
+      liveRegion.innerHTML = '';
+    }, 100);
+  });
+
+  /** Collapse the popup and move focus back to the trigger when the Escape key is pressed. */
+  popup.addEventListener('keydown', function(e) {
+    var isExpanded = trigger.getAttribute('aria-expanded') === 'true' ? true : false;
+
+    if(e.key === 'Escape' && isExpanded) {
+      trigger.setAttribute('aria-expanded', false);
+      trigger.focus();
+    }
+  });
+
+  /** Handle activation of each checkbox. */
+  resultCheckboxes.forEach(function(checkbox) {
+    checkbox.addEventListener('click', function(e) {
+      buildTriggerValue();
+      buildTags();
+    });
+  });
+
+  /** Collapse the popup if the user clicks anywhere outside it. */
+  document.addEventListener('click', function(e) {
+    var isExpanded = trigger.getAttribute('aria-expanded') === 'true' ? true : false;
+
+    if(!popup.contains(e.target) && !trigger.contains(e.target) && trigger != e.target && isExpanded) {
+      trigger.setAttribute('aria-expanded', false);
+    }
+  });
+});
+
+function buildTriggerValue() {
+  triggerValue.innerHTML = '';
+
+  // Get an array of all the labels belonging to checked checkboxes.
+  checkedCheckboxLabels = Array.prototype.slice.call(resultLabels).filter(function(label) {
+    return label.parentElement.querySelector('input').checked;
+  });
+
+  // If one or more checkbox is checked, list out their label text values in the trigger button, separated by commas.
+  if(checkedCheckboxLabels.length > 0) {
+    checkedCheckboxLabels.forEach(function(label, index) {
+      triggerValue.innerHTML += label.innerHTML;
+
+      if(index < checkedCheckboxLabels.length - 1) {
+        triggerValue.innerHTML += ', ';
+      }
+    });
+
+    // If no checkboxes are checked, revert the trigger button text to the original placeholder text.
+  } else {
+    triggerValue.innerHTML = 'Choose at least one';
+  }
+}
+
+function buildTags(setFocusToFirstTag = false) {
+  // Get rid of any previous tags
+  selectedTagsWrapper.innerHTML = '';
+
+  // Find the labels for each checked option
+  checkedCheckboxLabels = Array.prototype.slice.call(resultLabels).filter(function(label) {
+    return label.parentElement.querySelector('input').checked;
+  });
+
+  // Build up a list of "remove" buttons (tags) for each checked option
+  if(checkedCheckboxLabels.length > 0) {
+    var tagsList = document.createElement('ul');
+
+    checkedCheckboxLabels.forEach(function(label) {
+      var tagListItem = document.createElement('li');
+
+      var removeButton = document.createElement('button');
+      removeButton.classList.add('tag');
+      removeButton.innerHTML = '<span class="text">' + label.innerHTML + '</span> ' +
+                               '<span class="fas fa-times" aria-hidden="true"></span>' +
+                               '<span class="sr-only">Unselect</span>';
+
+      // Uncheck the respective option's checkbox in the popup, then rebuild the tag list
+      removeButton.addEventListener('click', function(e) {
+        label.parentElement.querySelector('input').checked = false;
+        buildTags(true);
+      });
+
+      tagListItem.appendChild(removeButton);
+      tagsList.appendChild(tagListItem);
+    });
+
+    selectedTagsWrapper.appendChild(tagsList);
+  }
+
+  // Set focus to the first tag, if requested. If there aren't any tags left, move focus to the trigger button instead.
+  if(setFocusToFirstTag) {
+    if(checkedCheckboxLabels.length > 0) {
+      tagsList.querySelector('button').focus();
+    } else {
+      trigger.focus();
+    }
+  }
+
+  // Rebuild the value inside the trigger button
+  buildTriggerValue();
+} #}

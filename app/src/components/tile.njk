@@ -1,0 +1,18 @@
+{#
+Tiles are blocks of content that contain all or most of its content in an overlay that covers up the main image when the user interacts with it. They share many of the same fundamental concepts as cards, and are even used in many of the same use cases. However, tiles are much more likely to have content that becomes visible on hover, which can be tricky to make accessible.
+
+Unlike cards, it's common for tiles to do just a single thing when clicked, like launch a quick view modal dialog or navigate to a product page. In those cases, tiles can actually be built as giant buttons or links!
+
+If multiple tiles are shown side by side, they should be organized using list markup.
+If the tile only has a single action, mark it up as either a button or a link depending on the action.
+If the tile has multiple actions or contains structured content, its wrapper element should have a role="group" attribute and a generic aria-label like "product" or "article".
+In some very specific scenarios both of these attributes can be optionally omitted to create a more streamlined experience for screen reader users.
+The main image can almost always be considered supplemental or decorative and given an empty alt attribute value.
+Any content that becomes visible on hover must also be reachable by both keyboard and screen reader users.
+
+https://codepen.io/A360/pen/oNBMbvo/ae71141b541eeb24290e8472634972c9
+https://codepen.io/A360/pen/OJVKdxz/da0e6659a8a08611f678eb2926bfd900
+https://codepen.io/A360/pen/eYNqmKP/d355b7f8778d09637f935564ce3ca95e
+https://codepen.io/A360/pen/OJMjRYy/1ddf2adccfeab7fbe7590880df139a20
+https://codepen.io/A360/pen/BazEeNz/3f2110eff980540b17a37ef55f89fcfc
+#}

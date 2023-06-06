@@ -1,15 +1,19 @@
-{% extends "layouts/base.njk" %} 
+{% extends "layouts/base.njk" %}
   {% block content %}
     <section class="section-button mt mb">
       <div class="container">
         <div class="grid">
-          <div class="span6">
-            {% include 'components/button.njk' %} 
+          <div class="g-col-12 g-col-900-8 g-start-900-3">
+            <h2>Buttons</h2>
           </div>
-          <div class="span6">
-            {% set disabled="disabled" %}
-            {% include 'components/button.njk' %} 
-          </div>
+        </div>
+        <div class="grid">
+          {% from 'data/buttons.njk' import buttons %}
+            {% for button in buttons.list %}
+              <div class="g-col-12 g-col-900-8 g-start-900-3">
+                {% include 'components/button.njk' %}
+              </div>
+            {% endfor %}
         </div>
       </div>
     </section>

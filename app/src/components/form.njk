@@ -1,0 +1,57 @@
+{# https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/form-select/about #}
+{#
+https://codepen.io/A360/pen/NWWeZvm/2a6672be7dd60d0772f329aa793bdd82
+https://codepen.io/A360/pen/JjjwQQM/35436e09ddc4144c95be03bac689c7a9
+https://codepen.io/A360/pen/rNVKaKX/1d4d5c623d192237b5d8258a06e8de76
+https://codepen.io/A360/pen/xxGzbqK/0ec0ca6062744865adbd19e795dc2531
+
+https://codepen.io/A360/pen/XWWrRXP/035aa6be85c48b380bb38b9540e375f7
+https://codepen.io/A360/pen/poozPLZ/26e0b4daca33a1d167324311c39ad3be
+https://codepen.io/A360/pen/ZEYJQyO/795e2e271d5a0bc978bd73abd741f434
+#}
+
+{# checkboxk#}
+<fieldset>
+  <legend>Pick your poultry</legend>
+
+  <input type="checkbox" name="chicken" value="bantam" id="bantam" class="sr-only">
+  <label for="bantam">Bantam</label>
+
+  <input type="checkbox" name="chicken" value="brahma" id="brahma" class="sr-only">
+  <label for="brahma">Brahma</label>
+
+  <input type="checkbox" name="chicken" value="cochin" id="cochin" class="sr-only">
+  <label for="cochin">Cochin</label>
+</fieldset>
+
+{# radio #}
+<fieldset>
+  <legend>Pick your poultry</legend>
+
+  <input type="radio" name="chicken" value="bantam" id="bantam" class="sr-only">
+  <label for="bantam">Bantam</label>
+
+  <input type="radio" name="chicken" value="brahma" id="brahma" class="sr-only">
+  <label for="brahma">Brahma</label>
+
+  <input type="radio" name="chicken" value="cochin" id="cochin" class="sr-only">
+  <label for="cochin">Cochin</label>
+</fieldset>
+
+{# custom select #}
+{#
+<button
+  role="combobox"
+  aria-haspopup="listbox"
+  aria-labelledby="label selected-text"
+  aria-expanded="false"
+  id="trigger"
+  class="trigger">
+  <span id="selected-text">Bantam</span>
+  <span class="icon fas fa-sort-down" aria-hidden="true"></span>
+</button>
+<ul role="listbox" aria-labelledby="[ID of the relevant <label>]">
+  <!-- Options -->
+  <li role="option" id="option-1" aria-selected="true">Option value</li>
+</ul>
+#}
