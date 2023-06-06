@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/app.css?v=0.0.5">
+  <link rel="icon" type="image/png" href="./assets/img/favicon/fav-32.png">
+  
+</head>
+<body data-theme="light">
+  <div id="page">
+    
+    <header class="header" data-js-component="Header">
+  <nav class="container">
+    <a href="./">Component Library</a> 
+  </nav>
+</header>
+
+    <main>
+      
+    
+<section>
+  <div class="container">
+    <div class="grid">
+      <div class="g-col-12">
+        <h2>Flickity Carousel</h2>
+      </div>
+      <div class="g-col-12">
+        <div class="carousel" aria-label="hero carousel" data-component="Carousel">
+          
+          <p class="sr-only">This is a carousel with auto-rotating slides. Activate any of the buttons to disable rotation. Use Next and Previous buttons to navigate, or jump to a slide using the slide dots.</p>
+          
+          
+          
+          <div class="carousel-slider js-slider">
+            <div role="group" aria-label="slide 1 of 4" class="carousel-slide js-slide">
+              <img src="https://picsum.photos/700/300?random=1" alt="">
+            </div>
+            <div role="group" aria-label="slide 2 of 4" class="carousel-slide js-slide">
+              <img src="https://picsum.photos/700/300?random=2" alt="">
+            </div>
+            <div role="group" aria-label="slide 3 of 4" class="carousel-slide js-slide">
+              <img src="https://picsum.photos/700/300?random=3" alt="">
+            </div>
+            <div role="group" aria-label="slide 4 of 4" class="carousel-slide js-slide">
+              <img src="https://picsum.photos/700/300?random=4" alt="">
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+    </main>
+
+    
+    <footer class="footer">
+  <div class="container">
+    ©2022
+  </div>
+</footer>
+  </div>
+  <script src="./scripts/app.js?v=0.0.5"></script>
+</body>
+</html>
