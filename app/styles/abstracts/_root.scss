@@ -9,8 +9,10 @@
   --color-emphasis: #{$red};
   --color-link: #{$gray-2};
   --color-link-hover: #{$red};
-  --color-button-hover: #{$gray-d};
+  --color-button-bg: #{$gray-d};
+  --color-button-hover: #{$gray-e};
   --color-border: #{$gray-5};
+  --color-focus: #{$teal};
 }
 
 [data-theme="dark"] {
@@ -23,6 +25,8 @@
   --color-emphasis: #{$red};
   --color-link: #{$gray-2};
   --color-link-hover: #{$red};
+  --color-button-bg: #{$gray-3};
   --color-button-hover: #{$gray-2};
   --color-border: #{$gray-5};
+  --color-focus: #{$teal};
 }

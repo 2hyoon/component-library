@@ -1,22 +1,31 @@
 
-.button {
+.btn {
+  --button-text-color: var(--color-text);
+  --button-bg-color: var(--color-button-bg);
+  --button-hover-color: var(--color-button-hover);
+  --button-border-color: var(--color-border);
+  --button-focus-color: var(--color-focus);
+}
+
+.btn {
   @include reset-button;
 
   border-radius: 3px;
-  background-color: $gray-e;
-  color: $gray-2;
-  padding: rem(13px) rem(10px);
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  padding: rem(10px) rem(13px);
   font-size: rem(14px);
   font-family: $font-sans;
   font-weight: $font-weight-semibold;
   border: 1px solid $black;
 
   &:hover {
-    background-color: rgba($color: $gray-e, $alpha: 60%);
+    background-color: var(--button-hover-color);
   }
 
-  &:focus {
-    @include reset-focus;
+  &:focus-visible {
+    @include focus-style;
+    // outline: 2px solid var(--color-focus);
   }
 
   &.disabled,

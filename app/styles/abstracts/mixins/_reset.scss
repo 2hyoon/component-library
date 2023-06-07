@@ -10,8 +10,8 @@
   appearance: none;
 }
 
-@mixin reset-focus {
-  outline: 2px solid var(--color-blue);
+@mixin focus-style {
+  outline: 2px solid var(--color-focus);
 }
 
 @mixin reset-list {
