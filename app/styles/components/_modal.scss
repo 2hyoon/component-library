@@ -17,7 +17,7 @@
 
 .modal-dialog {
   position: relative;
-  background-color: $white;
+  background-color: var(--color-bg-subtle);
   width: 90%;
   height: 50%;
   padding: $spacer * 2;

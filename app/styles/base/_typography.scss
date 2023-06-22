@@ -66,4 +66,8 @@ p {
 
 a {
   color: inherit;
+
+  &:hover {
+    color: var(--color-primary);
+  }
 }

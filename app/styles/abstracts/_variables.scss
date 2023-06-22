@@ -14,16 +14,16 @@ $gray-b: #bbb;
 $gray-c: #ccc;
 $gray-d: #ddd;
 $gray-e: #eee;
-$blue: #0d6efd !default;
-$indigo: #6610f2 !default;
-$purple: #6f42c1 !default;
+$blue: #1771f9 !default;
+$indigo: #610fee !default;
+$purple: #5c30ad !default;
 $pink: #d63384 !default;
-$red: #dc3545 !default;
-$orange: #fd7e14 !default;
+$red: #cb2e3e !default;
+$orange: #f47c49 !default;
 $yellow: #ffc107 !default;
-$green: #198754 !default;
-$teal: #20c997 !default;
-$cyan: #0dcaf0 !default;
+$green: #0f9154 !default;
+$teal: #39c49b !default;
+$cyan: #2bc5e4 !default;
 
 // font family
 $font-sans: "Roboto", sans-serif;
@@ -71,7 +71,7 @@ $breakpoints: (
   "800": 889px,
   "900": 992px,
   "1000": 1024px,
-  "1200": 1200px,
+  // "1200": 1200px,
   "1400": 1400px,
   "default": 768px,
 ) !default;
