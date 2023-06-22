@@ -4,48 +4,33 @@
     {# charty header #}
     <div class="grid row">
       <div class="g-col-12 g-col-900-8 g-start-900-3">
-        <h1>Charts</h1>
-      </div>
-    </div>
-
-    {# bar chart #}
-    <div class="grid row">
-      <div class="g-col-12 g-col-900-5 g-start-900-4">
-
+        <h1>Chart.js</h1>
+        {# bar chart #}
         <h2>Bar Chart</h2>
-
         <div data-component="Charty" data-json="bar-a" class="charty">
           <canvas class="js-canvas"></canvas>
         </div>
-
         <div data-component="Charty" data-json="bar-b" class="charty">
           <canvas class="js-canvas"></canvas>
         </div>
-
       </div>
-    </div>
 
-    {# line chart#}
-    <div class="grid row">
-      <div class="g-col-12 g-col-900-7 g-start-900-4">
-
+      <div class="g-col-12 g-col-900-8 g-start-900-3">
+        {# line chart#}
         <h2>Line Chart</h2>
-
         <div data-component="Charty" data-json="line-a" class="charty">
           <canvas class="js-canvas"></canvas>
         </div>
       </div>
-    </div>
 
-    {# doughnut chart#}
-    <div class="grid row">
-      <div class="g-col-12 g-col-900-4 g-start-900-4">
-
+      <div class="g-col-12 g-col-900-8 g-start-900-3">
+        {# doughnut chart#}
         <h2>Doughnut Chart</h2>
-
         <h3>Doughnut & Table</h3>
         <div data-component="Charty" data-json="doughnut-b" class="charty">
-          <canvas class="js-canvas"></canvas>
+          <div style="width:50%;">
+            <canvas class="js-canvas"></canvas>
+          </div>
           <table class="charts-table">
             <thead>
               <tr>
@@ -97,16 +82,19 @@
             </tfoot>
           </table>
         </div>
+      </div>
 
+      <div class="g-col-12 g-col-900-8 g-start-900-3">
         <h3>Multiple Doughnuts</h3>
+      </div>
+      <div class="g-col-12 g-col-900-3 g-start-900-3">
         <div data-component="Charty" data-json="doughnut-a" class="charty">
           <canvas class="js-canvas"></canvas>
           <canvas class="js-canvas"></canvas>
           <canvas class="js-canvas"></canvas>
         </div>
-
       </div>
-    </div>
 
+    </div>
   </div>
 </section>
