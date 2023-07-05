@@ -36,7 +36,7 @@ h2,
 
 h3,
 .h3 {
-  font-size: rem(40px);
+  font-size: rem(38px);
   font-weight: $font-weight-bold;
 }
 
@@ -48,7 +48,7 @@ h4,
 
 h5,
 .h5 {
-  font-size: rem(20px);
+  font-size: rem(24px);
   font-weight: $font-weight-bold;
 }
 
@@ -62,6 +62,7 @@ p {
   font-size: 1rem;
   font-weight: $font-weight-normal;
   line-height: $line-height-md;
+  margin: 0 0 $spacer;
 }
 
 a {
