@@ -3,6 +3,27 @@ export default class Filter {
     this.elem = elem;
     this.trigger = this.elem.querySelector(".js-filter-trigger");
     this.list = this.elem.querySelector(".js-filter-list");
+    this.options = this.elem.querySelectorAll(".js-filter-options input");
+    this.selectedContainer = this.elem.querySelector(".js-filter-selected");
+    this.results;
+  }
+
+  updateResults() {
+    this.selectedContainer.innerHTML = "";
+
+    this.options.forEach((option, index) => {
+      if (!option.checked) return;
+
+      const btn = document.createElement("button");
+      btn.innerHTML = this.options[index].previousElementSibling.innerText;
+      btn.classList.add("filter-remove-btn", "btn");
+      this.selectedContainer.appendChild(btn);
+
+      btn.addEventListener("click", () => {
+        this.options[index].checked = false;
+        this.updateResults();
+      });
+    });
   }
 
   setup() {
@@ -51,6 +72,12 @@ export default class Filter {
       ) {
         this.trigger.setAttribute("aria-expanded", false);
       }
+    });
+
+    this.options.forEach((option) => {
+      option.addEventListener("click", () => {
+        this.updateResults();
+      });
     });
   }
 
