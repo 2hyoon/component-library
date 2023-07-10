@@ -27,6 +27,7 @@
     width: 100%;
     background-color: var(--color-bg-subtle);
     display: none;
+    z-index: $zindex-dropdown;
   }
 
   &-trigger[aria-expanded=true] + .filter-list {
@@ -41,5 +42,9 @@
     li {
       margin: $spacer rem(10px);
     }
+  }
+
+  .btn-delete {
+    margin: 0 rem(5px) rem(5px) 0;
   }
 }

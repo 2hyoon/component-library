@@ -16,7 +16,7 @@ export default class Filter {
 
       const btn = document.createElement("button");
       btn.innerHTML = this.options[index].previousElementSibling.innerText;
-      btn.classList.add("filter-remove-btn", "btn");
+      btn.classList.add("filter-remove-btn", "btn-delete");
       this.selectedContainer.appendChild(btn);
 
       btn.addEventListener("click", () => {

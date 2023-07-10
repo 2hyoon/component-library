@@ -1,10 +1,11 @@
-
-.btn {
+.btn,
+.btn-delete {
   --button-text-color: var(--color-text);
   --button-bg-color: var(--color-button-bg);
   --button-hover-color: var(--color-button-hover);
   --button-border-color: var(--color-border);
   --button-focus-color: var(--color-focus);
+  --button-error-color: var(--color-emphasis);
 }
 
 .btn {
@@ -25,7 +26,6 @@
 
   &:focus-visible {
     @include focus-style;
-    // outline: 2px solid var(--color-focus);
   }
 
   &.disabled,
@@ -34,5 +34,55 @@
     border: 1px solid $gray-a;
     color: $gray-a;
     cursor: default;
+  }
+}
+
+.btn-delete {
+  @include reset-button;
+
+  display: inline-block;
+  position: relative;
+  border-radius: 3px;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  padding: rem(10px) rem(40px) rem(10px) rem(13px);
+  font-size: rem(14px);
+  font-family: $font-sans;
+  font-weight: $font-weight-semibold;
+  border: 1px solid $black;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: rem(3px);
+    width: rem(16px);
+    background-color: var(--button-text-color);
+    right: 10px;
+    top: 50%;
+    margin-top: -2px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    color: var(--button-error-color);
+    background-color: var(--button-hover-color);
+    border: 1px solid var(--button-error-color);
+
+    &::before,
+    &::after {
+      background-color: var(--button-error-color);
+    }
+  }
+
+  &:focus-visible {
+    @include focus-style;
   }
 }
