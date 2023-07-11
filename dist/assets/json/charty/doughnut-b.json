@@ -1,0 +1,59 @@
+{
+  "charts": [
+    {
+      "type": "doughnut",
+      "data": {
+        "labels": ["A", "B", "C", "D", "E"],
+        "datasets": [{
+          "data": [14, 37, 21, 27, 1],
+          "backgroundColor": [
+            "#ef476f",
+            "#ffd166",
+            "#06d6a0",
+            "#118ab2",
+            "#073b4c"
+          ],
+          "hoverBackgroundColor": [
+            "#ef476f",
+            "#ffd166",
+            "#06d6a0",
+            "#118ab2",
+            "#073b4c"
+          ],
+          "hoverOffset": 0,
+          "hoverBorderColor": [
+            "#ef476f",
+            "#ffd166",
+            "#06d6a0",
+            "#118ab2",
+            "#073b4c"
+          ],
+          "borderWidth": 0,
+          "hoverBorderWidth": 10,
+          "borderRadius": 0,
+          "borderJoinStyle": "miter"
+        }]
+      },
+      "options": {
+        "aspectRatio": 1,
+        "cutout": "60%",
+        "layout": {
+            "padding": {
+                "left": 15,
+                "right": 15,
+                "top": 15,
+                "bottom": 15
+            }
+        },
+        "plugins": {
+          "title": {
+            "display": false,
+            "text": "Present"
+          }
+        }
+      },
+      "unit": "%",
+      "hasMatchedTable": true
+    }
+  ]
+}

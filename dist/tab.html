@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/app.css?v=0.0.5">
+  <link rel="icon" type="image/png" href="./assets/img/favicon/fav-32.png">
+  
+</head>
+<body data-theme="light">
+  <div id="page">
+    
+    <header class="header" data-js-component="Header">
+  <nav class="container">
+    <a href="./">Component Library</a> 
+  </nav>
+</header>
+
+    <main>
+      
+    
+<section class="tab" data-component="Tab">
+  <div class="container">
+    <div class="grid">
+      <div class="g-col-12 g-col-900-8 g-start-900-3">
+        <h2>Tab</h2>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="g-col-12 g-col-900-8 g-start-900-3">
+        <div class="tab-list js-tablist" role="tablist" aria-label="cities">
+          <button role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" class="btn tab-btn js-tab">Seoul</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-panel-2" tabindex="-1" id="tab-2" class="btn tab-btn js-tab">Paris</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-panel-3" tabindex="-1" id="tab-3" class="btn tab-btn js-tab">
+          London</button>
+          
+        </div>
+        <div class="tab-panels">
+          <div role="tabpanel" tabindex="0" aria-labelledby="tab-1" id="tab-panel-1" class="tab-panel is-visible js-panel">
+            <h3>Seoul</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus lectus, viverra quis imperdiet vitae, vehicula
+              sit amet sem. Nam finibus velit vel viverra tempor. Nunc dolor ipsum, malesuada elementum ultrices vel, suscipit eu
+              libero. Quisque convallis a magna vel imperdiet. Nulla sapien nisl, semper nec eros sed, dictum congue libero.</p>
+          </div>
+          <div role="tabpanel" tabindex="0" aria-labelledby="tab-2" id="tab-panel-2" class="tab-panel js-panel">
+            <h3>Paris</h3>
+            <p>Morbi placerat bibendum augue, a varius metus pulvinar euismod. Vivamus et tempus massa, dapibus accumsan ligula.
+              Nulla eu erat at eros sodales aliquet. Phasellus nisi felis, finibus et dolor quis, porttitor rhoncus enim. Curabitur
+              lectus enim, condimentum eget posuere quis, tempor ut erat.</p>
+          </div>
+          <div role="tabpanel" tabindex="0" aria-labelledby="tab-3" id="tab-panel-3" class="tab-panel js-panel">
+            <h3>London</h3>
+            <p>Donec dapibus malesuada felis, sed commodo elit scelerisque pharetra. Mauris imperdiet enim sed dapibus venenatis. In
+              lacus nulla, blandit a neque ac, interdum auctor urna. In lacinia sit amet quam eget sagittis. Proin tincidunt ipsum et
+              dui tincidunt blandit.</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+    </main>
+
+    
+    <footer class="footer">
+  <div class="container">
+    ©2022
+  </div>
+</footer>
+  </div>
+  <script src="./scripts/app.js?v=0.0.5"></script>
+</body>
+</html>

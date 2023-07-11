@@ -1,0 +1,52 @@
+{#
+  https://codepen.io/A360/pen/jOEjdNy/9fdd2bd235ac07f3b59fcabd8dec1e4e
+  https://codepen.io/A360/pen/gObNqQg/438952c9407a4637b717bf9bf496ae9b
+  https://codepen.io/A360/pen/oNgKQbX/afdee110724fd6d1d01bfb9a79a2accf
+  https://codepen.io/A360/pen/ZEQPpqZ/136a9bab669dcfbd63662f6eee7fe04c
+
+  Tabs change state on a single page, not provide navigational controls to other pages.
+#}
+<section class="tab" data-component="Tab">
+  <div class="container">
+    <div class="grid">
+      <div class="g-col-12 g-col-900-8 g-start-900-3">
+        <h2>Tab</h2>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="g-col-12 g-col-900-8 g-start-900-3">
+        <div class="tab-list js-tablist" role="tablist" aria-label="cities">
+          <button role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" class="btn tab-btn js-tab">Seoul</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-panel-2" tabindex="-1" id="tab-2" class="btn tab-btn js-tab">Paris</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-panel-3" tabindex="-1" id="tab-3" class="btn tab-btn js-tab">
+          London</button>
+          {# <button role="tab" aria-selected="false" aria-controls="tab-panel-4" tabindex="-1" id="tab-4" class="tab-btn js-tab" disabled="true">Madrid</button> #}
+        </div>
+        <div class="tab-panels">
+          <div role="tabpanel" tabindex="0" aria-labelledby="tab-1" id="tab-panel-1" class="tab-panel is-visible js-panel">
+            <h3>Seoul</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus lectus, viverra quis imperdiet vitae, vehicula
+              sit amet sem. Nam finibus velit vel viverra tempor. Nunc dolor ipsum, malesuada elementum ultrices vel, suscipit eu
+              libero. Quisque convallis a magna vel imperdiet. Nulla sapien nisl, semper nec eros sed, dictum congue libero.</p>
+          </div>
+          <div role="tabpanel" tabindex="0" aria-labelledby="tab-2" id="tab-panel-2" class="tab-panel js-panel">
+            <h3>Paris</h3>
+            <p>Morbi placerat bibendum augue, a varius metus pulvinar euismod. Vivamus et tempus massa, dapibus accumsan ligula.
+              Nulla eu erat at eros sodales aliquet. Phasellus nisi felis, finibus et dolor quis, porttitor rhoncus enim. Curabitur
+              lectus enim, condimentum eget posuere quis, tempor ut erat.</p>
+          </div>
+          <div role="tabpanel" tabindex="0" aria-labelledby="tab-3" id="tab-panel-3" class="tab-panel js-panel">
+            <h3>London</h3>
+            <p>Donec dapibus malesuada felis, sed commodo elit scelerisque pharetra. Mauris imperdiet enim sed dapibus venenatis. In
+              lacus nulla, blandit a neque ac, interdum auctor urna. In lacinia sit amet quam eget sagittis. Proin tincidunt ipsum et
+              dui tincidunt blandit.</p>
+          </div>
+          {# <div role="tabpanel" tabindex="0" aria-labelledby="tab-4" id="tab-panel-4" class="tab-panel js-panel">
+                  <h3>Madrid</h3>
+                  <p>Maecenas aliquam vehicula felis, vitae vehicula massa semper ac. Sed pellentesque bibendum lacus quis blandit. Maecenas finibus leo ex, ut vulputate velit blandit ut. Donec mattis quam vitae varius fermentum. Etiam libero dolor, luctus hendrerit semper in, elementum fermentum libero. Mauris vitae euismod orci.</p>
+                </div> #}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

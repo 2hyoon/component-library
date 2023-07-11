@@ -1,0 +1,77 @@
+{#
+https://codepen.io/A360/pen/LYNBZOq/99cc7332f9ec385c4cbd6e9d6c870563
+https://codepen.io/A360/pen/WNwLwbj/0a4e35831b9d599c0f2f11eb7d630176
+https://codepen.io/A360/pen/GRZGPKN/e9486c77a4b5244ffe31f5d92963c988
+https://codepen.io/A360/pen/qBNEJYW/0e1ac95394360122c094cd8e24df07ad
+https://codepen.io/A360/pen/pobNYYE/138e0c5a9762fdfd3a1e09a0b780590d
+#}
+{# modal menu
+<button type="button">
+  <span class="fas fa-three-bars" aria-hidden="true"></span>
+  <span class="sr-only">Open menu</span>
+</button>
+
+...
+
+<div role="dialog" aria-modal="true" aria-label="menu">
+  <button type="button">
+    <span class="fas fa-times" aria-hidden="true"></span>
+    <span class="sr-only">Close menu</span>
+  </button>
+  ...
+</div>
+#}
+{# expandable menu
+<button type="button" aria-controls="mobile-menu" aria-expanded="false">
+  <span class="fas fa-three-bars" aria-hidden="true"></span>
+  <span class="fas fa-times" aria-hidden="true" style="display: none"></span>
+  <span class="sr-only" style="display: none">Menu</span>
+</button>
+
+<div id="mobile-menu">
+  ...
+</div>
+#}
+
+<div class="container">
+  <header>
+    <nav>
+      <button class="menu-open-button">
+        <span class="fas fa-bars" aria-hidden="true"></span>
+        <span class="sr-only">Open menu</span>
+      </button>
+
+      <a href="/" class="logo">
+        <img src="https://assets.codepen.io/3609497/accessible360-logo-horizontal.png" alt="Accessible360">
+      </a>
+
+      <button class="search-button" onclick="javascript:alert('Gotcha! This is a fake button for the demo.')">
+        <span class="fas fa-search" aria-hidden="true"></span>
+        <span class="sr-only">Search (fake button)</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet massa nec magna egestas semper. Pellentesque sagittis sem vel magna ultricies euismod. Duis imperdiet urna nec placerat lacinia. Curabitur viverra suscipit imperdiet. Donec et viverra urna, sit amet accumsan elit. Cras vitae mollis magna. Nam scelerisque felis vel erat imperdiet finibus.</p>
+
+    <p>Nulla vitae facilisis sem. Morbi sed nisl ut nisi scelerisque finibus. Ut luctus eu odio a vestibulum. Etiam nec tempus nisi. Quisque vel tempus sem. Aenean sodales lorem velit, quis aliquet sapien facilisis eu. Curabitur interdum justo tristique volutpat scelerisque. Nulla arcu mi, iaculis nec odio a, sollicitudin rutrum enim. Nullam non cursus purus. Proin tempor, metus vitae suscipit malesuada, magna purus bibendum sem, quis fringilla nulla mi et diam. Quisque in lacus id mi gravida semper. Donec imperdiet at felis at cursus.</p>
+
+    <p>Mauris ullamcorper, arcu in accumsan consequat, nibh velit vehicula sem, vitae tincidunt mi quam ut enim. In congue quam sit amet luctus varius. Mauris ut ornare lectus. Suspendisse sed interdum felis, a fringilla odio. Proin non euismod tortor, ut ultricies mi. Pellentesque ac lectus pharetra, tristique justo sit amet, malesuada dui. Nunc justo nibh, volutpat ac aliquam id, egestas eget est. Vivamus tincidunt bibendum tortor eget pellentesque. Maecenas odio tellus, convallis eget lobortis bibendum, fermentum eget nulla. Vivamus pulvinar metus risus, sit amet vestibulum velit pellentesque et. Nullam efficitur feugiat dolor, sit amet efficitur massa pretium non. Aenean placerat leo id massa finibus, euismod volutpat massa egestas.</p>
+  </main>
+
+  <div class="mobile-menu-modal-dialog" role="dialog" aria-modal="true" aria-label="menu">
+    <button class="menu-close-button first-focusable-element">
+      <span class="fas fa-times" aria-hidden="true"></span>
+      <span class="sr-only">Close menu</span>
+    </button>
+
+    <ul class="menu">
+      <li><a href="/home">Home</a></li>
+      <li><a href="/home">About</a></li>
+      <li><a href="/home">Products</a></li>
+      <li><a href="/home">Blog</a></li>
+      <li><a href="/home" class="last-focusable-element">Contact</a></li>
+    </ul>
+  </div>
+</div>

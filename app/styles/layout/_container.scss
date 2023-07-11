@@ -1,8 +1,7 @@
 // <section>
 // <div class="container">
 // <div class="grid">
-// <div class="span6"></div>
-// <div class="span6"></div>
+// <div class="g-col-12"></div>
 // </div>
 // </div>
 // </section>
@@ -12,15 +11,13 @@ section,
 .section {
   display: block;
   position: relative;
-}
+  padding-top: $spacer * 2;
+  padding-bottom: $spacer * 2;
 
-.section-mg {
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
-.row {
-  margin-bottom: 60px;
+  @include breakpoint-up(map.get($breakpoints, "900")) {
+    padding-top: $spacer * 4;
+    padding-bottom: $spacer * 4;
+  }
 }
 
 // container has max width
@@ -34,16 +31,4 @@ section,
   margin-right: auto;
   padding-left: 3%;
   padding-right: 3%;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat($grid-columns, 1fr);
-  gap: 1rem;
-
-  @include make-cssgrid;
-
-  > div {
-    background-color:var(--color-secondary);
-  }
 }

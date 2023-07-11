@@ -1,0 +1,17 @@
+{# Uses screen-reader-only text inside the trigger element to "label" the tooltip.
+The element containing the tooltip content has role="tooltip".
+https://codepen.io/A360/pen/jOOXXBV/b1c7f646872e02fd7a371f599efe7e23
+https://codepen.io/A360/pen/mddaYxW/4d3d21cdeed738e36f3aa6e3e25d0330
+https://codepen.io/A360/pen/mddaYxW/4d3d21cdeed738e36f3aa6e3e25d0330
+https://codepen.io/A360/pen/WNbxyYr/710dcb27e98233d3eaf9416e058bb4fe
+https://codepen.io/A360/pen/NWPaROQ/15bd5d3c03015e0096473f4e502d0b25
+#}
+
+<div class="tooltip-container">
+  <div class="trigger" tabindex="0">
+    <span class="fas fa-question" aria-hidden="true"></span>
+    <span class="sr-only">Why do you need my email?</span>
+  </div>
+
+  <div class="tooltip" role="tooltip">This is the email where we will send your recovery password.</div>
+</div>

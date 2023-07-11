@@ -1,0 +1,24 @@
+.tab-list {
+  margin-top: $spacer*2;
+}
+
+.tab-btn {
+  &[aria-selected="true"] {
+    background-color: $white;
+    border: 2px solid $black;
+  }
+
+  &[disabled="true"] {
+    cursor: not-allowed;
+  }
+}
+
+.tab-panel {
+  display: none;
+  padding-top: $spacer * 2;
+
+  &.is-visible {
+    display: block;
+  }
+}
+

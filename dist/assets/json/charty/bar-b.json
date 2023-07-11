@@ -1,0 +1,61 @@
+{
+  "charts": [
+    {
+      "type": "bar",
+      "data": {
+        "labels": ["2010", "2020", "2030"],
+        "datasets": [{
+            "label": "A",
+            "data": [70, 60, 50],
+            "backgroundColor": "#cdb4db",
+            "hoverBackgroundColor": "#cdb4db"
+          }, {
+          "label": "B",
+          "data": [30, 40, 50],
+          "backgroundColor": "#84a98c",
+          "hoverBackgroundColor": "#84a98c"
+        }]
+      },
+      "options": {
+        "scales": {
+          "x": {
+            "grid": {
+              "color": "#ffffff",
+              "drawBorder": true,
+              "drawOnChartArea": true,
+              "drawTicks": true,
+              "display": false
+            },
+            "ticks": {
+              "color": "#5a6771",
+              "font": {
+                "size": 11,
+                "family": "'Gotham A', 'Gotham B', sans-serif"
+              }
+            }
+          },
+          "y": {
+            "grid": {
+              "display": true,
+              "drawBorder": false,
+              "color": "#acbac4"
+            },
+            "position": "right",
+            "min": 0,
+            "max": 80,
+            "ticks": {
+              "stepSize": 10,
+              "color": "#5a6771",
+              "font": {
+                "size": 11,
+                "family": "'Gotham A', 'Gotham B', sans-serif",
+                "weight": 500
+              }
+            }
+          }
+        }
+      },
+      "unit": "%"
+    }
+  ]
+}

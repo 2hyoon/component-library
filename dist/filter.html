@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/app.css?v=0.0.5">
+  <link rel="icon" type="image/png" href="./assets/img/favicon/fav-32.png">
+  
+</head>
+<body data-theme="light">
+  <div id="page">
+    
+    <header class="header" data-js-component="Header">
+  <nav class="container">
+    <a href="./">Component Library</a> 
+  </nav>
+</header>
+
+    <main>
+      
+    
+
+<section class="filter" data-component="Filter">
+  <div class="container">
+
+    <div class="grid row">
+      <div class="g-col-12 g-col-900-8 g-start-900-3">
+        <h2>Filter</h2>
+      </div>
+    </div>
+
+    <div class="grid row">
+      <div class="g-col-12 g-col-900-9 g-start-900-3">
+        <label id="label">Pick your color:</label>
+      </div>
+    </div>
+
+
+    <div role="region" class="filter-dd" aria-label="options filter with selected options">
+      <div class="grid row">
+        <div class="g-col-12 g-col-900-4 g-start-900-3" style="position:relative;">
+          <button class="filter-trigger btn js-filter-trigger" aria-controls="filter-list" aria-expanded="false" aria-labelledby="label value">
+            <span class="value" id="value">Choose color(s)</span>
+          </button>
+
+          <div id="filter-list" class="filter-list js-filter-list" role="region" aria-label="option filter">
+            <div class="sr-only">
+                The following text field filters the results that follow as you type. Use Tab to access the results.
+            </div>
+            <div class="results-count sr-only" aria-live="assertive"></div>
+            <ul class="filter-options js-filter-options">
+              <li>
+                <label for="filter-option-0">Red</label>
+                <input type="checkbox" id="filter-option-0" value="red">
+              </li>
+              <li>
+                <label for="filter-option-1">Blue</label>
+                <input type="checkbox" id="filter-option-1" value="blue">
+              </li>
+              <li>
+                <label for="filter-option-2">Yellow</label>
+                <input type="checkbox" id="filter-option-2" value="yellow">
+              </li>
+              <li>
+                <label for="filter-option-3">Green</label>
+                <input type="checkbox" id="filter-option-3" value="green">
+              </li>
+              <li>
+                <label for="filter-option-4">Purple</label>
+                <input type="checkbox" id="filter-option-4" value="purple">
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="g-col-12 g-col-900-4 g-start-900-7">
+          <div class="filter-selected js-filter-selected" role="region" aria-label="Selected options"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  
+    </main>
+
+    
+    <footer class="footer">
+  <div class="container">
+    ©2022
+  </div>
+</footer>
+  </div>
+  <script src="./scripts/app.js?v=0.0.5"></script>
+</body>
+</html>

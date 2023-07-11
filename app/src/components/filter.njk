@@ -1,0 +1,76 @@
+{#
+https://codepen.io/A360/pen/LYyzEYP/cd31949e2b1b4e81412b16af396cca33
+https://codepen.io/A360/pen/OJmBBvr/5e21234fc0b1d764bbcd9cf5987e22fa  *single select
+https://codepen.io/A360/pen/rNmqQmG/ec16aa948e2b2480fa6312a8d1af251b  *multi select
+https://codepen.io/A360/pen/qBmJLMO/d1078dce09b6bafb988e9287efaef4e0
+https://codepen.io/A360/pen/YzVgpQy/4f0e4d7a59ee0d654dabb3e476ece988
+
+- Wrap both the text field and the content that it filters in a <section> tag or a <div> with role="region"
+  - <section aria-label="location filter"> or
+  - <div role="region" aria-label="location filter">
+- Use a visually hidden container like the one shown below, and turn it into an ARIA live region using aria-live="assertive". The "assertive" value means that changes to the inner contents of this element will be read out to users immediately, even when they are currently typing in the text field.
+- <div class="results-count sr-only" aria-live="assertive"></div>
+- When results are found, insert text into this field similar to "{x} results available". When no results are found, insert text like "no results available" so that users know that they should probably stop typing and try a different search term.
+#}
+
+<section class="filter" data-component="Filter">
+  <div class="container">
+
+    <div class="grid row">
+      <div class="g-col-12 g-col-900-8 g-start-900-3">
+        <h2>Filter</h2>
+      </div>
+    </div>
+
+    <div class="grid row">
+      <div class="g-col-12 g-col-900-9 g-start-900-3">
+        <label id="label">Pick your color:</label>
+      </div>
+    </div>
+
+
+    <div role="region" class="filter-dd" aria-label="options filter with selected options">
+      <div class="grid row">
+        <div class="g-col-12 g-col-900-4 g-start-900-3" style="position:relative;">
+          <button class="filter-trigger btn js-filter-trigger" aria-controls="filter-list" aria-expanded="false" aria-labelledby="label value">
+            <span class="value" id="value">Choose color(s)</span>
+          </button>
+
+          <div id="filter-list" class="filter-list js-filter-list" role="region" aria-label="option filter">
+            <div class="sr-only">
+                The following text field filters the results that follow as you type. Use Tab to access the results.
+            </div>
+            <div class="results-count sr-only" aria-live="assertive"></div>
+            <ul class="filter-options js-filter-options">
+              <li>
+                <label for="filter-option-0">Red</label>
+                <input type="checkbox" id="filter-option-0" value="red">
+              </li>
+              <li>
+                <label for="filter-option-1">Blue</label>
+                <input type="checkbox" id="filter-option-1" value="blue">
+              </li>
+              <li>
+                <label for="filter-option-2">Yellow</label>
+                <input type="checkbox" id="filter-option-2" value="yellow">
+              </li>
+              <li>
+                <label for="filter-option-3">Green</label>
+                <input type="checkbox" id="filter-option-3" value="green">
+              </li>
+              <li>
+                <label for="filter-option-4">Purple</label>
+                <input type="checkbox" id="filter-option-4" value="purple">
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="g-col-12 g-col-900-4 g-start-900-7">
+          <div class="filter-selected js-filter-selected" role="region" aria-label="Selected options"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+

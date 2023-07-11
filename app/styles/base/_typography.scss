@@ -24,46 +24,51 @@ h6,
 
 h1,
 .h1 {
-  font-size: rem(55px);
-  font-weight: $font-weight-xlight;
+  font-size: rem(65px);
+  font-weight: $font-weight-light;
 }
 
 h2,
 .h2 {
-  font-size: rem(45px);
-  font-weight: $font-weight-bold;
+  font-size: rem(55px);
+  font-weight: $font-weight-lighter;
 }
 
 h3,
 .h3 {
-  font-size: rem(30px);
+  font-size: rem(38px);
   font-weight: $font-weight-bold;
 }
 
 h4,
 .h4 {
-  font-size: rem(20px);
+  font-size: rem(30px);
   font-weight: $font-weight-bold;
 }
 
 h5,
 .h5 {
-  font-size: rem(14px);
+  font-size: rem(24px);
   font-weight: $font-weight-bold;
 }
 
 h6,
 .h6 {
-  font-size: rem(10px);
+  font-size: rem(12px);
   font-weight: $font-weight-bold;
 }
 
 p {
-  font-size: rem(15px);
+  font-size: 1rem;
   font-weight: $font-weight-normal;
   line-height: $line-height-md;
+  margin: 0 0 $spacer;
 }
 
 a {
   color: inherit;
+
+  &:hover {
+    color: var(--color-primary);
+  }
 }
