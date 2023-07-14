@@ -4,12 +4,12 @@ export default class Filter {
     this.trigger = this.elem.querySelector(".js-filter-trigger");
     this.list = this.elem.querySelector(".js-filter-list");
     this.options = this.elem.querySelectorAll(".js-filter-options input");
-    this.selectedContainer = this.elem.querySelector(".js-filter-selected");
+    this.filteredResults = this.elem.querySelector(".js-filter-results");
     this.results;
   }
 
   updateResults() {
-    this.selectedContainer.innerHTML = "";
+    this.filteredResults.innerHTML = "";
 
     this.options.forEach((option, index) => {
       if (!option.checked) return;
@@ -17,7 +17,7 @@ export default class Filter {
       const btn = document.createElement("button");
       btn.innerHTML = this.options[index].previousElementSibling.innerText;
       btn.classList.add("filter-remove-btn", "btn-delete");
-      this.selectedContainer.appendChild(btn);
+      this.filteredResults.appendChild(btn);
 
       btn.addEventListener("click", () => {
         this.options[index].checked = false;
